@@ -18,8 +18,8 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Thu Dec 24 15:09:37 UTC 2015.<br/>
-0 errors and 132 warnings found:<br/><br/>
+Check performed at Thu Dec 24 15:14:19 UTC 2015.<br/>
+1 errors and 133 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
@@ -40,6 +40,14 @@ Check performed at Thu Dec 24 15:09:37 UTC 2015.<br/>
 <a href="#GradleDynamicVersion">GradleDynamicVersion: Gradle Dynamic Version</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#MissingTranslation">MissingTranslation: Incomplete translation</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#Typos">Typos: Spelling error</a>
 </td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
@@ -372,6 +380,62 @@ Using <code>+</code> in dependencies lets you automatically pick up the latest a
 <a name="Correctness:Messages"></a>
 <div class="category"><a href="#" title="Return to top">Correctness:Messages</a><div class="categorySeparator"></div>
 </div>
+<a name="MissingTranslation"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MissingTranslation: Incomplete translation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:123</span>: <span class="message">"<code>web</code>" is not translated in "de" (German), "ja" (Japanese), "ru" (Russian)</span><br /><pre class="errorlines">
+<span class="lineno"> 120</span> 	&lt;string name="news">News&lt;/string>
+<span class="lineno"> 121</span> 	&lt;string name="activity_not_found">The activity is not found for this file.&lt;/string>
+<span class="lineno"> 122</span> 	&lt;string name="recent_issues">Resent issues&lt;/string>
+<span class="lineno"> 123</span> 	&lt;string <span class="errorspan">name="web">Web&lt;/string></span>
+<span class="lineno"> 124</span> 
+<span class="lineno"> 125</span> &lt;/resources>
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 8 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="error">Fatal</span><div class="summary">
+Explanation: Incomplete translation.</div>
+<div class="explanation">
+If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.<br/>
+<br/>
+If the string should <b>not</b> be translated, you can add the attribute <code>translatable="false"</code> on the <code>&lt;string></code> element, or you can define all your non-translatable strings in a resource file called <code>donottranslate.xml</code>. Or, you can ignore the issue with a <code>tools:ignore="MissingTranslation"</code> attribute.<br/>
+<br/>
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable <code>ANDROID_LINT_COMPLETE_REGIONS</code>.<br/>
+<br/>
+You can tell lint (and other tools) which language is the default language in your <code>res/values/</code> folder by specifying <code>tools:locale="languageCode"</code> for the root <code>&lt;resources></code> element in your resource file. (The <code>tools</code> prefix refers to the namespace declaration <code>http://schemas.android.com/tools</code>.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "MissingTranslation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="Typos"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">Typos: Spelling error</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:27</span>: <span class="message">"invez" is a common misspelling; did you mean "invés" ?</span><br /><pre class="errorlines">
+<span class="lineno">  24</span>   &lt;string name="menu_confirm_delete_msg">Tem certeza que deseja remover esta conexão?&lt;/string>
+<span class="lineno">  25</span>   &lt;string name="preference_category_issue">Tarefas&lt;/string>
+<span class="lineno">  26</span>   &lt;string name="preference_issue_get_all">Obter todas as tarefas&lt;/string>
+<span class="lineno">  27</span>   &lt;string name="preference_issue_description_get_all">Por padrão, obtém apenas tarefas NÃO FECHADAS do servidor remoto. Se ao <span class="errorspan">invez disso você deseja obter todas as tarefas, marque esta opção.&lt;/string></span>
+<span class="lineno">  28</span>   &lt;string name="preference_category_appearance">Aparência&lt;/string>
+<span class="lineno">  29</span>   &lt;string name="preference_category_appearance_themes">Tema&lt;/string>
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 7 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Spelling error.</div>
+<div class="explanation">
+This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Typos" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
 <a name="PluralsCandidate"></a>
 <div class="issue">
 <div class="id"><a href="#" title="Return to top">PluralsCandidate: Potential Plurals</a><div class="issueSeparator"></div>
@@ -531,11 +595,12 @@ Additional locations: <ul>
 <span class="lineno">   5</span> 	&lt;string name="menu_setting_label_accessurl">Redmine URL&lt;/string>
 <span class="lineno">   6</span> 	&lt;string name="menu_setting_edit_accessurl">http://www.redmine.org/redmine&lt;/string>
 </pre>
-<ul></ul><button id="Location4DivLink" onclick="reveal('Location4Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location4DivLink" onclick="reveal('Location4Div');" />+ 4 Additional Locations...</button>
 <div id="Location4Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:4</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:4</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:4</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:4</span>
 </ul>
 </div><br/><br/>
@@ -547,11 +612,12 @@ Additional locations: <ul>
 <span class="lineno">  20</span> 	&lt;string name="comment">Comment&lt;/string>
 <span class="lineno">  21</span> 	&lt;string name="delete">Delete&lt;/string>
 </pre>
-<ul></ul><button id="Location5DivLink" onclick="reveal('Location5Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location5DivLink" onclick="reveal('Location5Div');" />+ 4 Additional Locations...</button>
 <div id="Location5Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:19</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:19</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:19</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:19</span>
 </ul>
 </div><br/><br/>
@@ -565,11 +631,12 @@ Additional locations: <ul>
 <span class="lineno">  25</span> 	&lt;string name="preference_category_issue">Issues&lt;/string>
 <span class="lineno">  26</span> 	&lt;string name="preference_issue_get_all">Get all issues&lt;/string>
 </pre>
-<ul></ul><button id="Location6DivLink" onclick="reveal('Location6Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location6DivLink" onclick="reveal('Location6Div');" />+ 4 Additional Locations...</button>
 <div id="Location6Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:24</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:24</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:24</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:24</span>
 </ul>
 </div><br/><br/>
@@ -581,11 +648,12 @@ Additional locations: <ul>
 <span class="lineno">  71</span> 	&lt;string name="ticket_watcher">Watchers&lt;/string>
 <span class="lineno">  72</span> 
 </pre>
-<ul></ul><button id="Location7DivLink" onclick="reveal('Location7Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location7DivLink" onclick="reveal('Location7Div');" />+ 4 Additional Locations...</button>
 <div id="Location7Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:70</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:70</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:70</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:70</span>
 </ul>
 </div><br/><br/>
@@ -597,11 +665,12 @@ Additional locations: <ul>
 <span class="lineno">  93</span> 	&lt;string name="menu_filter">Filter&lt;/string>
 <span class="lineno">  94</span> 	&lt;string name="filter_none">None&lt;/string>
 </pre>
-<ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 4 Additional Locations...</button>
 <div id="Location8Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:89</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:89</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:89</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:89</span>
 </ul>
 </div><br/><br/>
@@ -613,11 +682,12 @@ Additional locations: <ul>
 <span class="lineno"> 113</span> 	&lt;string name="download">Download&lt;/string>
 <span class="lineno"> 114</span> 	&lt;string name="download_with_manager">Download via Download Manager&lt;/string>
 </pre>
-<ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 3 Additional Locations...</button>
+<ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 4 Additional Locations...</button>
 <div id="Location9Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:109</span>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:109</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:109</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:109</span>
 </ul>
 </div><br/><br/>
