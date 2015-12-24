@@ -270,7 +270,7 @@ To fix this issue, set the `targetSdkVersion` to the highest available value. Th
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java"
-            line="147"
+            line="152"
             column="55"/>
     </issue>
 

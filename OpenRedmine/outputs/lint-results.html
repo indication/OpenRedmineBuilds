@@ -18,7 +18,7 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Tue Dec 15 15:34:40 UTC 2015.<br/>
+Check performed at Thu Dec 24 14:50:42 UTC 2015.<br/>
 0 errors and 132 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
@@ -234,13 +234,13 @@ To fix this issue, set the <code>targetSdkVersion</code> to the highest availabl
 <span class="lineno">  71</span> 		mFooter.setVisibility(View.GONE);
 <span class="lineno">  72</span> 		return super.onCreateView(inflater, container, savedInstanceState);
 </pre>
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java">../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java</a>:147</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 144</span> 	@Override
-<span class="lineno"> 145</span> 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-<span class="lineno"> 146</span> 	                         Bundle savedInstanceState) {
-<span class="lineno"> 147</span> 		mFooter = inflater.inflate(R.layout.listview_footer,<span class="errorspan">null);</span>
-<span class="lineno"> 148</span> 		mFooter.setVisibility(View.GONE);
-<span class="lineno"> 149</span> 		View view = super.onCreateView(inflater, container, savedInstanceState);
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java">../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java</a>:152</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 149</span> 	@Override
+<span class="lineno"> 150</span> 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+<span class="lineno"> 151</span> 	                         Bundle savedInstanceState) {
+<span class="lineno"> 152</span> 		mFooter = inflater.inflate(R.layout.listview_footer,<span class="errorspan">null);</span>
+<span class="lineno"> 153</span> 		mFooter.setVisibility(View.GONE);
+<span class="lineno"> 154</span> 		View view = super.onCreateView(inflater, container, savedInstanceState);
 </pre>
 </div>
 </div>
