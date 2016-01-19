@@ -667,6 +667,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
             line="4"
             column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="4"
+            column="11"/>
     </issue>
 
     <issue
@@ -697,6 +701,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="19"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="19"
             column="11"/>
     </issue>
@@ -731,6 +739,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
             line="24"
             column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="24"
+            column="11"/>
     </issue>
 
     <issue
@@ -761,6 +773,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="70"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="70"
             column="11"/>
     </issue>
@@ -795,6 +811,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
             line="89"
             column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="89"
+            column="11"/>
     </issue>
 
     <issue
@@ -825,6 +845,10 @@ There are cases where this is not the case, so this issue is a warning rather th
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="109"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="109"
             column="11"/>
     </issue>

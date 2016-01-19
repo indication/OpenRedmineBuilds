@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="org.transdroid.daemon.util.SocketFactoryTest" tests="2" failures="0" errors="0" skipped="0" time="0.086" timestamp="2015-12-30T11:26:01" hostname="localhost">
+<testsuite name="org.transdroid.daemon.util.SocketFactoryTest" tests="2" failures="0" errors="0" skipped="0" time="0.076" timestamp="2016-01-19T16:55:15" hostname="localhost">
   <properties>
     <property name="device" value="test(AVD) - 4.4.4" />
     <property name="flavor" value="" />
