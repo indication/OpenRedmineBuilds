@@ -18,26 +18,18 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Tue Jan 26 15:35:09 UTC 2016.<br/>
-0 errors and 133 warnings found:<br/><br/>
+Check performed at Thu Jan 28 16:27:21 UTC 2016.<br/>
+0 errors and 137 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
-<a href="#OldTargetApi">OldTargetApi: Target SDK attribute is not targeting latest version</a>
 </td></tr>
 <tr>
 <td class="countColumn">14</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
 <a href="#InflateParams">InflateParams: Layout Inflation without a Parent</a>
 </td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
-<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
-</td></tr>
-<tr>
-<td class="countColumn">8</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
-<a href="#GradleDynamicVersion">GradleDynamicVersion: Gradle Dynamic Version</a>
+<td class="countColumn">14</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#PrivateResource">PrivateResource: Using private resources</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
 </td></tr>
@@ -58,6 +50,10 @@ Check performed at Tue Jan 26 15:35:09 UTC 2016.<br/>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
 <a href="#ExportedContentProvider">ExportedContentProvider: Content provider does not require permission</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#AllowBackup">AllowBackup: Missing <code>allowBackup</code> attribute</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
@@ -98,34 +94,6 @@ Check performed at Tue Jan 26 15:35:09 UTC 2016.<br/>
 <br/>
 <a name="Correctness"></a>
 <div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
-</div>
-<a name="OldTargetApi"></a>
-<div class="issue">
-<div class="id"><a href="#" title="Return to top">OldTargetApi: Target SDK attribute is not targeting latest version</a><div class="issueSeparator"></div>
-</div>
-<div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:9</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
-<span class="lineno">   6</span>     testBuildType "debug"
-<span class="lineno">   7</span>     defaultConfig {
-<span class="lineno">   8</span>         minSdkVersion 8
-<span class="lineno">   9</span>         <span class="errorspan">targetSdkVersion 21</span>
-<span class="lineno">  10</span> 
-<span class="lineno">  11</span>         versionCode 50
-</pre>
-</div>
-<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
-<br>
-Priority: 6 / 10<br/>
-Category: Correctness</div>
-Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Target SDK attribute is not targeting latest version.</div>
-<div class="explanation">
-When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
-<br/>
-To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
-</div>
-<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
-</div><br/>To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 <a name="InflateParams"></a>
 <div class="issue">
@@ -258,119 +226,137 @@ When inflating a layout, avoid passing in null as the parent view, since otherwi
 <br/><div class="moreinfo">More info: <a href="http://www.doubleencore.com/2013/05/layout-inflation-as-intended">http://www.doubleencore.com/2013/05/layout-inflation-as-intended</a>
 </div><br/>To suppress this error, use the issue id "InflateParams" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
-<a name="GradleDependency"></a>
+<a name="PrivateResource"></a>
 <div class="issue">
-<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+<div class="id"><a href="#" title="Return to top">PrivateResource: Using private resources</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:49</span>: <span class="message">A newer version of com.android.support:support-v4 than 21.0.+ is available: 23.1.1</span><br /><pre class="errorlines">
-<span class="lineno">  46</span>     compile project(':Transdroid')
-<span class="lineno">  47</span>     androidTestCompile 'com.google.guava:guava:+'
-<span class="lineno">  48</span>     androidTestCompile 'junit:junit:4.8.2'
-<span class="lineno">  49</span>     <span class="errorspan">compile 'com.android.support:support-v4:21.0.+'</span>
-<span class="lineno">  50</span>     compile 'com.android.support:appcompat-v7:21.0.+'
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/form/RelationForm.java">../../src/main/java/jp/redmine/redmineclient/adapter/form/RelationForm.java</a>:31</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  28</span> 		textStatus = (TextView)view.findViewById(R.id.textStatus);
+<span class="lineno">  29</span> 		textDelay = (TextView)view.findViewById(R.id.textDelay);
+<span class="lineno">  30</span> 		progressBar = (ProgressBar)view.findViewById(R.id.progressissue);
+<span class="lineno">  31</span> 		imageIcon = (ImageView)view.findViewById(<span class="errorspan">R.id.icon);</span>
+<span class="lineno">  32</span> 
+<span class="lineno">  33</span> 	}
 </pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:50</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 21.0.+ is available: 23.1.1</span><br /><pre class="errorlines">
-<span class="lineno">  47</span>     androidTestCompile 'com.google.guava:guava:+'
-<span class="lineno">  48</span>     androidTestCompile 'junit:junit:4.8.2'
-<span class="lineno">  49</span>     compile 'com.android.support:support-v4:21.0.+'
-<span class="lineno">  50</span>     <span class="errorspan">compile 'com.android.support:appcompat-v7:21.0.+'</span>
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-<span class="lineno">  52</span>     compile 'se.emilsjolander:stickylistheaders:2.+'
+<span class="location"><a href="../../src/main/res/layout/listheader_connection.xml">../../src/main/res/layout/listheader_connection.xml</a>:9</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">   6</span> 	android:layout_height="wrap_content"
+<span class="lineno">   7</span> 	android:padding="5dp">
+<span class="lineno">   8</span> 	&lt;ImageView
+<span class="lineno">   9</span> 		android:id="<span class="errorspan">@+id/icon"</span>
+<span class="lineno">  10</span> 		android:layout_width="wrap_content"
+<span class="lineno">  11</span> 		android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listheader_connection.xml">../../src/main/res/layout/listheader_connection.xml</a>:26</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  23</span> 		android:text="Connection Name"
+<span class="lineno">  24</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  25</span> 		android:textAppearance="?android:attr/textAppearanceMedium"
+<span class="lineno">  26</span> 		android:layout_toRightOf="<span class="errorspan">@+id/icon"</span>
+<span class="lineno">  27</span> 		android:layout_centerVertical="true"/>
+<span class="lineno">  28</span> &lt;/RelativeLayout>
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listheader_journal.xml">../../src/main/res/layout/listheader_journal.xml</a>:9</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">   6</span> 	android:layout_height="wrap_content">
+<span class="lineno">   7</span> 
+<span class="lineno">   8</span> 	&lt;ImageView
+<span class="lineno">   9</span> 		android:id="<span class="errorspan">@+id/image"</span>
+<span class="lineno">  10</span> 		android:layout_width="wrap_content"
+<span class="lineno">  11</span> 		android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listheader_journal.xml">../../src/main/res/layout/listheader_journal.xml</a>:27</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  24</span> 		android:textAppearance="?android:attr/textAppearanceMedium"
+<span class="lineno">  25</span> 		android:layout_toLeftOf="@+id/date"
+<span class="lineno">  26</span> 		android:layout_centerVertical="true"
+<span class="lineno">  27</span> 		android:layout_toRightOf="<span class="errorspan">@+id/image"/></span>
+<span class="lineno">  28</span> 
+<span class="lineno">  29</span> 	&lt;TextView
+</pre>
+<button id="PrivateResourceDivLink" onclick="reveal('PrivateResourceDiv');" />+ 9 More Occurrences...</button>
+<div id="PrivateResourceDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/layout/listitem_attachment.xml">../../src/main/res/layout/listitem_attachment.xml</a>:15</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  12</span> 		android:layout_gravity="center_vertical"
+<span class="lineno">  13</span> 		android:src="@drawable/ic_action_attachment"
+<span class="lineno">  14</span> 		android:contentDescription="@string/ticket_attachments"
+<span class="lineno">  15</span> 		android:id="<span class="errorspan">@+id/image"</span>
+<span class="lineno">  16</span> 		android:layout_alignTop="@+id/textCreated"
+<span class="lineno">  17</span> 		android:layout_alignBottom="@+id/textCreated"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_attachment.xml">../../src/main/res/layout/listitem_attachment.xml</a>:27</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  24</span> 		android:text="Attachment file name.png"
+<span class="lineno">  25</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  26</span> 		android:layout_centerVertical="true"
+<span class="lineno">  27</span> 		android:layout_toRightOf="<span class="errorspan">@+id/image"</span>
+<span class="lineno">  28</span> 		android:layout_toEndOf="@+id/image"
+<span class="lineno">  29</span> 		android:layout_toLeftOf="@+id/textCreated"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_attachment.xml">../../src/main/res/layout/listitem_attachment.xml</a>:28</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  25</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  26</span> 		android:layout_centerVertical="true"
+<span class="lineno">  27</span> 		android:layout_toRightOf="@+id/image"
+<span class="lineno">  28</span> 		android:layout_toEndOf="<span class="errorspan">@+id/image"</span>
+<span class="lineno">  29</span> 		android:layout_toLeftOf="@+id/textCreated"/>
+<span class="lineno">  30</span> 
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_relation.xml">../../src/main/res/layout/listitem_relation.xml</a>:10</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">   7</span> 	android:padding="10dp">
+<span class="lineno">   8</span> 
+<span class="lineno">   9</span> 	&lt;ImageView
+<span class="lineno">  10</span> 		android:id="<span class="errorspan">@+id/icon"</span>
+<span class="lineno">  11</span> 		android:layout_width="wrap_content"
+<span class="lineno">  12</span> 		android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_relation.xml">../../src/main/res/layout/listitem_relation.xml</a>:25</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  22</span> 		android:layout_height="wrap_content"
+<span class="lineno">  23</span> 		android:layout_alignParentBottom="false"
+<span class="lineno">  24</span> 		android:layout_alignParentLeft="true"
+<span class="lineno">  25</span> 		android:layout_below="<span class="errorspan">@+id/icon"</span>
+<span class="lineno">  26</span> 		android:layout_alignParentRight="true"/>
+<span class="lineno">  27</span> 
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_relation.xml">../../src/main/res/layout/listitem_relation.xml</a>:36</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  33</span> 		android:text="1 day behind"
+<span class="lineno">  34</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  35</span> 		android:layout_centerVertical="true"
+<span class="lineno">  36</span> 		android:layout_toRightOf="<span class="errorspan">@+id/icon"</span>
+<span class="lineno">  37</span> 		android:layout_toEndOf="@+id/icon"/>
+<span class="lineno">  38</span> 
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_relation.xml">../../src/main/res/layout/listitem_relation.xml</a>:37</span>: <span class="message">The resource <code>@id/icon</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  34</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  35</span> 		android:layout_centerVertical="true"
+<span class="lineno">  36</span> 		android:layout_toRightOf="@+id/icon"
+<span class="lineno">  37</span> 		android:layout_toEndOf="<span class="errorspan">@+id/icon"/></span>
+<span class="lineno">  38</span> 
+<span class="lineno">  39</span> 	&lt;TextView
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_timeentry.xml">../../src/main/res/layout/listitem_timeentry.xml</a>:16</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  13</span> 		android:contentDescription="@string/ticket_time"
+<span class="lineno">  14</span> 		android:layout_alignTop="@+id/textTimeEntry"
+<span class="lineno">  15</span> 		android:layout_alignBottom="@+id/textTimeEntry"
+<span class="lineno">  16</span> 		android:id="<span class="errorspan">@+id/image"/></span>
+<span class="lineno">  17</span> 
+<span class="lineno">  18</span> 	&lt;TextView
+</pre>
+<span class="location"><a href="../../src/main/res/layout/listitem_timeentry.xml">../../src/main/res/layout/listitem_timeentry.xml</a>:25</span>: <span class="message">The resource <code>@id/image</code> is marked as private in com.android.support:appcompat-v7</span><br /><pre class="errorlines">
+<span class="lineno">  22</span> 		android:layout_gravity="center_vertical"
+<span class="lineno">  23</span> 		android:text="Activity"
+<span class="lineno">  24</span> 		tools:ignore="HardcodedText"
+<span class="lineno">  25</span> 		android:layout_toRightOf="<span class="errorspan">@+id/image"</span>
+<span class="lineno">  26</span> 		android:layout_centerVertical="true"/>
+<span class="lineno">  27</span> 
 </pre>
 </div>
-<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
-<br>
-Priority: 4 / 10<br/>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
 Category: Correctness</div>
 Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Obsolete Gradle Dependency.</div>
+Explanation: Using private resources.</div>
 <div class="explanation">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+Private resources should not be referenced; the may not be present everywhere, and even where they are they may disappear without notice.<br/>
+<br/>
+To fix this, copy the resource into your own project instead.
 </div>
-<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-</div>
-<a name="GradleDynamicVersion"></a>
-<div class="issue">
-<div class="id"><a href="#" title="Return to top">GradleDynamicVersion: Gradle Dynamic Version</a><div class="issueSeparator"></div>
-</div>
-<div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:47</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.google.guava:guava:+)</span><br /><pre class="errorlines">
-<span class="lineno">  44</span> 
-<span class="lineno">  45</span> dependencies {
-<span class="lineno">  46</span>     compile project(':Transdroid')
-<span class="lineno">  47</span>     <span class="errorspan">androidTestCompile 'com.google.guava:guava:+'</span>
-<span class="lineno">  48</span>     androidTestCompile 'junit:junit:4.8.2'
-<span class="lineno">  49</span>     compile 'com.android.support:support-v4:21.0.+'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:49</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.android.support:support-v4:21.0.+)</span><br /><pre class="errorlines">
-<span class="lineno">  46</span>     compile project(':Transdroid')
-<span class="lineno">  47</span>     androidTestCompile 'com.google.guava:guava:+'
-<span class="lineno">  48</span>     androidTestCompile 'junit:junit:4.8.2'
-<span class="lineno">  49</span>     <span class="errorspan">compile 'com.android.support:support-v4:21.0.+'</span>
-<span class="lineno">  50</span>     compile 'com.android.support:appcompat-v7:21.0.+'
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:50</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.android.support:appcompat-v7:21.0.+)</span><br /><pre class="errorlines">
-<span class="lineno">  47</span>     androidTestCompile 'com.google.guava:guava:+'
-<span class="lineno">  48</span>     androidTestCompile 'junit:junit:4.8.2'
-<span class="lineno">  49</span>     compile 'com.android.support:support-v4:21.0.+'
-<span class="lineno">  50</span>     <span class="errorspan">compile 'com.android.support:appcompat-v7:21.0.+'</span>
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-<span class="lineno">  52</span>     compile 'se.emilsjolander:stickylistheaders:2.+'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:52</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (se.emilsjolander:stickylistheaders:2.+)</span><br /><pre class="errorlines">
-<span class="lineno">  49</span>     compile 'com.android.support:support-v4:21.0.+'
-<span class="lineno">  50</span>     compile 'com.android.support:appcompat-v7:21.0.+'
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-<span class="lineno">  52</span>     <span class="errorspan">compile 'se.emilsjolander:stickylistheaders:2.+'</span>
-<span class="lineno">  53</span>     compile 'com.j256.ormlite:ormlite-core:4.+'
-<span class="lineno">  54</span>     compile 'com.j256.ormlite:ormlite-android:4.+'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:53</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.j256.ormlite:ormlite-core:4.+)</span><br /><pre class="errorlines">
-<span class="lineno">  50</span>     compile 'com.android.support:appcompat-v7:21.0.+'
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-<span class="lineno">  52</span>     compile 'se.emilsjolander:stickylistheaders:2.+'
-<span class="lineno">  53</span>     <span class="errorspan">compile 'com.j256.ormlite:ormlite-core:4.+'</span>
-<span class="lineno">  54</span>     compile 'com.j256.ormlite:ormlite-android:4.+'
-<span class="lineno">  55</span>     compile 'org.apache.commons:commons-lang3:3.+'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:54</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.j256.ormlite:ormlite-android:4.+)</span><br /><pre class="errorlines">
-<span class="lineno">  51</span>     compile 'com.andreabaccega:android-form-edittext:1.1.0'
-<span class="lineno">  52</span>     compile 'se.emilsjolander:stickylistheaders:2.+'
-<span class="lineno">  53</span>     compile 'com.j256.ormlite:ormlite-core:4.+'
-<span class="lineno">  54</span>     <span class="errorspan">compile 'com.j256.ormlite:ormlite-android:4.+'</span>
-<span class="lineno">  55</span>     compile 'org.apache.commons:commons-lang3:3.+'
-<span class="lineno">  56</span>     compile 'net.java:textile-j:2.2'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:55</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (org.apache.commons:commons-lang3:3.+)</span><br /><pre class="errorlines">
-<span class="lineno">  52</span>     compile 'se.emilsjolander:stickylistheaders:2.+'
-<span class="lineno">  53</span>     compile 'com.j256.ormlite:ormlite-core:4.+'
-<span class="lineno">  54</span>     compile 'com.j256.ormlite:ormlite-android:4.+'
-<span class="lineno">  55</span>     <span class="errorspan">compile 'org.apache.commons:commons-lang3:3.+'</span>
-<span class="lineno">  56</span>     compile 'net.java:textile-j:2.2'
-<span class="lineno">  57</span>     compile 'org.commonjava.googlecode.markdown4j:markdown4j:+'
-</pre>
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:57</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (org.commonjava.googlecode.markdown4j:markdown4j:+)</span><br /><pre class="errorlines">
-<span class="lineno">  54</span>     compile 'com.j256.ormlite:ormlite-android:4.+'
-<span class="lineno">  55</span>     compile 'org.apache.commons:commons-lang3:3.+'
-<span class="lineno">  56</span>     compile 'net.java:textile-j:2.2'
-<span class="lineno">  57</span>     <span class="errorspan">compile 'org.commonjava.googlecode.markdown4j:markdown4j:+'</span>
-<span class="lineno">  58</span> }
-<span class="lineno">  59</span> 
-</pre>
-</div>
-<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
-<br>
-Priority: 4 / 10<br/>
-Category: Correctness</div>
-Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Gradle Dynamic Version.</div>
-<div class="explanation">
-Using <code>+</code> in dependencies lets you automatically pick up the latest available version rather than a specific, named version. However, this is not recommended; your builds are not repeatable; you may have tested with a slightly different version than what the build server used. (Using a dynamic version as the major version number is more problematic than using it in the minor version position.)
-</div>
-<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDynamicVersion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "PrivateResource" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 
 <a name="Correctness:Messages"></a>
@@ -511,6 +497,40 @@ Explanation: Content provider does not require permission.</div>
 Content providers are exported by default and any application on the system can potentially use them to read and write data. If the content provider provides access to sensitive data, it should be protected by specifying <code>export=false</code> in the manifest or by protecting it with a permission that can be granted to other applications.
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ExportedContentProvider" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="AllowBackup"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">AllowBackup: Missing <code>allowBackup</code> attribute</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:9</span>: <span class="message">Should explicitly set <code>android:fullBackupContent</code> to <code>true</code> or <code>false</code> to opt-in to or out of full app data back-up and restore, or alternatively to an <code>@xml</code> resource which specifies which files to backup</span><br /><pre class="errorlines">
+<span class="lineno">   6</span>     &lt;uses-permission android:name="android.permission.INTERNET" />
+<span class="lineno">   7</span>     &lt;uses-permission android:name="android.permission.VIBRATE" />
+<span class="lineno">   8</span> 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<span class="lineno">   9</span>     <span class="errorspan">&lt;application</span>
+<span class="lineno">  10</span>         android:icon="@drawable/ic_launcher"
+<span class="lineno">  11</span>         android:label="@string/app_name"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing <code>allowBackup</code> attribute.</div>
+<div class="explanation">
+The allowBackup attribute determines if an application's data can be backed up and restored. It is documented at <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a><br/>
+<br/>
+By default, this flag is set to <code>true</code>. When this flag is set to <code>true</code>, application data can be backed up and restored by the user using <code>adb backup</code> and <code>adb restore</code>.<br/>
+<br/>
+This may have security consequences for an application. <code>adb backup</code> allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. <code>adb restore</code> allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.<br/>
+<br/>
+Setting <code>allowBackup="false"</code> opts an application out of both backup and restore.<br/>
+<br/>
+To fix this warning, decide whether your application should support backup, and explicitly set <code>android:allowBackup=(true|false)"</code>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a>
+</div><br/>To suppress this error, use the issue id "AllowBackup" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 
 <a name="Performance"></a>
