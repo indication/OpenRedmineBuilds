@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="org.transdroid.daemon.util.SocketFactoryTest" tests="2" failures="0" errors="0" skipped="0" time="0.085" timestamp="2016-01-28T16:30:29" hostname="localhost">
+<testsuite name="org.transdroid.daemon.util.SocketFactoryTest" tests="2" failures="0" errors="0" skipped="0" time="0.131" timestamp="2016-01-29T14:21:15" hostname="localhost">
   <properties>
     <property name="device" value="test(AVD) - 4.4.4" />
     <property name="flavor" value="" />
     <property name="project" value="Transdroid" />
   </properties>
-  <testcase name="testAndroidTestCaseSetupProperly" classname="org.transdroid.daemon.util.SocketFactoryTest" time="0.05" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.transdroid.daemon.util.SocketFactoryTest" time="0.026" />
   <testcase name="testDummy" classname="org.transdroid.daemon.util.SocketFactoryTest" time="0.0" />
 </testsuite>
