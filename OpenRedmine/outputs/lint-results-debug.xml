@@ -15,7 +15,7 @@
         errorLine2="                                                   ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="102"
+            line="101"
             column="52"/>
     </issue>
 
@@ -69,7 +69,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="164"
+            line="159"
             column="55"/>
     </issue>
 
@@ -87,7 +87,7 @@
         errorLine2="                                                        ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="166"
+            line="161"
             column="57"/>
     </issue>
 
@@ -123,7 +123,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="185"
+            line="172"
             column="55"/>
     </issue>
 
@@ -177,7 +177,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java"
-            line="109"
+            line="104"
             column="55"/>
     </issue>
 
@@ -195,7 +195,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
-            line="123"
+            line="117"
             column="55"/>
     </issue>
 
@@ -231,7 +231,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java"
-            line="70"
+            line="64"
             column="55"/>
     </issue>
 
@@ -249,42 +249,8 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java"
-            line="152"
+            line="147"
             column="55"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.android.support:support-v4 than 23.1.1 is available: 23.4.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    compile &apos;com.android.support:support-v4:23.1.1&apos;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="57"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of com.android.support:appcompat-v7 than 23.1.1 is available: 23.4.0"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    compile &apos;com.android.support:appcompat-v7:23.1.1&apos;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        quickfix="studio">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="58"
-            column="5"/>
     </issue>
 
     <issue
@@ -414,6 +380,44 @@ There are cases where this is not the case, so this issue is a warning rather th
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="97"
             column="2"/>
+    </issue>
+
+    <issue
+        id="TrulyRandom"
+        severity="Warning"
+        message="Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info."
+        category="Security"
+        priority="9"
+        summary="Weak RNG"
+        explanation="Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.
+
+If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .
+
+This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue."
+        url="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        urls="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        errorLine1="      context.init(null, trustManagers, new SecureRandom());"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/task/Fetcher.java"
+            line="131"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="      public void checkServerTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/task/Fetcher.java"
+            line="120"
+            column="19"/>
     </issue>
 
     <issue
@@ -582,6 +586,42 @@ If not set to false, and if targeting API 23 or later, lint will also warn that 
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="19"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.menu_settings_uploading` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;menu_settings_uploading&quot;>Posting item data.. &lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="23"
+            column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="23"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="23"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="23"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="23"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="23"
             column="11"/>
     </issue>
 
@@ -989,12 +1029,12 @@ For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStar
 For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.
 
 (Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="          android:layout_marginRight=&quot;3dp&quot;"
-        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="     android:layout_marginRight=&quot;3dp&quot;"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_issue.xml"
-            line="151"
-            column="11"/>
+            line="157"
+            column="6"/>
     </issue>
 
     <issue
