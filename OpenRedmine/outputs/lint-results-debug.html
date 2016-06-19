@@ -18,8 +18,8 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Sun Jun 19 14:41:49 UTC 2016.<br/>
-0 errors and 131 warnings found:<br/><br/>
+Check performed at Sun Jun 19 15:10:53 UTC 2016.<br/>
+0 errors and 130 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
@@ -54,10 +54,6 @@ Check performed at Sun Jun 19 14:41:49 UTC 2016.<br/>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results-debug_files/lint-warning.png" alt="Warning" />
 <a href="#TrustAllX509TrustManager">TrustAllX509TrustManager: Insecure TLS/SSL trust manager</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results-debug_files/lint-warning.png" alt="Warning" />
-<a href="#ExportedContentProvider">ExportedContentProvider: Content provider does not require permission</a>
 </td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results-debug_files/lint-warning.png" alt="Warning" />
@@ -186,13 +182,13 @@ Check performed at Sun Jun 19 14:41:49 UTC 2016.<br/>
 <span class="lineno"> 403</span> 			convertView.setTag(R.layout.listheader_journal);
 <span class="lineno"> 404</span> 		}
 </pre>
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java">../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java</a>:94</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  91</span> 
-<span class="lineno">  92</span> 	private void showHttpAuthDialog( final HttpAuthHandler handler, final String host, final String realm, final String title ) {
-<span class="lineno">  93</span> 		LayoutInflater inflater = ((Activity)mContext).getLayoutInflater();
-<span class="lineno">  94</span> 		View view = inflater.inflate(R.layout.input_basicauthentication, <span class="errorspan">null);</span>
-<span class="lineno">  95</span> 
-<span class="lineno">  96</span> 		final HttpAuthDialogForm form = new HttpAuthDialogForm(view);
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java">../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java</a>:119</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 116</span> 
+<span class="lineno"> 117</span> 	private void showHttpAuthDialog( final HttpAuthHandler handler, final String host, final String realm, final String title ) {
+<span class="lineno"> 118</span> 		LayoutInflater inflater = ((Activity)mContext).getLayoutInflater();
+<span class="lineno"> 119</span> 		View view = inflater.inflate(R.layout.input_basicauthentication, <span class="errorspan">null);</span>
+<span class="lineno"> 120</span> 
+<span class="lineno"> 121</span> 		final HttpAuthDialogForm form = new HttpAuthDialogForm(view);
 </pre>
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java">../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java</a>:104</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
 <span class="lineno"> 101</span> 	@Override
@@ -313,21 +309,21 @@ This check looks through the string definitions, and if it finds any words that 
 <div class="id"><a href="#" title="Return to top">PluralsCandidate: Potential Plurals</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:79</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
-<span class="lineno">  76</span> 	&lt;string name="relation_duplicated">Duplicated&lt;/string>
-<span class="lineno">  77</span> 	&lt;string name="relation_blocks">Blocks&lt;/string>
-<span class="lineno">  78</span> 	&lt;string name="relation_blocked">Blocked&lt;/string>
-<span class="lineno">  79</span> 	<span class="errorspan">&lt;string name="relation_precedes">%1$d days precedes&lt;/string></span>
-<span class="lineno">  80</span> 	&lt;string name="relation_follows">%1$d days follows&lt;/string>
-<span class="lineno">  81</span> 	&lt;string name="relation_copied_to">Copied&lt;/string>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:81</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
+<span class="lineno">  78</span> 	&lt;string name="relation_duplicated">Duplicated&lt;/string>
+<span class="lineno">  79</span> 	&lt;string name="relation_blocks">Blocks&lt;/string>
+<span class="lineno">  80</span> 	&lt;string name="relation_blocked">Blocked&lt;/string>
+<span class="lineno">  81</span> 	<span class="errorspan">&lt;string name="relation_precedes">%1$d days precedes&lt;/string></span>
+<span class="lineno">  82</span> 	&lt;string name="relation_follows">%1$d days follows&lt;/string>
+<span class="lineno">  83</span> 	&lt;string name="relation_copied_to">Copied&lt;/string>
 </pre>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:80</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
-<span class="lineno">  77</span> 	&lt;string name="relation_blocks">Blocks&lt;/string>
-<span class="lineno">  78</span> 	&lt;string name="relation_blocked">Blocked&lt;/string>
-<span class="lineno">  79</span> 	&lt;string name="relation_precedes">%1$d days precedes&lt;/string>
-<span class="lineno">  80</span> 	<span class="errorspan">&lt;string name="relation_follows">%1$d days follows&lt;/string></span>
-<span class="lineno">  81</span> 	&lt;string name="relation_copied_to">Copied&lt;/string>
-<span class="lineno">  82</span> 
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:82</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
+<span class="lineno">  79</span> 	&lt;string name="relation_blocks">Blocks&lt;/string>
+<span class="lineno">  80</span> 	&lt;string name="relation_blocked">Blocked&lt;/string>
+<span class="lineno">  81</span> 	&lt;string name="relation_precedes">%1$d days precedes&lt;/string>
+<span class="lineno">  82</span> 	<span class="errorspan">&lt;string name="relation_follows">%1$d days follows&lt;/string></span>
+<span class="lineno">  83</span> 	&lt;string name="relation_copied_to">Copied&lt;/string>
+<span class="lineno">  84</span> 
 </pre>
 </div>
 <div class="metadata">Priority: 5 / 10<br/>
@@ -356,29 +352,29 @@ This will ensure that in other languages the right set of translations are provi
 <div class="id"><a href="#" title="Return to top">StringFormatCount: Formatting argument types incomplete or inconsistent</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:58</span>: <span class="message">Formatting string '<code>ticket_modified_by</code>' is not referencing numbered arguments [1]</span><br /><pre class="errorlines">
-<span class="lineno">  55</span>   &lt;string name="ticket_date_arrow">&#9654;&lt;/string>
-<span class="lineno">  56</span>   &lt;string name="ticket_date_closed">Schliessungsdatum&lt;/string>
-<span class="lineno">  57</span>   &lt;string name="ticket_modified">Zuletzt bearbeitet&lt;/string>
-<span class="lineno">  58</span>   <span class="errorspan">&lt;string name="ticket_modified_by">%2$s&lt;/string></span>
-<span class="lineno">  59</span>   &lt;string name="ticket_time">Zeit&lt;/string>
-<span class="lineno">  60</span>   &lt;string name="ticket_time_estimate">%.2f&lt;/string>
+<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:60</span>: <span class="message">Formatting string '<code>ticket_modified_by</code>' is not referencing numbered arguments [1]</span><br /><pre class="errorlines">
+<span class="lineno">  57</span>   &lt;string name="ticket_date_arrow">&#9654;&lt;/string>
+<span class="lineno">  58</span>   &lt;string name="ticket_date_closed">Schliessungsdatum&lt;/string>
+<span class="lineno">  59</span>   &lt;string name="ticket_modified">Zuletzt bearbeitet&lt;/string>
+<span class="lineno">  60</span>   <span class="errorspan">&lt;string name="ticket_modified_by">%2$s&lt;/string></span>
+<span class="lineno">  61</span>   &lt;string name="ticket_time">Zeit&lt;/string>
+<span class="lineno">  62</span>   &lt;string name="ticket_time_estimate">%.2f&lt;/string>
 </pre>
-<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:94</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno">  91</span>   &lt;string name="filter_none">Kein&lt;/string>
-<span class="lineno">  92</span>   &lt;string name="edit">Bearbeiten&lt;/string>
-<span class="lineno">  93</span>   &lt;string name="changes_from_to">Ändere &lt;b>%1$s&lt;/b> von %2$s auf %3$s&lt;/string>
-<span class="lineno">  94</span>   <span class="errorspan">&lt;string name="changes_set_to">Setze &lt;b>%1$s&lt;/b> auf %3$s&lt;/string></span>
-<span class="lineno">  95</span>   &lt;string name="changes_remove_from">Lösche &lt;s>%2$s&lt;/s> von &lt;b>%1$s&lt;/b>&lt;/string>
-<span class="lineno">  96</span>   &lt;string name="remote_401">Authentifizierung wird benötigt. Bitte überprüfen Sie Ihre Rolle oder den API-Schlüssel.&lt;/string>
+<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:96</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno">  93</span>   &lt;string name="filter_none">Kein&lt;/string>
+<span class="lineno">  94</span>   &lt;string name="edit">Bearbeiten&lt;/string>
+<span class="lineno">  95</span>   &lt;string name="changes_from_to">Ändere &lt;b>%1$s&lt;/b> von %2$s auf %3$s&lt;/string>
+<span class="lineno">  96</span>   <span class="errorspan">&lt;string name="changes_set_to">Setze &lt;b>%1$s&lt;/b> auf %3$s&lt;/string></span>
+<span class="lineno">  97</span>   &lt;string name="changes_remove_from">Lösche &lt;s>%2$s&lt;/s> von &lt;b>%1$s&lt;/b>&lt;/string>
+<span class="lineno">  98</span>   &lt;string name="remote_401">Authentifizierung wird benötigt. Bitte überprüfen Sie Ihre Rolle oder den API-Schlüssel.&lt;/string>
 </pre>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:97</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno">  94</span> 	&lt;string name="filter_none">None&lt;/string>
-<span class="lineno">  95</span> 	&lt;string name="edit">Edit&lt;/string>
-<span class="lineno">  96</span> 	&lt;string name="changes_from_to">Change &lt;b>%1$s&lt;/b> from %2$s to %3$s&lt;/string>
-<span class="lineno">  97</span> 	<span class="errorspan">&lt;string name="changes_set_to">Set &lt;b>%1$s&lt;/b> to %3$s&lt;/string></span>
-<span class="lineno">  98</span> 	&lt;string name="changes_remove_from">Remove &lt;s>%2$s&lt;/s> from &lt;b>%1$s&lt;/b>&lt;/string>
-<span class="lineno">  99</span> 	&lt;string name="remote_401">Authentication is required. Check your role or API key.&lt;/string>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:99</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno">  96</span> 	&lt;string name="filter_none">None&lt;/string>
+<span class="lineno">  97</span> 	&lt;string name="edit">Edit&lt;/string>
+<span class="lineno">  98</span> 	&lt;string name="changes_from_to">Change &lt;b>%1$s&lt;/b> from %2$s to %3$s&lt;/string>
+<span class="lineno">  99</span> 	<span class="errorspan">&lt;string name="changes_set_to">Set &lt;b>%1$s&lt;/b> to %3$s&lt;/string></span>
+<span class="lineno"> 100</span> 	&lt;string name="changes_remove_from">Remove &lt;s>%2$s&lt;/s> from &lt;b>%1$s&lt;/b>&lt;/string>
+<span class="lineno"> 101</span> 	&lt;string name="remote_401">Authentication is required. Check your role or API key.&lt;/string>
 </pre>
 </div>
 <div class="metadata">Priority: 5 / 10<br/>
@@ -447,41 +443,18 @@ This check looks for X509TrustManager implementations whose <code>checkServerTru
 </div>
 <br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "TrustAllX509TrustManager" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
-<a name="ExportedContentProvider"></a>
-<div class="issue">
-<div class="id"><a href="#" title="Return to top">ExportedContentProvider: Content provider does not require permission</a><div class="issueSeparator"></div>
-</div>
-<div class="warningslist">
-<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:61</span>: <span class="message">Exported content providers can provide access to potentially sensitive data</span><br /><pre class="errorlines">
-<span class="lineno">  58</span> 				  android:configChanges="orientation|screenSize|keyboardHidden">&lt;/activity>
-<span class="lineno">  59</span> 		&lt;activity android:name=".activity.WebViewActivity"
-<span class="lineno">  60</span> 				  android:configChanges="orientation|screenSize|keyboardHidden" />
-<span class="lineno">  61</span> 		<span class="errorspan">&lt;provider</span>
-<span class="lineno">  62</span> 			android:name=".provider.Attachment"
-<span class="lineno">  63</span> 			android:authorities="jp.redmine.redmineclient.attachment"
-</pre>
-</div>
-<div class="metadata">Priority: 5 / 10<br/>
-Category: Security</div>
-Severity: <span class="warning">Warning</span><div class="summary">
-Explanation: Content provider does not require permission.</div>
-<div class="explanation">
-Content providers are exported by default and any application on the system can potentially use them to read and write data. If the content provider provides access to sensitive data, it should be protected by specifying <code>export=false</code> in the manifest or by protecting it with a permission that can be granted to other applications.
-</div>
-<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ExportedContentProvider" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-</div>
 <a name="AllowBackup"></a>
 <div class="issue">
 <div class="id"><a href="#" title="Return to top">AllowBackup: AllowBackup/FullBackupContent Problems</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:9</span>: <span class="message">On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute <code>android:fullBackupContent</code> to specify an <code>@xml</code> resource which configures which files to backup. More info: https://developer.android.com/preview/backup/index.html</span><br /><pre class="errorlines">
-<span class="lineno">   6</span>     &lt;uses-permission android:name="android.permission.INTERNET" />
-<span class="lineno">   7</span>     &lt;uses-permission android:name="android.permission.VIBRATE" />
-<span class="lineno">   8</span> 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<span class="lineno">   9</span>     <span class="errorspan">&lt;application</span>
-<span class="lineno">  10</span>         android:icon="@drawable/ic_launcher"
-<span class="lineno">  11</span>         android:label="@string/app_name"
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:10</span>: <span class="message">On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute <code>android:fullBackupContent</code> to specify an <code>@xml</code> resource which configures which files to backup. More info: https://developer.android.com/preview/backup/index.html</span><br /><pre class="errorlines">
+<span class="lineno">   7</span>     &lt;uses-permission android:name="android.permission.INTERNET" />
+<span class="lineno">   8</span>     &lt;uses-permission android:name="android.permission.VIBRATE" />
+<span class="lineno">   9</span> 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<span class="lineno">  10</span>     <span class="errorspan">&lt;application</span>
+<span class="lineno">  11</span>         android:icon="@drawable/ic_launcher"
+<span class="lineno">  12</span>         android:label="@string/app_name"
 </pre>
 </div>
 <div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ & Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results-debug_files/lint-run.png" />
@@ -626,58 +599,58 @@ Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:24</span>
 </ul>
 </div><br/><br/>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:70</span>: <span class="message">The resource <code>R.string.ticket_jump</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  67</span> 	&lt;string name="ticket_relations">Relations&lt;/string>
-<span class="lineno">  68</span> 	&lt;string name="ticket_journals">Journals&lt;/string>
-<span class="lineno">  69</span> 	&lt;string name="ticket_attachments">Attachments&lt;/string>
-<span class="lineno">  70</span> 	&lt;string <span class="errorspan">name="ticket_jump">Jump&lt;/string></span>
-<span class="lineno">  71</span> 	&lt;string name="ticket_watcher">Watchers&lt;/string>
-<span class="lineno">  72</span> 
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:72</span>: <span class="message">The resource <code>R.string.ticket_jump</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  69</span> 	&lt;string name="ticket_relations">Relations&lt;/string>
+<span class="lineno">  70</span> 	&lt;string name="ticket_journals">Journals&lt;/string>
+<span class="lineno">  71</span> 	&lt;string name="ticket_attachments">Attachments&lt;/string>
+<span class="lineno">  72</span> 	&lt;string <span class="errorspan">name="ticket_jump">Jump&lt;/string></span>
+<span class="lineno">  73</span> 	&lt;string name="ticket_watcher">Watchers&lt;/string>
+<span class="lineno">  74</span> 
 </pre>
 <ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 5 Additional Locations...</button>
 <div id="Location8Div" style="display: none">
 Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:70</span>
-<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:70</span>
-<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:70</span>
-<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:70</span>
-<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:70</span>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:72</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:72</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:72</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:72</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:72</span>
 </ul>
 </div><br/><br/>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:92</span>: <span class="message">The resource <code>R.string.menu_add_timeentry</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  89</span> 	&lt;string name="descending">descending&lt;/string>
-<span class="lineno">  90</span> 	&lt;string name="menu_setting_goto_redmine">Get token&lt;/string>
-<span class="lineno">  91</span> 	&lt;string name="menu_setting_message_accesstoken">NOTE: To get AccessToken, press \"Get token\" button.&lt;/string>
-<span class="lineno">  92</span> 	&lt;string <span class="errorspan">name="menu_add_timeentry">Record Time&lt;/string></span>
-<span class="lineno">  93</span> 	&lt;string name="menu_filter">Filter&lt;/string>
-<span class="lineno">  94</span> 	&lt;string name="filter_none">None&lt;/string>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:94</span>: <span class="message">The resource <code>R.string.menu_add_timeentry</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  91</span> 	&lt;string name="descending">descending&lt;/string>
+<span class="lineno">  92</span> 	&lt;string name="menu_setting_goto_redmine">Get token&lt;/string>
+<span class="lineno">  93</span> 	&lt;string name="menu_setting_message_accesstoken">NOTE: To get AccessToken, press \"Get token\" button.&lt;/string>
+<span class="lineno">  94</span> 	&lt;string <span class="errorspan">name="menu_add_timeentry">Record Time&lt;/string></span>
+<span class="lineno">  95</span> 	&lt;string name="menu_filter">Filter&lt;/string>
+<span class="lineno">  96</span> 	&lt;string name="filter_none">None&lt;/string>
 </pre>
 <ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 5 Additional Locations...</button>
 <div id="Location9Div" style="display: none">
 Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:89</span>
-<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:89</span>
-<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:89</span>
-<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:89</span>
-<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:89</span>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:91</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:91</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:91</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:91</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:91</span>
 </ul>
 </div><br/><br/>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:112</span>: <span class="message">The resource <code>R.string.progress</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 109</span> 	&lt;string name="input_error_select">Select %1$s&lt;/string>
-<span class="lineno"> 110</span> 	&lt;string name="warning_experimental_feature">This is EXPERIMANTAL. This feature may affect bad to your redmine.&lt;/string>
-<span class="lineno"> 111</span> 	&lt;string name="size">Size&lt;/string>
-<span class="lineno"> 112</span> 	&lt;string <span class="errorspan">name="progress">Progress&lt;/string></span>
-<span class="lineno"> 113</span> 	&lt;string name="download">Download&lt;/string>
-<span class="lineno"> 114</span> 	&lt;string name="download_with_manager">Download via Download Manager&lt;/string>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:114</span>: <span class="message">The resource <code>R.string.progress</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 111</span> 	&lt;string name="input_error_select">Select %1$s&lt;/string>
+<span class="lineno"> 112</span> 	&lt;string name="warning_experimental_feature">This is EXPERIMANTAL. This feature may affect bad to your redmine.&lt;/string>
+<span class="lineno"> 113</span> 	&lt;string name="size">Size&lt;/string>
+<span class="lineno"> 114</span> 	&lt;string <span class="errorspan">name="progress">Progress&lt;/string></span>
+<span class="lineno"> 115</span> 	&lt;string name="download">Download&lt;/string>
+<span class="lineno"> 116</span> 	&lt;string name="download_with_manager">Download via Download Manager&lt;/string>
 </pre>
 <ul></ul><button id="Location10DivLink" onclick="reveal('Location10Div');" />+ 5 Additional Locations...</button>
 <div id="Location10Div" style="display: none">
 Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:109</span>
-<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:109</span>
-<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:109</span>
-<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:109</span>
-<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:109</span>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:111</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:111</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:111</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:111</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:111</span>
 </ul>
 </div><br/><br/>
 </div>
@@ -761,13 +734,13 @@ Low density is not really used much anymore, so this check ignores the ldpi dens
 <div class="id"><a href="#" title="Return to top">GoogleAppIndexingWarning: Missing support for Google App Indexing</a><div class="issueSeparator"></div>
 </div>
 <div class="warningslist">
-<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:9</span>: <span class="message">App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent-filler. See issue explanation for more details.</span><br /><pre class="errorlines">
-<span class="lineno">   6</span>     &lt;uses-permission android:name="android.permission.INTERNET" />
-<span class="lineno">   7</span>     &lt;uses-permission android:name="android.permission.VIBRATE" />
-<span class="lineno">   8</span> 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-<span class="lineno">   9</span>     <span class="errorspan">&lt;application</span>
-<span class="lineno">  10</span>         android:icon="@drawable/ic_launcher"
-<span class="lineno">  11</span>         android:label="@string/app_name"
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:10</span>: <span class="message">App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent-filler. See issue explanation for more details.</span><br /><pre class="errorlines">
+<span class="lineno">   7</span>     &lt;uses-permission android:name="android.permission.INTERNET" />
+<span class="lineno">   8</span>     &lt;uses-permission android:name="android.permission.VIBRATE" />
+<span class="lineno">   9</span> 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<span class="lineno">  10</span>     <span class="errorspan">&lt;application</span>
+<span class="lineno">  11</span>         android:icon="@drawable/ic_launcher"
+<span class="lineno">  12</span>         android:label="@string/app_name"
 </pre>
 </div>
 <div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results-debug_files/lint-run.png" />
