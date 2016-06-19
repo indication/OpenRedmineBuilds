@@ -18,14 +18,18 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Mon Jun 13 16:56:50 UTC 2016.<br/>
-0 errors and 129 warnings found:<br/><br/>
+Check performed at Sun Jun 19 13:31:56 UTC 2016.<br/>
+0 errors and 131 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
 <td class="countColumn">14</td><td class="issueColumn"><img border="0" align="top" src="lint-results-debug_files/lint-warning.png" alt="Warning" />
 <a href="#InflateParams">InflateParams: Layout Inflation without a Parent</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results-debug_files/lint-warning.png" alt="Warning" />
+<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
 </td></tr>
@@ -241,6 +245,39 @@ When inflating a layout, avoid passing in null as the parent view, since otherwi
 </div>
 <br/><div class="moreinfo">More info: <a href="http://www.doubleencore.com/2013/05/layout-inflation-as-intended">http://www.doubleencore.com/2013/05/layout-inflation-as-intended</a>
 </div><br/>To suppress this error, use the issue id "InflateParams" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDependency"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:55</span>: <span class="message">A newer version of com.android.support:support-v4 than 23.4.0 is available: 24.0.0</span><br /><pre class="errorlines">
+<span class="lineno">  52</span> dependencies {
+<span class="lineno">  53</span>     androidTestCompile 'com.google.guava:guava:19.0'
+<span class="lineno">  54</span>     androidTestCompile 'junit:junit:4.12'
+<span class="lineno">  55</span>     <span class="errorspan">compile 'com.android.support:support-v4:23.4.0'</span>
+<span class="lineno">  56</span>     compile 'com.android.support:appcompat-v7:23.4.0'
+<span class="lineno">  57</span>     compile 'com.andreabaccega:android-form-edittext:1.2.1'
+</pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:56</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 23.4.0 is available: 24.0.0</span><br /><pre class="errorlines">
+<span class="lineno">  53</span>     androidTestCompile 'com.google.guava:guava:19.0'
+<span class="lineno">  54</span>     androidTestCompile 'junit:junit:4.12'
+<span class="lineno">  55</span>     compile 'com.android.support:support-v4:23.4.0'
+<span class="lineno">  56</span>     <span class="errorspan">compile 'com.android.support:appcompat-v7:23.4.0'</span>
+<span class="lineno">  57</span>     compile 'com.andreabaccega:android-form-edittext:1.2.1'
+<span class="lineno">  58</span>     compile 'se.emilsjolander:stickylistheaders:2.7.0'
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results-debug_files/lint-run.png" />
+<br>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Obsolete Gradle Dependency.</div>
+<div class="explanation">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 </div>
 
 <a name="Correctness:Messages"></a>
