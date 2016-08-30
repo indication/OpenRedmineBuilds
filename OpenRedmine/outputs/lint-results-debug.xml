@@ -256,7 +256,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:support-v4 than 23.4.0 is available: 24.0.0"
+        message="A newer version of com.android.support:support-v4 than 23.4.0 is available: 24.2.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -273,7 +273,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:appcompat-v7 than 23.4.0 is available: 24.0.0"
+        message="A newer version of com.android.support:appcompat-v7 than 23.4.0 is available: 24.2.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
