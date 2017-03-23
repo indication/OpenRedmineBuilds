@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 162 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 159 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Mar 23 16:23:00 UTC 2017      </nav>
+Check performed at Thu Mar 23 16:27:06 UTC 2017      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -184,7 +184,7 @@ Check performed at Thu Mar 23 16:23:00 UTC 2017      </nav>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
-      <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (14)</a>
+      <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (10)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (4)</a>
       <a class="mdl-navigation__link" href="#Deprecated"><i class="material-icons warning-icon">warning</i>Using deprecated resources (25)</a>
       <a class="mdl-navigation__link" href="#Typos"><i class="material-icons warning-icon">warning</i>Spelling error (2)</a>
@@ -192,7 +192,7 @@ Check performed at Thu Mar 23 16:23:00 UTC 2017      </nav>
       <a class="mdl-navigation__link" href="#StringFormatCount"><i class="material-icons warning-icon">warning</i>Formatting argument types incomplete or inconsistent (9)</a>
       <a class="mdl-navigation__link" href="#TrulyRandom"><i class="material-icons warning-icon">warning</i>Weak RNG (1)</a>
       <a class="mdl-navigation__link" href="#TrustAllX509TrustManager"><i class="material-icons warning-icon">warning</i>Insecure TLS/SSL trust manager (1)</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (10)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (11)</a>
       <a class="mdl-navigation__link" href="#TypographyEllipsis"><i class="material-icons warning-icon">warning</i>Ellipsis string can be replaced with ellipsis character (3)</a>
       <a class="mdl-navigation__link" href="#IconMissingDensityFolder"><i class="material-icons warning-icon">warning</i>Missing density folder (1)</a>
       <a class="mdl-navigation__link" href="#GoogleAppIndexingWarning"><i class="material-icons warning-icon">warning</i>Missing support for Firebase App Indexing (1)</a>
@@ -218,7 +218,7 @@ Check performed at Thu Mar 23 16:23:00 UTC 2017      </nav>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#OldTargetApi">OldTargetApi</a>: Target SDK attribute is not targeting latest version</td></tr>
 <tr>
-<td class="countColumn">14</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#InflateParams">InflateParams</a>: Layout Inflation without a Parent</td></tr>
 <tr>
 <td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -248,7 +248,7 @@ Check performed at Thu Mar 23 16:23:00 UTC 2017      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">11</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Typography">Usability:Typography</a>
 </td></tr>
@@ -358,24 +358,14 @@ Dismiss</button>            </div>
 <span class="lineno"> 103 </span>    }
 </pre>
 
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java</a>:42</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 39 </span>    <span class="annotation">@Override</span>
-<span class="lineno"> 40 </span>    <span class="keyword">public</span> View getHeaderView(<span class="keyword">int</span> i, View convertView, ViewGroup parent) {
-<span class="lineno"> 41 </span>        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {
-<span class="caretline"><span class="lineno"> 42 </span>            convertView = infrator.inflate(R.layout.listheader_connection, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 43 </span>        }
-<span class="lineno"> 44 </span>        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>)
-<span class="lineno"> 45 </span>            <span class="keyword">return</span> <span class="keyword">null</span>;
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/IssueDetailAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/IssueDetailAdapter.java</a>:97</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno">  94 </span>            convertView = <span class="keyword">null</span>;
-<span class="lineno">  95 </span>        }
-<span class="lineno">  96 </span>        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {
-<span class="caretline"><span class="lineno">  97 </span>            convertView = infrator.inflate(R.layout.listheader_journal, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  98 </span>            convertView.setTag(R.layout.listheader_journal);
-<span class="lineno">  99 </span>        }
-<span class="lineno"> 100 </span>        <span class="keyword">if</span>(convertView != <span class="keyword">null</span>){
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java</a>:31</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 28 </span>    <span class="annotation">@Override</span>
+<span class="lineno"> 29 </span>    <span class="keyword">public</span> View getHeaderView(<span class="keyword">int</span> i, View convertView, ViewGroup parent) {
+<span class="lineno"> 30 </span>        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {
+<span class="caretline"><span class="lineno"> 31 </span>            convertView = infrator.inflate(R.layout.listheader_connection, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 32 </span>        }
+<span class="lineno"> 33 </span>        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>)
+<span class="lineno"> 34 </span>            <span class="keyword">return</span> <span class="keyword">null</span>;
 </pre>
 
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueList.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueList.java</a>:159</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
@@ -398,18 +388,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 164 </span>                = ListFragmentSwipeRefreshLayout.inject(container, view);
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="InflateParamsDivLink" onclick="reveal('InflateParamsDiv');" />+ 9 More Occurrences...</button>
-<div id="InflateParamsDiv" style="display: none">
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java</a>:137</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 134 </span>        } <span class="keyword">else</span> {
-<span class="lineno"> 135 </span>            LayoutInflater infalInflater = (LayoutInflater) parent.getContext()
-<span class="lineno"> 136 </span>                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-<span class="caretline"><span class="lineno"> 137 </span>            convertView = infalInflater.inflate(R.layout.listheader_issuetitle, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 138 </span>            <span class="keyword">if</span> (convertView != <span class="keyword">null</span>){
-<span class="lineno"> 139 </span>                TextView text = (TextView) convertView.findViewById(R.id.textTitle);
-<span class="lineno"> 140 </span>                text.setText(adapter == <span class="keyword">null</span> ? <span class="string">""</span> : convertView.getContext().getString(getInner(position).res));
-</pre>
-
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:172</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
 <span class="lineno"> 169 </span>    <span class="annotation">@Override</span>
 <span class="lineno"> 170 </span>    <span class="keyword">public</span> View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -420,16 +398,8 @@ Dismiss</button>            </div>
 <span class="lineno"> 175 </span>        mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.layoutSwipeRefresh);
 </pre>
 
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/JournalListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/JournalListAdapter.java</a>:402</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 399 </span>            convertView = <span class="keyword">null</span>;
-<span class="lineno"> 400 </span>        }
-<span class="lineno"> 401 </span>        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {
-<span class="caretline"><span class="lineno"> 402 </span>            convertView = infrator.inflate(R.layout.listheader_journal, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 403 </span>            convertView.setTag(R.layout.listheader_journal);
-<span class="lineno"> 404 </span>        }
-<span class="lineno"> 405 </span>        <span class="keyword">if</span>(convertView != <span class="keyword">null</span>){
-</pre>
-
+<button class="mdl-button mdl-js-button mdl-button--primary" id="InflateParamsDivLink" onclick="reveal('InflateParamsDiv');" />+ 5 More Occurrences...</button>
+<div id="InflateParamsDiv" style="display: none">
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java">../../src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java</a>:119</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
 <span class="lineno"> 116 </span>
 <span class="lineno"> 117 </span>    <span class="keyword">private</span> <span class="keyword">void</span> showHttpAuthDialog( <span class="keyword">final</span> HttpAuthHandler handler, <span class="keyword">final</span> String host, <span class="keyword">final</span> String realm, <span class="keyword">final</span> String title ) {
@@ -458,16 +428,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 118 </span>        mFooter.setVisibility(View.GONE);
 <span class="lineno"> 119 </span>        View view = <span class="keyword">super</span>.onCreateView(inflater, container, savedInstanceState);
 <span class="lineno"> 120 </span>        ListFragmentSwipeRefreshLayout.ViewRefreshLayout result
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/RecentIssueListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/RecentIssueListAdapter.java</a>:34</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 31 </span>    <span class="annotation">@Override</span>
-<span class="lineno"> 32 </span>    <span class="keyword">public</span> View getHeaderView(<span class="keyword">int</span> i, View convertView, ViewGroup parent) {
-<span class="lineno"> 33 </span>        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {
-<span class="caretline"><span class="lineno"> 34 </span>            convertView = infrator.inflate(R.layout.listheader_connection, <span class="warning"><span class="keyword">null</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 35 </span>        }
-<span class="lineno"> 36 </span>        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>)
-<span class="lineno"> 37 </span>            <span class="keyword">return</span> <span class="keyword">null</span>;
 </pre>
 
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java">../../src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java</a>:64</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
@@ -889,14 +849,14 @@ Dismiss</button>            </div>
 <span class="lineno">  29 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"preference_category_appearance_themes"</span>>Tema<span class="tag">&lt;/string></span>
 <span class="lineno">  30 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_refresh"</span>>Atualizar lista<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:113</span>: <span class="message">"via" is a common misspelling; did you mean "vía" ?</span><br /><pre class="errorlines">
-<span class="lineno"> 110 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"size"</span>>Size<span class="tag">&lt;/string></span>
-<span class="lineno"> 111 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"progress"</span>>Progress<span class="tag">&lt;/string></span>
-<span class="lineno"> 112 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download"</span>>Download<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 113 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_with_manager"</span>>Download <span class="warning">via</span> Download Manager<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 114 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
-<span class="lineno"> 115 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"connection"</span>>Connection<span class="tag">&lt;/string></span>
-<span class="lineno"> 116 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"favorite"</span>>Favorite<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:118</span>: <span class="message">"via" is a common misspelling; did you mean "vía" ?</span><br /><pre class="errorlines">
+<span class="lineno"> 115 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"size"</span>>Size<span class="tag">&lt;/string></span>
+<span class="lineno"> 116 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"progress"</span>>Progress<span class="tag">&lt;/string></span>
+<span class="lineno"> 117 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download"</span>>Download<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 118 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_with_manager"</span>>Download <span class="warning">via</span> Download Manager<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 119 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
+<span class="lineno"> 120 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"connection"</span>>Connection<span class="tag">&lt;/string></span>
+<span class="lineno"> 121 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"favorite"</span>>Favorite<span class="tag">&lt;/string></span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationTypos" style="display: none;">
@@ -937,24 +897,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:81</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
-<span class="lineno">  78 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_duplicated"</span>>Duplicated<span class="tag">&lt;/string></span>
-<span class="lineno">  79 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocks"</span>>Blocks<span class="tag">&lt;/string></span>
-<span class="lineno">  80 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocked"</span>>Blocked<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  81 </span>    <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_precedes"</span>>%1$d days precedes<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  82 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_follows"</span>>%1$d days follows<span class="tag">&lt;/string></span>
-<span class="lineno">  83 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_copied_to"</span>>Copied<span class="tag">&lt;/string></span>
-<span class="lineno">  84 </span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:86</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
+<span class="lineno">  83 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_duplicated"</span>>Duplicated<span class="tag">&lt;/string></span>
+<span class="lineno">  84 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocks"</span>>Blocks<span class="tag">&lt;/string></span>
+<span class="lineno">  85 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocked"</span>>Blocked<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno">  86 </span>    <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_precedes"</span>>%1$d days precedes<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  87 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_follows"</span>>%1$d days follows<span class="tag">&lt;/string></span>
+<span class="lineno">  88 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_copied_to"</span>>Copied<span class="tag">&lt;/string></span>
+<span class="lineno">  89 </span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:82</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
-<span class="lineno">  79 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocks"</span>>Blocks<span class="tag">&lt;/string></span>
-<span class="lineno">  80 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocked"</span>>Blocked<span class="tag">&lt;/string></span>
-<span class="lineno">  81 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_precedes"</span>>%1$d days precedes<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  82 </span>    <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_follows"</span>>%1$d days follows<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  83 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_copied_to"</span>>Copied<span class="tag">&lt;/string></span>
-<span class="lineno">  84 </span>
-<span class="lineno">  85 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"project_status_none"</span>><span class="tag">&lt;/string></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:87</span>: <span class="message">Formatting %d followed by words ("days"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
+<span class="lineno">  84 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocks"</span>>Blocks<span class="tag">&lt;/string></span>
+<span class="lineno">  85 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_blocked"</span>>Blocked<span class="tag">&lt;/string></span>
+<span class="lineno">  86 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_precedes"</span>>%1$d days precedes<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno">  87 </span>    <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_follows"</span>>%1$d days follows<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  88 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_copied_to"</span>>Copied<span class="tag">&lt;/string></span>
+<span class="lineno">  89 </span>
+<span class="lineno">  90 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"project_status_none"</span>><span class="tag">&lt;/string></span>
 </pre>
 
 </div>
@@ -1043,52 +1003,52 @@ Dismiss</button>            </div>
 <span class="lineno">  69 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_time_estimate"</span>>%.2f<span class="tag">&lt;/string></span>
 <span class="lineno">  70 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_activity"</span>>Activity<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:94</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno">  91 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>Нет<span class="tag">&lt;/string></span>
-<span class="lineno">  92 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Изменить<span class="tag">&lt;/string></span>
-<span class="lineno">  93 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Изменить <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> с %2$s на %3$s<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  94 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Установить <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> для %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  95 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Удалить <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> из <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
-<span class="lineno">  96 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Требуется аутентификация. Проверьте права доступа или ключ API.<span class="tag">&lt;/string></span>
-<span class="lineno">  97 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Ошибка в настройках соединения.<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:99</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>Нет<span class="tag">&lt;/string></span>
+<span class="lineno">  97 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Изменить<span class="tag">&lt;/string></span>
+<span class="lineno">  98 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Изменить <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> с %2$s на %3$s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno">  99 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Установить <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> для %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Удалить <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> из <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
+<span class="lineno"> 101 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Требуется аутентификация. Проверьте права доступа или ключ API.<span class="tag">&lt;/string></span>
+<span class="lineno"> 102 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Ошибка в настройках соединения.<span class="tag">&lt;/string></span></pre>
 
 <button class="mdl-button mdl-js-button mdl-button--primary" id="StringFormatCountDivLink" onclick="reveal('StringFormatCountDiv');" />+ 4 More Occurrences...</button>
 <div id="StringFormatCountDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:96</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno">  93 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>Kein<span class="tag">&lt;/string></span>
-<span class="lineno">  94 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Bearbeiten<span class="tag">&lt;/string></span>
-<span class="lineno">  95 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Ändere <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> von %2$s auf %3$s<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  96 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Setze <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> auf %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  97 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Lösche <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> von <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
-<span class="lineno">  98 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Authentifizierung wird benötigt. Bitte überprüfen Sie Ihre Rolle oder den API-Schlüssel.<span class="tag">&lt;/string></span>
-<span class="lineno">  99 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Etwas ist mit den Verbindungseinstellungen falsch.<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:101</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno">  98 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>Kein<span class="tag">&lt;/string></span>
+<span class="lineno">  99 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Bearbeiten<span class="tag">&lt;/string></span>
+<span class="lineno"> 100 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Ändere <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> von %2$s auf %3$s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 101 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Setze <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> auf %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 102 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Lösche <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> von <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
+<span class="lineno"> 103 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Authentifizierung wird benötigt. Bitte überprüfen Sie Ihre Rolle oder den API-Schlüssel.<span class="tag">&lt;/string></span>
+<span class="lineno"> 104 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Etwas ist mit den Verbindungseinstellungen falsch.<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:99</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>None<span class="tag">&lt;/string></span>
-<span class="lineno">  97 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Edit<span class="tag">&lt;/string></span>
-<span class="lineno">  98 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Change <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> from %2$s to %3$s<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  99 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Set <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> to %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 100 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Remove <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> from <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
-<span class="lineno"> 101 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Authentication is required. Check your role or API key.<span class="tag">&lt;/string></span>
-<span class="lineno"> 102 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Something wrong with connection settings.<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:104</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno"> 101 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>None<span class="tag">&lt;/string></span>
+<span class="lineno"> 102 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Edit<span class="tag">&lt;/string></span>
+<span class="lineno"> 103 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Change <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> from %2$s to %3$s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 104 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Set <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> to %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 105 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Remove <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> from <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
+<span class="lineno"> 106 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_401"</span>>Authentication is required. Check your role or API key.<span class="tag">&lt;/string></span>
+<span class="lineno"> 107 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_403"</span>>Something wrong with connection settings.<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:109</span>: <span class="message">Formatting string '<code>ticket_modified_by</code>' is not referencing numbered arguments [1]</span><br /><pre class="errorlines">
-<span class="lineno"> 106 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"format_datetime"</span>>%1$tF %1$tH:%1$tM<span class="tag">&lt;/string></span>
-<span class="lineno"> 107 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"format_progress"</span>>%1$d%%<span class="tag">&lt;/string></span>
-<span class="lineno"> 108 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_created_by"</span>>by %1$s on %2$s<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 109 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_modified_by"</span>>%2$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 110 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_time_estimate"</span>>%.2f<span class="tag">&lt;/string></span>
-<span class="lineno"> 111 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_journals"</span>>Journals<span class="tag">&lt;/string></span>
-<span class="lineno"> 112 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_relates"</span>>Relate<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:114</span>: <span class="message">Formatting string '<code>ticket_modified_by</code>' is not referencing numbered arguments [1]</span><br /><pre class="errorlines">
+<span class="lineno"> 111 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"format_datetime"</span>>%1$tF %1$tH:%1$tM<span class="tag">&lt;/string></span>
+<span class="lineno"> 112 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"format_progress"</span>>%1$d%%<span class="tag">&lt;/string></span>
+<span class="lineno"> 113 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_created_by"</span>>by %1$s on %2$s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 114 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_modified_by"</span>>%2$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 115 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_time_estimate"</span>>%.2f<span class="tag">&lt;/string></span>
+<span class="lineno"> 116 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_journals"</span>>Journals<span class="tag">&lt;/string></span>
+<span class="lineno"> 117 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_relates"</span>>Relate<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:119</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
-<span class="lineno"> 116 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_message_accesstoken"</span>>NOTE: To get AccessToken, press \"Get token\" button.<span class="tag">&lt;/string></span>
-<span class="lineno"> 117 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_add_timeentry"</span>>Record Time<span class="tag">&lt;/string></span>
-<span class="lineno"> 118 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Change <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> from %2$s to %3$s<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 119 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Set <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> to %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 120 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Remove <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> from <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
-<span class="lineno"> 121 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_saved"</span>>Has been saved to remote<span class="tag">&lt;/string></span>
-<span class="lineno"> 122 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"input_error_invalid_decimal"</span>>Input valid number.<span class="tag">&lt;/string></span></pre>
+<span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:124</span>: <span class="message">Formatting string '<code>changes_set_to</code>' is not referencing numbered arguments [2]</span><br /><pre class="errorlines">
+<span class="lineno"> 121 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_message_accesstoken"</span>>NOTE: To get AccessToken, press \"Get token\" button.<span class="tag">&lt;/string></span>
+<span class="lineno"> 122 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_add_timeentry"</span>>Record Time<span class="tag">&lt;/string></span>
+<span class="lineno"> 123 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_from_to"</span>>Change <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> from %2$s to %3$s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 124 </span>  <span class="warning"><span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_set_to"</span>>Set <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b></span> to %3$s<span class="tag">&lt;/string></span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 125 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"changes_remove_from"</span>>Remove <span class="tag">&lt;s></span>%2$s<span class="tag">&lt;/s></span> from <span class="tag">&lt;b></span>%1$s<span class="tag">&lt;/b>&lt;/string></span>
+<span class="lineno"> 126 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"remote_saved"</span>>Has been saved to remote<span class="tag">&lt;/string></span>
+<span class="lineno"> 127 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"input_error_invalid_decimal"</span>>Input valid number.<span class="tag">&lt;/string></span></pre>
 
 </div>
 </div>
@@ -1310,11 +1270,11 @@ Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:19</span>
 <li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:19</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:19</span>
-<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:100</span>
+<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:105</span>
 <li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:19</span>
 </ul>
 </div><br/><br/>
-<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 5 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 6 More Occurrences...</button>
 <div id="UnusedResourcesDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:23</span>: <span class="message">The resource <code>R.string.menu_settings_uploading</code> appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno">  20 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"comment"</span>>Comment<span class="tag">&lt;/string></span>
@@ -1335,7 +1295,7 @@ Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:23</span>
 <li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:23</span>
 <li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:23</span>
-<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:102</span>
+<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:107</span>
 <li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:23</span>
 </ul>
 </div><br/><br/>
@@ -1368,8 +1328,8 @@ Additional locations: <ul>
 <span class="lineno">  71 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_attachments"</span>>Attachments<span class="tag">&lt;/string></span>
 <span class="caretline"><span class="lineno">  72 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"ticket_jump"</span></span>>Jump<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  73 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_watcher"</span>>Watchers<span class="tag">&lt;/string></span>
-<span class="lineno">  74 </span>
-<span class="lineno">  75 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"relation_none"</span>><span class="tag">&lt;/string></span>
+<span class="lineno">  74 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_journal_id"</span>>#%1$d<span class="tag">&lt;/string></span>
+<span class="lineno">  75 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"issue_id_string"</span>>#%1s<span class="tag">&lt;/string></span>
 </pre>
 
 <ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 8 Additional Locations...</button>
@@ -1385,50 +1345,73 @@ Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:70</span>
 </ul>
 </div><br/><br/>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:94</span>: <span class="message">The resource <code>R.string.menu_add_timeentry</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  91 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"descending"</span>>descending<span class="tag">&lt;/string></span>
-<span class="lineno">  92 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_goto_redmine"</span>>Get token<span class="tag">&lt;/string></span>
-<span class="lineno">  93 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_message_accesstoken"</span>>NOTE: To get AccessToken, press \"Get token\" button.<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  94 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"menu_add_timeentry"</span></span>>Record Time<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  95 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_filter"</span>>Filter<span class="tag">&lt;/string></span>
-<span class="lineno">  96 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>None<span class="tag">&lt;/string></span>
-<span class="lineno">  97 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Edit<span class="tag">&lt;/string></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:76</span>: <span class="message">The resource <code>R.string.issue_id</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  73 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_watcher"</span>>Watchers<span class="tag">&lt;/string></span>
+<span class="lineno">  74 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ticket_journal_id"</span>>#%1$d<span class="tag">&lt;/string></span>
+<span class="lineno">  75 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"issue_id_string"</span>>#%1s<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno">  76 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"issue_id"</span></span>>#%1$d<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  77 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"issue_id_subject"</span>>#%1$d %2$s<span class="tag">&lt;/string></span>
+<span class="lineno">  78 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"issue_id_tracker_subject"</span>>%3$s #%1$d %2$s<span class="tag">&lt;/string></span>
+<span class="lineno">  79 </span>
 </pre>
 
 <ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 8 Additional Locations...</button>
 <div id="Location9Div" style="display: none">
 Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:91</span>
-<li> <span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:91</span>
-<li> <span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:94</span>
-<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:91</span>
-<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:91</span>
-<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:89</span>
-<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:117</span>
-<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:89</span>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:76</span>
+<li> <span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:78</span>
+<li> <span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:81</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:76</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:76</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:74</span>
+<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:74</span>
 </ul>
 </div><br/><br/>
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:114</span>: <span class="message">The resource <code>R.string.progress</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 111 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"input_error_select"</span>>Select %1$s<span class="tag">&lt;/string></span>
-<span class="lineno"> 112 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"warning_experimental_feature"</span>>This is EXPERIMANTAL. This feature may affect bad to your redmine.<span class="tag">&lt;/string></span>
-<span class="lineno"> 113 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"size"</span>>Size<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 114 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"progress"</span></span>>Progress<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 115 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download"</span>>Download<span class="tag">&lt;/string></span>
-<span class="lineno"> 116 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_with_manager"</span>>Download via Download Manager<span class="tag">&lt;/string></span>
-<span class="lineno"> 117 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:99</span>: <span class="message">The resource <code>R.string.menu_add_timeentry</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"descending"</span>>descending<span class="tag">&lt;/string></span>
+<span class="lineno">  97 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_goto_redmine"</span>>Get token<span class="tag">&lt;/string></span>
+<span class="lineno">  98 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_setting_message_accesstoken"</span>>NOTE: To get AccessToken, press \"Get token\" button.<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno">  99 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"menu_add_timeentry"</span></span>>Record Time<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"menu_filter"</span>>Filter<span class="tag">&lt;/string></span>
+<span class="lineno"> 101 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"filter_none"</span>>None<span class="tag">&lt;/string></span>
+<span class="lineno"> 102 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"edit"</span>>Edit<span class="tag">&lt;/string></span>
 </pre>
 
 <ul></ul><button id="Location10DivLink" onclick="reveal('Location10Div');" />+ 8 Additional Locations...</button>
 <div id="Location10Div" style="display: none">
 Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:111</span>
-<li> <span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:111</span>
-<li> <span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:114</span>
-<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:111</span>
-<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:111</span>
-<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:109</span>
-<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:85</span>
-<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:109</span>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:96</span>
+<li> <span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:96</span>
+<li> <span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:99</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:96</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:96</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:94</span>
+<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:122</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:94</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:119</span>: <span class="message">The resource <code>R.string.progress</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 116 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"input_error_select"</span>>Select %1$s<span class="tag">&lt;/string></span>
+<span class="lineno"> 117 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"warning_experimental_feature"</span>>This is EXPERIMANTAL. This feature may affect bad to your redmine.<span class="tag">&lt;/string></span>
+<span class="lineno"> 118 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"size"</span>>Size<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 119 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"progress"</span></span>>Progress<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 120 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download"</span>>Download<span class="tag">&lt;/string></span>
+<span class="lineno"> 121 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_with_manager"</span>>Download via Download Manager<span class="tag">&lt;/string></span>
+<span class="lineno"> 122 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
+</pre>
+
+<ul></ul><button id="Location11DivLink" onclick="reveal('Location11Div');" />+ 8 Additional Locations...</button>
+<div id="Location11Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-de/strings.xml">../../src/main/res/values-de/strings.xml</a>:116</span>
+<li> <span class="location"><a href="../../src/main/res/values-es-rES/strings.xml">../../src/main/res/values-es-rES/strings.xml</a>:116</span>
+<li> <span class="location"><a href="../../src/main/res/values-fr/strings.xml">../../src/main/res/values-fr/strings.xml</a>:119</span>
+<li> <span class="location"><a href="../../src/main/res/values-ja/strings.xml">../../src/main/res/values-ja/strings.xml</a>:116</span>
+<li> <span class="location"><a href="../../src/main/res/values-pt-rBR/strings.xml">../../src/main/res/values-pt-rBR/strings.xml</a>:116</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:114</span>
+<li> <span class="location"><a href="../../src/main/res/values-tr-rTR/strings.xml">../../src/main/res/values-tr-rTR/strings.xml</a>:90</span>
+<li> <span class="location"><a href="../../src/main/res/values-zh/strings.xml">../../src/main/res/values-zh/strings.xml</a>:114</span>
 </ul>
 </div><br/><br/>
 </div>
@@ -1855,6 +1838,32 @@ Dismiss</button>            </div>
 
 <button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 78 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/layout/listheader_connection.xml">../../src/main/res/layout/listheader_connection.xml</a>:14</span>: <span class="message">Consider adding <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@android:drawable/btn_star_big_on"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">contentDescription</span>=<span class="value">"@string/ticket_relations"</span>
+<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>/>
+<span class="lineno"> 16 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 17 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/name"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/listheader_connection.xml">../../src/main/res/layout/listheader_connection.xml</a>:21</span>: <span class="message">Consider adding <code>android:layout_marginEnd="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"fill_parent"</span>
+<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"10dp"</span>
+<span class="caretline"><span class="lineno"> 21 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"10dp"</span>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Connection Name"</span>
+<span class="lineno"> 24 </span>        <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/listheader_connection.xml">../../src/main/res/layout/listheader_connection.xml</a>:26</span>: <span class="message">Consider adding <code>android:layout_toEndOf="@+id/icon"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Connection Name"</span>
+<span class="lineno"> 24 </span>        <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span>
+<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">textAppearance</span>=<span class="value">"?android:attr/textAppearanceMedium"</span>
+<span class="caretline"><span class="lineno"> 26 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@+id/icon"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>/>
+<span class="lineno"> 28 </span><span class="tag">&lt;/RelativeLayout></span></pre>
+
 <span class="location"><a href="../../src/main/res/layout/listheader_issuetitle.xml">../../src/main/res/layout/listheader_issuetitle.xml</a>:7</span>: <span class="message">Consider adding <code>android:layout_marginStart="3dip"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno">  4 </span>    <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/textTitle"</span>
 <span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
@@ -1863,33 +1872,6 @@ Dismiss</button>            </div>
 <span class="lineno">  8 </span>    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Title"</span>
 <span class="lineno">  9 </span>    <span class="prefix">android:</span><span class="attribute">textAppearance</span>=<span class="value">"?android:attr/textAppearanceLarge"</span>
 <span class="lineno"> 10 </span>    <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span> /></pre>
-
-<span class="location"><a href="../../src/main/res/layout/listheader_journal.xml">../../src/main/res/layout/listheader_journal.xml</a>:15</span>: <span class="message">Consider adding <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"center_vertical"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/ic_action_message"</span>
-<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">contentDescription</span>=<span class="value">"@string/ticket_attachments"</span>
-<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_margin</span>=<span class="value">"10dp"</span>/>
-<span class="lineno"> 17 </span>
-<span class="lineno"> 18 </span>    <span class="tag">&lt;TextView</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/listheader_journal.xml">../../src/main/res/layout/listheader_journal.xml</a>:25</span>: <span class="message">Consider adding <code>android:layout_toStartOf="@+id/date"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"User Name"</span>
-<span class="lineno"> 23 </span>        <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">textAppearance</span>=<span class="value">"?android:attr/textAppearanceMedium"</span>
-<span class="caretline"><span class="lineno"> 25 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toLeftOf</span></span>=<span class="value">"@+id/date"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@+id/image"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/listheader_journal.xml">../../src/main/res/layout/listheader_journal.xml</a>:27</span>: <span class="message">Consider adding <code>android:layout_toEndOf="@+id/image"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">textAppearance</span>=<span class="value">"?android:attr/textAppearanceMedium"</span>
-<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">layout_toLeftOf</span>=<span class="value">"@+id/date"</span>
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 27 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@+id/image"</span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 28 </span>
-<span class="lineno"> 29 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 30 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/date"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/listitem_attachment.xml">../../src/main/res/layout/listitem_attachment.xml</a>:29</span>: <span class="message">Consider adding <code>android:layout_toStartOf="@+id/textCreated"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
