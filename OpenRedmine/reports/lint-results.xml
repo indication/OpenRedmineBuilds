@@ -66,24 +66,6 @@
         explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
         url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
         urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="   convertView = infrator.inflate(R.layout.listheader_journal, null);"
-        errorLine2="                                                               ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueDetailAdapter.java"
-            line="97"
-            column="64"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
         errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
         errorLine2="                                                      ~~~~">
         <location
@@ -120,48 +102,12 @@
         explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
         url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
         urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="   convertView = infalInflater.inflate(R.layout.listheader_issuetitle, null);"
-        errorLine2="                                                                       ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java"
-            line="137"
-            column="72"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
         errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
             line="172"
             column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="   convertView = infrator.inflate(R.layout.listheader_journal, null);"
-        errorLine2="                                                               ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/JournalListAdapter.java"
-            line="402"
-            column="64"/>
     </issue>
 
     <issue
@@ -216,24 +162,6 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
             line="117"
             column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="   convertView = infrator.inflate(R.layout.listheader_connection, null);"
-        errorLine2="                                                                  ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RecentIssueListAdapter.java"
-            line="34"
-            column="67"/>
     </issue>
 
     <issue
@@ -770,7 +698,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="113"
+            line="118"
             column="49"/>
     </issue>
 
@@ -788,7 +716,7 @@
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="81"
+            line="86"
             column="2"/>
     </issue>
 
@@ -806,7 +734,7 @@
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="82"
+            line="87"
             column="2"/>
     </issue>
 
@@ -886,7 +814,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="94"
+            line="99"
             column="3"/>
     </issue>
 
@@ -902,7 +830,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="96"
+            line="101"
             column="3"/>
     </issue>
 
@@ -918,7 +846,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="99"
+            line="104"
             column="3"/>
     </issue>
 
@@ -934,7 +862,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="109"
+            line="114"
             column="3"/>
     </issue>
 
@@ -950,7 +878,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="119"
+            line="124"
             column="3"/>
     </issue>
 
@@ -1133,7 +1061,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="100"
+            line="105"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1182,7 +1110,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="102"
+            line="107"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1291,6 +1219,55 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.string.issue_id` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;issue_id&quot;>#%1$d&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="76"
+            column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="76"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="78"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
+            line="81"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="76"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="76"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="74"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="62"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="74"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.string.menu_add_timeentry` appears to be unused"
         category="Performance"
         priority="3"
@@ -1301,39 +1278,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="94"
+            line="99"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="91"
+            line="96"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="91"
+            line="96"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="94"
+            line="99"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="91"
+            line="96"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="91"
+            line="96"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="89"
+            line="94"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="117"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="89"
+            line="94"
             column="11"/>
     </issue>
 
@@ -1350,39 +1327,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="114"
+            line="119"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="111"
+            line="116"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="111"
+            line="116"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="114"
+            line="119"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="111"
+            line="116"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="111"
+            line="116"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="109"
+            line="114"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="85"
+            line="90"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="109"
+            line="114"
             column="11"/>
     </issue>
 
@@ -1655,54 +1632,6 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listheader_issuetitle.xml"
             line="7"
             column="2"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentLeft=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listheader_journal.xml"
-            line="15"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_toStartOf=&quot;@+id/date&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_toLeftOf=&quot;@+id/date&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listheader_journal.xml"
-            line="25"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_toEndOf=&quot;@+id/image&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_toRightOf=&quot;@+id/image&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listheader_journal.xml"
-            line="27"
-            column="3"/>
     </issue>
 
     <issue
