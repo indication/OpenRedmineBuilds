@@ -698,7 +698,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="118"
+            line="124"
             column="49"/>
     </issue>
 
@@ -716,7 +716,7 @@
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="86"
+            line="92"
             column="2"/>
     </issue>
 
@@ -734,7 +734,7 @@
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="87"
+            line="93"
             column="2"/>
     </issue>
 
@@ -814,7 +814,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="99"
+            line="105"
             column="3"/>
     </issue>
 
@@ -830,7 +830,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="101"
+            line="107"
             column="3"/>
     </issue>
 
@@ -846,7 +846,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="104"
+            line="110"
             column="3"/>
     </issue>
 
@@ -862,7 +862,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="114"
+            line="120"
             column="3"/>
     </issue>
 
@@ -878,7 +878,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="124"
+            line="130"
             column="3"/>
     </issue>
 
@@ -1061,7 +1061,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="105"
+            line="111"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1110,7 +1110,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="107"
+            line="113"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1170,6 +1170,153 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.string.preference_category_issue` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;preference_category_issue&quot;>Issues&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="25"
+            column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="25"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="24"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
+            line="33"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="25"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="25"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="25"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="20"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="25"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.preference_issue_get_all` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;preference_issue_get_all&quot;>Get all issues&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="26"
+            column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="26"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="25"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
+            line="34"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="26"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="26"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="26"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="21"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="26"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.preference_issue_description_get_all` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;preference_issue_description_get_all&quot;>By default, fetch UNCLOSED issues from remote. If you wish to get all issues from remote, check this option.&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="27"
+            column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="27"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="40"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
+            line="35"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="27"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="27"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="27"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="22"
+            column="11"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
+            line="27"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.string.ticket_jump` appears to be unused"
         category="Performance"
         priority="3"
@@ -1180,39 +1327,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="72"
+            line="73"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="72"
+            line="73"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="74"
+            line="75"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="77"
+            line="78"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="72"
+            line="73"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="72"
+            line="73"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="70"
+            line="71"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="58"
+            line="59"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="70"
+            line="71"
             column="11"/>
     </issue>
 
@@ -1229,39 +1376,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="76"
+            line="82"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="76"
+            line="82"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="78"
+            line="84"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="81"
+            line="87"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="76"
+            line="82"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="76"
+            line="82"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="74"
+            line="80"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="62"
+            line="68"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="74"
+            line="80"
             column="11"/>
     </issue>
 
@@ -1278,39 +1425,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="99"
+            line="105"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="96"
+            line="102"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="96"
+            line="102"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="99"
+            line="105"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="96"
+            line="102"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="96"
+            line="102"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="94"
+            line="100"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="122"
+            line="128"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="94"
+            line="100"
             column="11"/>
     </issue>
 
@@ -1327,39 +1474,39 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
-            line="119"
+            line="125"
             column="10"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
-            line="116"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="116"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="119"
+            line="125"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
-            line="116"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
-            line="116"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
-            line="114"
+            line="120"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="90"
+            line="96"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
-            line="114"
+            line="120"
             column="11"/>
     </issue>
 
@@ -2149,470 +2296,6 @@
     <issue
         id="RtlHardcoded"
         severity="Warning"
-        message="Consider adding `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentLeft=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="17"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentRight=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="18"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="25"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_marginEnd=&quot;5dp&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_marginRight=&quot;5dp&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="35"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_toEndOf=&quot;@+id/labelProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_toRightOf=&quot;@+id/labelProject&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="48"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="53"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentRight=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="84"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_marginStart=&quot;5dp&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_marginLeft=&quot;5dp&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="85"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="90"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="110"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="115"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="133"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentRight=&quot;true&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="134"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="139"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="162"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignEnd=&quot;@+id/labelProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignRight=&quot;@+id/labelProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="165"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignParentRight=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="194"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="200"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="218"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="245"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignEnd=&quot;@+id/labelProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignRight=&quot;@+id/labelProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="247"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;/>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="260"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="265"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignEnd=&quot;@+id/labelProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignRight=&quot;@+id/labelProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="267"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="281"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="309"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_gravity=&quot;right|center_vertical&quot;"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="332"
-            column="27"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignEnd=&quot;@+id/labelProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignRight=&quot;@+id/labelProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="335"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider adding `android:layout_alignStart=&quot;@+id/textProject&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="  android:layout_alignLeft=&quot;@+id/textProject&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issuedetail.xml"
-            line="346"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
         message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
         category="Internationalization:Bidirectional Text"
         priority="5"
@@ -2816,6 +2499,18 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_splash.xml"
             line="43"
             column="20"/>
+    </issue>
+
+    <issue
+        id="RtlEnabled"
+        severity="Warning"
+        message="The project references RTL attributes, but does not explicitly enable or disable RTL support with `android:supportsRtl` in the manifest"
+        category="Internationalization:Bidirectional Text"
+        priority="3"
+        summary="Using RTL attributes without enabling RTL support"
+        explanation="To enable right-to-left support, when running on API 17 and higher, you must set the `android:supportsRtl` attribute in the manifest `&lt;application>` element.&#xA;&#xA;If you have started adding RTL attributes, but have not yet finished the migration, you can set the attribute to false to satisfy this lint check.">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"/>
     </issue>
 
 </issues>
