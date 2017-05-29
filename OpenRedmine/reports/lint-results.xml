@@ -2,18 +2,6 @@
 <issues format="4" by="lint 2.3.0">
 
     <issue
-        id="InvalidPackage"
-        severity="Error"
-        message="Invalid package reference in library; not included in Android: `javax.persistence`. Referenced from `com.j256.ormlite.misc.JavaxPersistenceImpl`."
-        category="Correctness"
-        priority="6"
-        summary="Package not included in Android"
-        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
-        <location
-            file="/home/travis/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.0/3382b8260646dd334a1b9c1b3d412fcb73d8b21/ormlite-core-5.0.jar"/>
-    </issue>
-
-    <issue
         id="OldTargetApi"
         severity="Warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
@@ -1624,7 +1612,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
-            line="10"
+            line="12"
             column="5"/>
     </issue>
 
