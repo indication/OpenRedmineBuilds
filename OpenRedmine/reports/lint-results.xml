@@ -436,118 +436,6 @@
         priority="2"
         summary="Using deprecated resources"
         explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="35"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="49"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="63"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="77"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="135"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="145"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
-        errorLine1="  android:singleLine=&quot;true&quot;"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
-            line="156"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="Deprecated"
-        severity="Warning"
-        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
-        category="Correctness"
-        priority="2"
-        summary="Using deprecated resources"
-        explanation="Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You&apos;ve been warned."
         errorLine1="     android:singleLine=&quot;true&quot;"
         errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -935,20 +823,35 @@
     <issue
         id="UnusedResources"
         severity="Warning"
-        message="The resource `R.drawable.ic_action_add_time` appears to be unused"
+        message="The resource `R.drawable.ic_access_time` appears to be unused"
         category="Performance"
         priority="3"
         summary="Unused resources"
         explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
         quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-hdpi/ic_action_add_time.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_access_time.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_relative_arrow_equals` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;97.0&quot;"
+        errorLine2="^"
+        quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-ldpi/ic_action_add_time.png"/>
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-mdpi/ic_action_add_time.png"/>
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-xhdpi/ic_action_add_time.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_arrow_equals.xml"
+            line="1"
+            column="1"/>
     </issue>
 
     <issue
@@ -959,15 +862,64 @@
         priority="3"
         summary="Unused resources"
         explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
+        errorLine2="^"
         quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-hdpi/ic_relative_copy_from.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_copy_from.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_relative_follows_to` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
+        errorLine2="^"
+        quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-ldpi/ic_relative_copy_from.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_follows_to.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_relative_precedes_to` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
+        errorLine2="^"
+        quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-mdpi/ic_relative_copy_from.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_precedes_to.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ic_search` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^"
+        quickfix="studio">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable-xhdpi/ic_relative_copy_from.png"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_search.xml"
+            line="1"
+            column="1"/>
     </issue>
 
     <issue
@@ -2113,7 +2065,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="25"
+            line="26"
             column="3"/>
     </issue>
 
@@ -2129,7 +2081,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="35"
+            line="36"
             column="3"/>
     </issue>
 
@@ -2145,7 +2097,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="36"
+            line="37"
             column="3"/>
     </issue>
 
@@ -2161,7 +2113,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="47"
+            line="48"
             column="3"/>
     </issue>
 
@@ -2177,7 +2129,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="49"
+            line="50"
             column="3"/>
     </issue>
 
@@ -2193,7 +2145,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="58"
+            line="59"
             column="3"/>
     </issue>
 
@@ -2209,19 +2161,19 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml"
-            line="60"
+            line="61"
             column="3"/>
     </issue>
 
     <issue
         id="RtlHardcoded"
         severity="Warning"
-        message="Consider adding `android:drawableStart=&quot;@android:drawable/ic_menu_add&quot;` to better support right-to-left layouts"
+        message="Consider adding `android:drawableStart=&quot;@drawable/ic_add_circle&quot;` to better support right-to-left layouts"
         category="Internationalization:Bidirectional Text"
         priority="5"
         summary="Using left/right instead of start/end attributes"
         explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="    android:drawableLeft=&quot;@android:drawable/ic_menu_add&quot;"
+        errorLine1="    android:drawableLeft=&quot;@drawable/ic_add_circle&quot;"
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listview_add.xml"
