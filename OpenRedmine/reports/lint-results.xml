@@ -70,7 +70,7 @@
         errorLine2="                                                      ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="159"
+            line="160"
             column="55"/>
     </issue>
 
@@ -88,7 +88,7 @@
         errorLine2="                                                        ~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="161"
+            line="162"
             column="57"/>
     </issue>
 
