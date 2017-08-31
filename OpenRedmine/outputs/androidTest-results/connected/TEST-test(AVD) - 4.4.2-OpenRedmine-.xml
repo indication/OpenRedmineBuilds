@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="jp.redmine.redmineclient.testentity.TypeConverterTest" tests="6" failures="0" errors="0" skipped="0" time="0.386" timestamp="2017-08-31T14:48:29" hostname="localhost">
+<testsuite name="jp.redmine.redmineclient.testentity.TypeConverterTest" tests="6" failures="0" errors="0" skipped="0" time="0.361" timestamp="2017-08-31T14:55:20" hostname="localhost">
   <properties>
     <property name="device" value="test(AVD) - 4.4.2" />
     <property name="flavor" value="" />
@@ -8,7 +8,7 @@
   <testcase name="testAndroidTestCaseSetupProperly" classname="jp.redmine.redmineclient.testentity.TypeConverterTest" time="0.025" />
   <testcase name="testDateTimeLocal" classname="jp.redmine.redmineclient.testentity.TypeConverterTest" time="0.026" />
   <testcase name="testDateTimeLocalMs" classname="jp.redmine.redmineclient.testentity.TypeConverterTest" time="0.051" />
-  <testcase name="testDateTimeUTC" classname="jp.redmine.redmineclient.testentity.TypeConverterTest" time="0.05" />
-  <testcase name="testAndroidTestCaseSetupProperly" classname="jp.redmine.redmineclient.testurl.RemoteUrlIssueTest" time="0.0" />
+  <testcase name="testDateTimeUTC" classname="jp.redmine.redmineclient.testentity.TypeConverterTest" time="0.025" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="jp.redmine.redmineclient.testurl.RemoteUrlIssueTest" time="0.05" />
   <testcase name="testRaw" classname="jp.redmine.redmineclient.testurl.RemoteUrlIssueTest" time="0.051" />
 </testsuite>
