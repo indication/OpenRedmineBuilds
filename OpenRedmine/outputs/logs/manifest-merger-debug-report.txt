@@ -33,12 +33,12 @@ ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/Androi
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:10:19-82
 application
 ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:12:5-83:19
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.android/build-cache/4da54e01ec14a44474a6400c9cbbfb5c60fa68e7/output/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:design:23.2.0] /home/travis/.android/build-cache/a8fbaa78de8142ad706ff0e183afeb9d7edf248d/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/5f66e9f646c9756347e8f25c96f9c0b7e8c70862/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/travis/.android/build-cache/aa0b9d7cb8d89629bf5c6c13afba269184fcc0e9/output/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/travis/.android/build-cache/8c89e42127bb207ed93e31cb266cb8bef36377b9/output/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] /home/travis/.android/build-cache/ae4b3f48c1f77e3ce55bc57418ebc4ec19518a33/output/AndroidManifest.xml:22:5-20
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.android/build-cache/1d23c9cc4891f695e6ed861641eb76264f3b3a5f/output/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:23.2.0] /home/travis/.android/build-cache/a2660f05fd8a0c933eeb8dbd157221e834491aa9/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/75d47ff1ecbc505613d0f79005ab78fea2c3f4b9/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/travis/.android/build-cache/6b62ab68c9ae73571cd6389f534cbb4883d033fb/output/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/travis/.android/build-cache/219acb7e96bc0e99498e5cac4c9a543e959f5c7a/output/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] /home/travis/.android/build-cache/64aa8ffa17da91cf901f20b1a1bc99f5bdcc3101/output/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:14:9-41
 	android:allowClearUserData
@@ -185,16 +185,16 @@ ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/Androi
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:79:4-39
 uses-sdk
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.android/build-cache/4da54e01ec14a44474a6400c9cbbfb5c60fa68e7/output/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:23.2.0] /home/travis/.android/build-cache/a8fbaa78de8142ad706ff0e183afeb9d7edf248d/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.2.0] /home/travis/.android/build-cache/44b57ad67d0ca0765883779f2490df5702a0054a/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/5f66e9f646c9756347e8f25c96f9c0b7e8c70862/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/travis/.android/build-cache/aa0b9d7cb8d89629bf5c6c13afba269184fcc0e9/output/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/travis/.android/build-cache/8c89e42127bb207ed93e31cb266cb8bef36377b9/output/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] /home/travis/.android/build-cache/ae4b3f48c1f77e3ce55bc57418ebc4ec19518a33/output/AndroidManifest.xml:20:5-43
-MERGED from [se.emilsjolander:stickylistheaders:2.7.0] /home/travis/.android/build-cache/8d770c121f6f1eb75730ba604870c134649d64a9/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.android/build-cache/1d23c9cc4891f695e6ed861641eb76264f3b3a5f/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:23.2.0] /home/travis/.android/build-cache/a2660f05fd8a0c933eeb8dbd157221e834491aa9/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.0] /home/travis/.android/build-cache/7b55755ed177ac462f3cf46adea516a4f2e386b2/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/75d47ff1ecbc505613d0f79005ab78fea2c3f4b9/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] /home/travis/.android/build-cache/6b62ab68c9ae73571cd6389f534cbb4883d033fb/output/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.0] /home/travis/.android/build-cache/219acb7e96bc0e99498e5cac4c9a543e959f5c7a/output/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] /home/travis/.android/build-cache/64aa8ffa17da91cf901f20b1a1bc99f5bdcc3101/output/AndroidManifest.xml:20:5-43
+MERGED from [se.emilsjolander:stickylistheaders:2.7.0] /home/travis/.android/build-cache/c5f8bab055ef979793cc8ba0711f8ab3f0d5faad/output/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/5f66e9f646c9756347e8f25c96f9c0b7e8c70862/output/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.2.0] /home/travis/.android/build-cache/75d47ff1ecbc505613d0f79005ab78fea2c3f4b9/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
