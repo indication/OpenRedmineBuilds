@@ -194,7 +194,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="72"
+            line="76"
             column="5"/>
     </issue>
 
@@ -211,7 +211,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="73"
+            line="77"
             column="5"/>
     </issue>
 
@@ -228,7 +228,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="74"
+            line="78"
             column="5"/>
     </issue>
 
@@ -245,7 +245,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="75"
+            line="79"
             column="5"/>
     </issue>
 
