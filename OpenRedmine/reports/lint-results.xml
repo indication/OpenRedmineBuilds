@@ -330,6 +330,54 @@
         errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
+            line="10"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="40"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="54"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
             line="58"
             column="3"/>
@@ -348,38 +396,6 @@
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="60"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="StringFormatCount"
-        severity="Warning"
-        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
-        category="Correctness:Messages"
-        priority="5"
-        summary="Formatting argument types incomplete or inconsistent"
-        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
-        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="62"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="StringFormatCount"
-        severity="Warning"
-        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
-        category="Correctness:Messages"
-        priority="5"
-        summary="Formatting argument types incomplete or inconsistent"
-        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
-        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="65"
             column="3"/>
     </issue>
 
@@ -450,22 +466,6 @@
     <issue
         id="StringFormatCount"
         severity="Warning"
-        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
-        category="Correctness:Messages"
-        priority="5"
-        summary="Formatting argument types incomplete or inconsistent"
-        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
-        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="109"
-            column="3"/>
-    </issue>
-
-    <issue
-        id="StringFormatCount"
-        severity="Warning"
         message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
         category="Correctness:Messages"
         priority="5"
@@ -491,7 +491,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="130"
+            line="133"
             column="3"/>
     </issue>
 
@@ -817,7 +817,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="10"
+            line="23"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -866,7 +866,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="25"
+            line="4"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -882,7 +882,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="100"
+            line="18"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -915,7 +915,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="29"
+            line="40"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -931,7 +931,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="102"
+            line="115"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -964,7 +964,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="30"
+            line="41"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -980,7 +980,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="19"
+            line="21"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1013,7 +1013,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="31"
+            line="42"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -1029,7 +1029,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="20"
+            line="22"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1062,7 +1062,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="32"
+            line="43"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -1078,7 +1078,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="21"
+            line="23"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1107,11 +1107,11 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="40"
+            line="50"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="33"
+            line="44"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -1127,7 +1127,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="22"
+            line="24"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1156,11 +1156,11 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="75"
+            line="80"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="76"
+            line="81"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -1176,7 +1176,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="58"
+            line="65"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1205,11 +1205,11 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
-            line="84"
+            line="44"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml"
-            line="85"
+            line="16"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
@@ -1225,7 +1225,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="120"
+            line="69"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1274,7 +1274,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="128"
+            line="131"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1323,7 +1323,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="85"
+            line="97"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
