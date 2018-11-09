@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="4" by="lint 3.1.4">
+<issues format="4" by="lint 3.2.0">
 
     <issue
         id="InflateParams"
@@ -184,7 +184,24 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 27.1.1"
+        message="A newer version of com.google.guava:guava than 22.0 is available: 24.1-jre"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    testImplementation &apos;com.google.guava:guava:22.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
+            line="73"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 28.0.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -194,14 +211,14 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="76"
+            line="79"
             column="5"/>
     </issue>
 
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:support-fragment than 25.3.1 is available: 27.1.1"
+        message="A newer version of com.android.support:support-fragment than 25.3.1 is available: 28.0.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -211,14 +228,14 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="77"
+            line="80"
             column="5"/>
     </issue>
 
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 27.1.1"
+        message="A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 28.0.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -228,14 +245,14 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="78"
+            line="81"
             column="5"/>
     </issue>
 
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.android.support:design than 25.3.1 is available: 27.1.1"
+        message="A newer version of com.android.support:design than 25.3.1 is available: 28.0.0"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -245,7 +262,7 @@
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
-            line="79"
+            line="82"
             column="5"/>
     </issue>
 
@@ -362,8 +379,8 @@
         errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="54"
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            line="58"
             column="3"/>
     </issue>
 
@@ -378,8 +395,24 @@
         errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml"
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="58"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="60"
             column="3"/>
     </issue>
 
@@ -397,6 +430,70 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="60"
             column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="60"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="60"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="60"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`ticket_modified_by`&apos; is not referencing numbered arguments [1]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1=" &lt;string name=&quot;ticket_modified_by&quot;>%2$s&lt;/string>"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
+            line="60"
+            column="2"/>
     </issue>
 
     <issue
@@ -439,10 +536,90 @@
         priority="5"
         summary="Formatting argument types incomplete or inconsistent"
         explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>Nastavit &lt;b>%1$s&lt;/b> na %3$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="107"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
         errorLine1="  &lt;string name=&quot;changes_set_to&quot;>Setze &lt;b>%1$s&lt;/b> auf %3$s&lt;/string>"
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="107"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>Set &lt;b>%1$s&lt;/b> to %3$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml"
+            line="107"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>&lt;b>%1$s&lt;/b> に %3$s を設定&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml"
+            line="107"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>Definir &lt;b>%1$s&lt;/b> para %3$s&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="107"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        severity="Warning"
+        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Formatting argument types incomplete or inconsistent"
+        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
+        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>&lt;b>%1$s\&apos;ı&lt;/b> %3$s\&apos;a ayarla&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
             line="107"
             column="3"/>
     </issue>
@@ -477,22 +654,6 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="110"
             column="2"/>
-    </issue>
-
-    <issue
-        id="StringFormatCount"
-        severity="Warning"
-        message="Formatting string &apos;`changes_set_to`&apos; is not referencing numbered arguments [2]"
-        category="Correctness:Messages"
-        priority="5"
-        summary="Formatting argument types incomplete or inconsistent"
-        explanation="When a formatted string takes arguments, it usually needs to reference the same arguments in all translations (or all arguments if there are no translations.&#xA;&#xA;There are cases where this is not the case, so this issue is a warning rather than an error by default. However, this usually happens when a language is not translated or updated correctly."
-        errorLine1="  &lt;string name=&quot;changes_set_to&quot;>Set &lt;b>%1$s&lt;/b> to %3$s&lt;/string>"
-        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="133"
-            column="3"/>
     </issue>
 
     <issue
@@ -680,7 +841,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -697,7 +858,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;97.0&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -714,7 +875,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -731,7 +892,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -748,7 +909,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector android:height=&quot;24dp&quot; android:viewportHeight=&quot;73.105&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -765,7 +926,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -782,7 +943,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1="&lt;android.support.v4.view.ViewPager xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
         errorLine2="^"
         quickfix="studio">
@@ -799,7 +960,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;menu_access_to&quot;>Access&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -807,6 +968,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="4"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="4"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="4"
@@ -848,7 +1013,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;menu_setting_list_menu_title&quot;>%1$s :&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -856,6 +1021,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="19"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="19"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="19"
@@ -882,7 +1051,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="18"
+            line="19"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -897,7 +1066,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;menu_settings_uploading&quot;>Posting item data.. &lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -905,6 +1074,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="23"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="23"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="23"
@@ -931,7 +1104,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="115"
+            line="23"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -946,7 +1119,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;menu_confirm_delete_msg&quot;>Are you sure you want to delete this connection?&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -954,6 +1127,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="24"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="24"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="24"
@@ -980,7 +1157,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="21"
+            line="24"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -995,7 +1172,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;preference_category_issue&quot;>Issues&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1003,6 +1180,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="25"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="25"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="25"
@@ -1029,7 +1210,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="22"
+            line="25"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1044,7 +1225,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;preference_issue_get_all&quot;>Get all issues&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1052,6 +1233,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="26"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="26"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="26"
@@ -1078,7 +1263,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="23"
+            line="26"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1093,7 +1278,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;preference_issue_description_get_all&quot;>By default, fetch UNCLOSED issues from remote. If you wish to get all issues from remote, check this option.&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1101,6 +1286,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="27"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="27"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="27"
@@ -1127,7 +1316,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="24"
+            line="27"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1142,7 +1331,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;ticket_jump&quot;>Jump&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1150,6 +1339,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="73"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="73"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="73"
@@ -1176,7 +1369,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="65"
+            line="73"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1191,7 +1384,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;issue_id&quot;>#%1$d&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1199,6 +1392,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="82"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="82"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="82"
@@ -1225,7 +1422,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="69"
+            line="82"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1240,7 +1437,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;menu_add_timeentry&quot;>Record Time&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1248,6 +1445,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="105"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="102"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="102"
@@ -1274,7 +1475,7 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="131"
+            line="102"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
@@ -1289,7 +1490,7 @@
         category="Performance"
         priority="3"
         summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds."
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
         errorLine1=" &lt;string name=&quot;progress&quot;>Progress&lt;/string>"
         errorLine2="         ~~~~~~~~~~~~~~~"
         quickfix="studio">
@@ -1297,6 +1498,10 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml"
             line="125"
             column="10"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml"
+            line="122"
+            column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
             line="122"
@@ -1323,12 +1528,31 @@
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
-            line="97"
+            line="122"
             column="11"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="114"
             column="11"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="  &lt;string name=&quot;menu_setting_edit_accesstoken&quot;>0e7c82... 40 karakter&lt;/string>"
+        errorLine2="                                               ^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="9"
+            column="48"/>
     </issue>
 
     <issue
@@ -1379,11 +1603,68 @@
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
         url="http://en.wikipedia.org/wiki/Ellipsis"
         urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Obtendo dados do item...&lt;/string>"
+        errorLine2="                                       ^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml"
+            line="22"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Nesne verisi getiriliyor...&lt;/string>"
+        errorLine2="                                       ^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
+            line="22"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Schreibe Elemente ...&lt;/string>"
         errorLine2="                                         ^"
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml"
+            line="23"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Nesne verisi gönderiliyor...&lt;/string>"
+        errorLine2="                                         ^"
+        quickfix="studio">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml"
             line="23"
             column="42"/>
     </issue>
@@ -1422,6 +1703,96 @@
     </issue>
 
     <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_basicauthentication.xml"
+            line="17"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_basicauthentication.xml"
+            line="43"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml"
+            line="188"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml"
+            line="203"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml"
+            line="233"
+            column="6"/>
+    </issue>
+
+    <issue
         id="ContentDescription"
         severity="Warning"
         message="Missing `contentDescription` attribute on image"
@@ -1430,12 +1801,28 @@
         summary="Image without `contentDescription`"
         explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
         errorLine1=" &lt;ImageView"
-        errorLine2=" ^"
+        errorLine2="  ~~~~~~~~~"
         quickfix="studio">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml"
             line="19"
-            column="2"/>
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ConstantLocale"
+        severity="Warning"
+        message="Assigning `Locale.getDefault()` to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running"
+        category="Internationalization"
+        priority="6"
+        summary="Constant Locale"
+        explanation="Assigning `Locale.getDefault()` to a constant is suspicious, because the locale can change while the app is running."
+        errorLine1=" protected static final String PROVIDER = BuildConfig.APPLICATION_ID + &quot;.&quot; + TAG.toLowerCase(Locale.getDefault());"
+        errorLine2="                                                                                             ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/provider/Attachment.java"
+            line="43"
+            column="94"/>
     </issue>
 
     <issue
