@@ -2311,7 +2311,7 @@
         errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="87"
+            line="100"
             column="4"/>
     </issue>
 
@@ -2327,7 +2327,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="98"
+            line="111"
             column="3"/>
     </issue>
 
@@ -2343,7 +2343,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="105"
+            line="118"
             column="3"/>
     </issue>
 
