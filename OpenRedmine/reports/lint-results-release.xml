@@ -2,6 +2,18 @@
 <issues format="5" by="lint 3.5.1">
 
     <issue
+        id="InvalidPackage"
+        severity="Error"
+        message="Invalid package reference in library; not included in Android: `javax.persistence`. Referenced from `com.j256.ormlite.misc.JavaxPersistenceImpl`."
+        category="Correctness"
+        priority="6"
+        summary="Package not included in Android"
+        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
+        <location
+            file="/home/travis/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.1/bf7a747016c99ac01577d3268a4ac9c24e94d5de/ormlite-core-5.1.jar"/>
+    </issue>
+
+    <issue
         id="GradleDependency"
         severity="Warning"
         message="A newer version of com.google.guava:guava than 22.0 is available: 24.1-jre"
@@ -2311,7 +2323,7 @@
         errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="100"
+            line="87"
             column="4"/>
     </issue>
 
@@ -2327,7 +2339,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="111"
+            line="98"
             column="3"/>
     </issue>
 
@@ -2343,7 +2355,7 @@
         errorLine2="  ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml"
-            line="118"
+            line="105"
             column="3"/>
     </issue>
 

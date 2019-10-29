@@ -173,16 +173,17 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 133 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 133 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Oct 29 16:14:43 UTC 2019      </nav>
+Check performed at Tue Oct 29 16:46:48 UTC 2019      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
+      <a class="mdl-navigation__link" href="#InvalidPackage"><i class="material-icons error-icon">error</i>Package not included in Android (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (5)</a>
       <a class="mdl-navigation__link" href="#Typos"><i class="material-icons warning-icon">warning</i>Spelling error (2)</a>
       <a class="mdl-navigation__link" href="#PluralsCandidate"><i class="material-icons warning-icon">warning</i>Potential Plurals (2)</a>
@@ -216,6 +217,9 @@ Check performed at Tue Oct 29 16:14:43 UTC 2019      </nav>
 <table class="overview">
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<a href="#InvalidPackage">InvalidPackage</a>: Package not included in Android</td></tr>
 <tr>
 <td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
@@ -300,7 +304,47 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Correctness"></a>
-<a name="GradleDependency"></a>
+<a name="InvalidPackage"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InvalidPackageCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Package not included in Android</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../../../../../.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.1/bf7a747016c99ac01577d3268a4ac9c24e94d5de/ormlite-core-5.1.jar">../../../../../../.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.1/bf7a747016c99ac01577d3268a4ac9c24e94d5de/ormlite-core-5.1.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>javax.persistence</code>. Referenced from <code>com.j256.ormlite.misc.JavaxPersistenceImpl</code>.</span><br />
+</div>
+<div class="metadata"><div class="explanation" id="explanationInvalidPackage" style="display: none;">
+This check scans through libraries looking for calls to APIs that are not included in Android.<br/>
+<br/>
+When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.<br/>
+<br/>
+This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.<br/>To suppress this error, use the issue id "InvalidPackage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">InvalidPackage</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Error</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInvalidPackageLink" onclick="reveal('explanationInvalidPackage');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InvalidPackageCardLink" onclick="hideid('InvalidPackageCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="GradleDependency"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -2230,32 +2274,32 @@ Dismiss</button>            </div>
 <span class="lineno"> 10 </span>          <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"10dp"</span>
 <span class="lineno"> 11 </span>          <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/add"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:100</span>: <span class="message">Consider adding <code>android:layout_marginStart="10dip"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  99 </span>            <span class="prefix">android:</span><span class="attribute">singleLine</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 100 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dip"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 101 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"10.2k"</span>
-<span class="lineno"> 102 </span>            <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span> />
-<span class="lineno"> 103 </span>        <span class="tag">&lt;/TableRow></span></pre>
+<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:87</span>: <span class="message">Consider adding <code>android:layout_marginStart="10dip"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  84 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  85 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  86 </span>            <span class="prefix">android:</span><span class="attribute">singleLine</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno">  87 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dip"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  88 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"10.2k"</span>
+<span class="lineno">  89 </span>            <span class="prefix">tools:</span><span class="attribute">ignore</span>=<span class="value">"HardcodedText"</span> />
+<span class="lineno">  90 </span>        <span class="tag">&lt;/TableRow></span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:111</span>: <span class="message">Consider adding <code>android:drawableStart="@android:drawable/ic_menu_save"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 108 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/buttonDownload"</span>
-<span class="lineno"> 109 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 110 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 111 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">drawableLeft</span></span>=<span class="value">"@android:drawable/ic_menu_save"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 112 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/download"</span> />
-<span class="lineno"> 113 </span>
-<span class="lineno"> 114 </span>    <span class="tag">&lt;Button</span></pre>
+<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:98</span>: <span class="message">Consider adding <code>android:drawableStart="@android:drawable/ic_menu_save"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  95 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/buttonDownload"</span>
+<span class="lineno">  96 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  97 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  98 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">drawableLeft</span></span>=<span class="value">"@android:drawable/ic_menu_save"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  99 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/download"</span> />
+<span class="lineno"> 100 </span>
+<span class="lineno"> 101 </span>    <span class="tag">&lt;Button</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:118</span>: <span class="message">Consider adding <code>android:drawableStart="@android:drawable/ic_menu_set_as"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 115 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/buttonBrowser"</span>
-<span class="lineno"> 116 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 117 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 118 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">drawableLeft</span></span>=<span class="value">"@android:drawable/ic_menu_set_as"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 119 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/download_with_manager"</span> />
-<span class="lineno"> 120 </span>    
-<span class="lineno"> 121 </span><span class="tag">&lt;/LinearLayout></span></pre>
+<span class="location"><a href="../../src/main/res/layout/page_download.xml">../../src/main/res/layout/page_download.xml</a>:105</span>: <span class="message">Consider adding <code>android:drawableStart="@android:drawable/ic_menu_set_as"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 102 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/buttonBrowser"</span>
+<span class="lineno"> 103 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 104 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 105 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">drawableLeft</span></span>=<span class="value">"@android:drawable/ic_menu_set_as"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 106 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/download_with_manager"</span> />
+<span class="lineno"> 107 </span>    
+<span class="lineno"> 108 </span><span class="tag">&lt;/LinearLayout></span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/page_issue.xml">../../src/main/res/layout/page_issue.xml</a>:25</span>: <span class="message">Consider adding <code>android:layout_marginStart="3dip"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno"> 22 </span><span class="attribute">                     </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/textIssueId"</span>
