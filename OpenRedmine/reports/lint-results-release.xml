@@ -2,18 +2,6 @@
 <issues format="5" by="lint 3.5.1">
 
     <issue
-        id="InvalidPackage"
-        severity="Error"
-        message="Invalid package reference in library; not included in Android: `javax.persistence`. Referenced from `com.j256.ormlite.misc.JavaxPersistenceImpl`."
-        category="Correctness"
-        priority="6"
-        summary="Package not included in Android"
-        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
-        <location
-            file="/home/travis/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.1/bf7a747016c99ac01577d3268a4ac9c24e94d5de/ormlite-core-5.1.jar"/>
-    </issue>
-
-    <issue
         id="GradleDependency"
         severity="Warning"
         message="A newer version of com.google.guava:guava than 22.0 is available: 24.1-jre"
@@ -1417,22 +1405,6 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml"
             line="114"
             column="11"/>
-    </issue>
-
-    <issue
-        id="RedundantNamespace"
-        severity="Warning"
-        message="This namespace declaration is redundant"
-        category="Performance"
-        priority="1"
-        summary="Redundant namespace"
-        explanation="In Android XML documents, only specify the namespace on the root/document element. Namespace declarations elsewhere in the document are typically accidental leftovers from copy/pasting XML from other files or documentation."
-        errorLine1="   xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
-        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issue.xml"
-            line="55"
-            column="4"/>
     </issue>
 
     <issue
