@@ -173,17 +173,17 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 132 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 131 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Oct 31 16:43:47 UTC 2019      </nav>
+Check performed at Thu Oct 31 17:04:15 UTC 2019      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (5)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (4)</a>
       <a class="mdl-navigation__link" href="#Typos"><i class="material-icons warning-icon">warning</i>Spelling error (2)</a>
       <a class="mdl-navigation__link" href="#PluralsCandidate"><i class="material-icons warning-icon">warning</i>Potential Plurals (2)</a>
       <a class="mdl-navigation__link" href="#StringFormatCount"><i class="material-icons warning-icon">warning</i>Formatting argument types incomplete or inconsistent (22)</a>
@@ -216,7 +216,7 @@ Check performed at Thu Oct 31 16:43:47 UTC 2019      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
 <tr>
-<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
 </td></tr>
@@ -305,50 +305,41 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:75</span>: <span class="message">A newer version of com.google.guava:guava than 22.0 is available: 24.1-jre</span><br /><pre class="errorlines">
-<span class="lineno">  72 </span>}
-<span class="lineno">  73 </span>
-<span class="lineno">  74 </span>dependencies {
-<span class="caretline"><span class="lineno">  75 </span>    <span class="warning">testImplementation <span class="string">'com.google.guava:guava:22.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  76 </span>    testImplementation <span class="string">'junit:junit:4.12'</span>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:80</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
 <span class="lineno">  77 </span>    androidTestImplementation <span class="string">'com.android.support.test:runner:1.0.2'</span>, {
-<span class="lineno">  78 </span>        exclude group: <span class="string">'com.android.support'</span>, module: <span class="string">'support-annotations'</span></pre>
-
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:81</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
 <span class="lineno">  78 </span>        exclude group: <span class="string">'com.android.support'</span>, module: <span class="string">'support-annotations'</span>
 <span class="lineno">  79 </span>    }
-<span class="lineno">  80 </span>    <span class="comment">//implementation 'com.android.support:support-v4:25.3.1'</span>
-<span class="caretline"><span class="lineno">  81 </span>    <span class="warning">implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
-<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
-<span class="lineno">  84 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span></pre>
+<span class="caretline"><span class="lineno">  80 </span>    <span class="warning">implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
+<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
+<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span></pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:82</span>: <span class="message">A newer version of com.android.support:support-fragment than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:81</span>: <span class="message">A newer version of com.android.support:support-fragment than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
+<span class="lineno">  78 </span>        exclude group: <span class="string">'com.android.support'</span>, module: <span class="string">'support-annotations'</span>
 <span class="lineno">  79 </span>    }
-<span class="lineno">  80 </span>    <span class="comment">//implementation 'com.android.support:support-v4:25.3.1'</span>
-<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
-<span class="caretline"><span class="lineno">  82 </span>    <span class="warning">implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
-<span class="lineno">  84 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span>
-<span class="lineno">  85 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span></pre>
+<span class="lineno">  80 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
+<span class="caretline"><span class="lineno">  81 </span>    <span class="warning">implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
+<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span>
+<span class="lineno">  84 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span></pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:83</span>: <span class="message">A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
-<span class="lineno">  80 </span>    <span class="comment">//implementation 'com.android.support:support-v4:25.3.1'</span>
-<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
-<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
-<span class="caretline"><span class="lineno">  83 </span>    <span class="warning">implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  84 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span>
-<span class="lineno">  85 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span>
-<span class="lineno">  86 </span>    <span class="comment">//implementation 'se.emilsjolander:stickylistheaders:2.7.0'</span></pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:82</span>: <span class="message">A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
+<span class="lineno">  79 </span>    }
+<span class="lineno">  80 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
+<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
+<span class="caretline"><span class="lineno">  82 </span>    <span class="warning">implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:design:25.3.1'</span>
+<span class="lineno">  84 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span>
+<span class="lineno">  85 </span>    <span class="comment">//implementation 'se.emilsjolander:stickylistheaders:2.7.0'</span></pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:84</span>: <span class="message">A newer version of com.android.support:design than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
-<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
-<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
-<span class="lineno">  83 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
-<span class="caretline"><span class="lineno">  84 </span>    <span class="warning">implementation <span class="string">'com.android.support:design:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  85 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span>
-<span class="lineno">  86 </span>    <span class="comment">//implementation 'se.emilsjolander:stickylistheaders:2.7.0'</span>
-<span class="lineno">  87 </span>    implementation <span class="string">'com.github.mtotschnig:StickyListHeaders:2.7.1'</span></pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:83</span>: <span class="message">A newer version of com.android.support:design than 25.3.1 is available: 28.0.0</span><br /><pre class="errorlines">
+<span class="lineno">  80 </span>    implementation <span class="string">'com.android.support:appcompat-v7:25.3.1'</span>
+<span class="lineno">  81 </span>    implementation <span class="string">'com.android.support:support-fragment:25.3.1'</span>
+<span class="lineno">  82 </span>    implementation <span class="string">'com.android.support:animated-vector-drawable:25.3.1'</span>
+<span class="caretline"><span class="lineno">  83 </span>    <span class="warning">implementation <span class="string">'com.android.support:design:25.3.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  84 </span>    implementation <span class="string">'com.andreabaccega:android-form-edittext:1.2.1'</span>
+<span class="lineno">  85 </span>    <span class="comment">//implementation 'se.emilsjolander:stickylistheaders:2.7.0'</span>
+<span class="lineno">  86 </span>    implementation <span class="string">'com.github.mtotschnig:StickyListHeaders:2.7.1'</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
@@ -402,9 +393,9 @@ Dismiss</button>            </div>
 <span class="lineno"> 122 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"progress"</span>>Progress<span class="tag">&lt;/string></span>
 <span class="lineno"> 123 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download"</span>>Download<span class="tag">&lt;/string></span>
 <span class="caretline"><span class="lineno"> 124 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_with_manager"</span>>Download <span class="warning">via</span> Download Manager<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 125 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
-<span class="lineno"> 126 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"connection"</span>>Connection<span class="tag">&lt;/string></span>
-<span class="lineno"> 127 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"favorite"</span>>Favorite<span class="tag">&lt;/string></span></pre>
+<span class="lineno"> 125 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"download_cancelled"</span>>Download was cancelled. Try again.<span class="tag">&lt;/string></span>
+<span class="lineno"> 126 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"wiki"</span>>Wiki<span class="tag">&lt;/string></span>
+<span class="lineno"> 127 </span>  <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"connection"</span>>Connection<span class="tag">&lt;/string></span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationTypos" style="display: none;">
