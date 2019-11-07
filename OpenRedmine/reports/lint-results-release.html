@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 131 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 124 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sun Nov 03 15:16:54 UTC 2019      </nav>
+Check performed at Thu Nov 07 15:59:55 UTC 2019      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -189,7 +189,7 @@ Check performed at Sun Nov 03 15:16:54 UTC 2019      </nav>
       <a class="mdl-navigation__link" href="#StringFormatCount"><i class="material-icons warning-icon">warning</i>Formatting argument types incomplete or inconsistent (22)</a>
       <a class="mdl-navigation__link" href="#TrulyRandom"><i class="material-icons warning-icon">warning</i>Weak RNG (1)</a>
       <a class="mdl-navigation__link" href="#TrustAllX509TrustManager"><i class="material-icons warning-icon">warning</i>Insecure TLS/SSL trust manager (1)</a>
-      <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (9)</a>
+      <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (2)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (18)</a>
       <a class="mdl-navigation__link" href="#TypographyEllipsis"><i class="material-icons warning-icon">warning</i>Ellipsis string can be replaced with ellipsis character (7)</a>
       <a class="mdl-navigation__link" href="#IconMissingDensityFolder"><i class="material-icons warning-icon">warning</i>Missing density folder (1)</a>
@@ -240,7 +240,7 @@ Check performed at Sun Nov 03 15:16:54 UTC 2019      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#StaticFieldLeak">StaticFieldLeak</a>: Static Field Leaks</td></tr>
 <tr>
 <td class="countColumn">18</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -847,76 +847,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java</a>:150</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (anonymous jp.redmine.redmineclient.task.SelectIssuePost)</span><br /><pre class="errorlines">
-<span class="lineno"> 147 </span>                        issue.setProject(project);
-<span class="lineno"> 148 </span>                }
-<span class="lineno"> 149 </span>                form.getValue(issue);
-<span class="caretline"><span class="lineno"> 150 </span>                SelectIssuePost post = <span class="warning"><span class="keyword">new</span> SelectIssuePost(getHelper(), connection){</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 151 </span>                    <span class="keyword">private</span> <span class="keyword">boolean</span> isSuccess = <span class="keyword">true</span>;
-<span class="lineno"> 152 </span>                    <span class="annotation">@Override</span>
-<span class="lineno"> 153 </span>                    <span class="keyword">protected</span> <span class="keyword">void</span> onError(Exception lasterror) {
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueList.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueList.java</a>:249</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.IssueList.SelectDataTask)</span><br /><pre class="errorlines">
-<span class="lineno"> 246 </span>        onRefresh(<span class="keyword">true</span>);
-<span class="lineno"> 247 </span>    }
-<span class="lineno"> 248 </span>
-<span class="caretline"><span class="lineno"> 249 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectIssueTask {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 250 </span>        <span class="keyword">public</span> SelectDataTask(DatabaseCacheHelper helper,RedmineConnection connection, <span class="keyword">long</span> project) {
-<span class="lineno"> 251 </span>            <span class="keyword">super</span>(helper,connection,project);
-<span class="lineno"> 252 </span>        }
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:130</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (anonymous jp.redmine.redmineclient.task.SelectIssueJournalPost)</span><br /><pre class="errorlines">
-<span class="lineno"> 127 </span>                journal.setIssueId((<span class="keyword">long</span>) intent.getIssueId());
-<span class="lineno"> 128 </span>                formComment.getValue(journal);
-<span class="lineno"> 129 </span>
-<span class="caretline"><span class="lineno"> 130 </span>                SelectIssueJournalPost post = <span class="warning"><span class="keyword">new</span> SelectIssueJournalPost(getHelper(), connection){</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 131 </span>                    <span class="keyword">private</span> <span class="keyword">boolean</span> isSuccess = <span class="keyword">true</span>;
-<span class="lineno"> 132 </span>                    <span class="annotation">@Override</span>
-<span class="lineno"> 133 </span>                    <span class="keyword">protected</span> <span class="keyword">void</span> onError(Exception lasterror) {
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:250</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.IssueView.SelectDataTask)</span><br /><pre class="errorlines">
-<span class="lineno"> 247 </span>        task.execute(intent.getIssueId());
-<span class="lineno"> 248 </span>    }
-<span class="lineno"> 249 </span>
-<span class="caretline"><span class="lineno"> 250 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectIssueJournalTask{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 251 </span>        <span class="keyword">public</span> SelectDataTask() {
-<span class="lineno"> 252 </span>            <span class="keyword">super</span>();
-<span class="lineno"> 253 </span>            helper = getHelper();
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java">../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java</a>:150</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.NewsList.SelectDataTask)</span><br /><pre class="errorlines">
-<span class="lineno"> 147 </span>        }
-<span class="lineno"> 148 </span>    }
-<span class="lineno"> 149 </span>
-<span class="caretline"><span class="lineno"> 150 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectNewsTask {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 151 </span>        <span class="keyword">public</span> SelectDataTask(DatabaseCacheHelper helper, RedmineConnection con) {
-<span class="lineno"> 152 </span>            <span class="keyword">super</span>(helper, con);
-<span class="lineno"> 153 </span>        }
-</pre>
-
-<button class="mdl-button mdl-js-button mdl-button--primary" id="StaticFieldLeakDivLink" onclick="reveal('StaticFieldLeakDiv');" />+ 4 More Occurrences...</button>
-<div id="StaticFieldLeakDiv" style="display: none">
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java">../../src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java</a>:156</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.ProjectList.SelectDataTask)</span><br /><pre class="errorlines">
-<span class="lineno"> 153 </span>        task.execute(connection);
-<span class="lineno"> 154 </span>    }
-<span class="lineno"> 155 </span>
-<span class="caretline"><span class="lineno"> 156 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectProjectTask {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 157 </span>        <span class="keyword">public</span> SelectDataTask(DatabaseCacheHelper helper) {
-<span class="lineno"> 158 </span>            <span class="keyword">super</span>(helper);
-<span class="lineno"> 159 </span>        }
-</pre>
-
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java">../../src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java</a>:129</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (anonymous jp.redmine.redmineclient.task.SelectTimeEntriesPost)</span><br /><pre class="errorlines">
-<span class="lineno"> 126 </span>                    }
-<span class="lineno"> 127 </span>                }
-<span class="lineno"> 128 </span>                form.getValue(timeentry);
-<span class="caretline"><span class="lineno"> 129 </span>                SelectTimeEntriesPost post = <span class="warning"><span class="keyword">new</span> SelectTimeEntriesPost(getHelper(), connection){</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 130 </span>                    <span class="keyword">private</span> <span class="keyword">boolean</span> isSuccess = <span class="keyword">true</span>;
-<span class="lineno"> 131 </span>                    <span class="annotation">@Override</span>
-<span class="lineno"> 132 </span>                    <span class="keyword">protected</span> <span class="keyword">void</span> onError(Exception lasterror) {
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:244</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.IssueView.SelectDataTask)</span><br /><pre class="errorlines">
+<span class="lineno"> 241 </span>        task.execute(intent.getIssueId());
+<span class="lineno"> 242 </span>    }
+<span class="lineno"> 243 </span>
+<span class="caretline"><span class="lineno"> 244 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectIssueJournalTask{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 245 </span>        <span class="keyword">public</span> SelectDataTask() {
+<span class="lineno"> 246 </span>            <span class="keyword">super</span>();
+<span class="lineno"> 247 </span>            helper = getHelper();
 </pre>
 
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java">../../src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java</a>:139</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.WikiDetail.SelectDataTask)</span><br /><pre class="errorlines">
@@ -929,17 +867,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 142 </span>        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java">../../src/main/java/jp/redmine/redmineclient/fragment/WikiList.java</a>:110</span>: <span class="message">This <code>AsyncTask</code> class should be static or leaks might occur (jp.redmine.redmineclient.fragment.WikiList.SelectDataTask)</span><br /><pre class="errorlines">
-<span class="lineno"> 107 </span>        mListener.wiki(item.getConnectionId(),item.getProject().getId(),item.getTitle());
-<span class="lineno"> 108 </span>    }
-<span class="lineno"> 109 </span>
-<span class="caretline"><span class="lineno"> 110 </span>    <span class="keyword">private</span> <span class="keyword">class</span> <span class="warning">SelectDataTask</span> <span class="keyword">extends</span> SelectWikiTask {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 111 </span>        <span class="keyword">public</span> SelectDataTask(DatabaseCacheHelper helper, RedmineConnection con, <span class="keyword">long</span> proj_id){
-<span class="lineno"> 112 </span>            <span class="keyword">super</span>(helper,con,proj_id);
-<span class="lineno"> 113 </span>        }
-</pre>
-
-</div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationStaticFieldLeak" style="display: none;">
 A static field will leak contexts.<br/>
