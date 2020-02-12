@@ -10,7 +10,7 @@ MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/
 MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0f47d9c02b94eebe1dccc35d5c7ac9bd/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/9d2d4e11cb6d857a4d5abc17c8e290d5/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e7ded68ebf561085898d2cf0518ef443/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79bf96a4eafeaed66f16016dddea4cba/StickyListHeaders-2.7.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/7f692c1a83eb1cc47789e844ccd02c06/StickyListHeaders-2.7.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d406e22cd2afe4fbbb29f9355b816a00/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0a1e8b46b4c3b7285cfe90d1c188b735/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/08c4960737c09967d6b062ca8a9d0ae4/recyclerview-v7-25.3.1/AndroidManifest.xml:17:1-26:12
@@ -243,8 +243,8 @@ MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/c
 MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/9d2d4e11cb6d857a4d5abc17c8e290d5/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e7ded68ebf561085898d2cf0518ef443/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e7ded68ebf561085898d2cf0518ef443/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79bf96a4eafeaed66f16016dddea4cba/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79bf96a4eafeaed66f16016dddea4cba/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/7f692c1a83eb1cc47789e844ccd02c06/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/7f692c1a83eb1cc47789e844ccd02c06/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d406e22cd2afe4fbbb29f9355b816a00/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d406e22cd2afe4fbbb29f9355b816a00/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0a1e8b46b4c3b7285cfe90d1c188b735/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
