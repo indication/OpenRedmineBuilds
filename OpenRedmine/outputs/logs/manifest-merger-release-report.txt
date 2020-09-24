@@ -3,28 +3,24 @@ manifest
 ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
-INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/12a182d10e395be6ff3603e35171ef60/android-form-edittext-1.2.1/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d53aef5ca87374385840d53057a85cb6/StickyListHeaders-2.7.1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/3db3391a6f55ecc069181b0be66c8133/recyclerview-v7-25.3.1/AndroidManifest.xml:17:1-26:12
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:17:1-31:12
-INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/063dd6d72f1a08a56ab9d43a1060c89e/android-form-edittext-1.2.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4f1f327fff1e9b85206d14fdf36cf466/StickyListHeaders-2.7.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8c913391e20a46fd5b949f2450c7536b/recyclerview-v7-25.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:17:1-31:12
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
 	package
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:4:5-39
-		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
-		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:2:1-87:12
@@ -57,30 +53,30 @@ ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/Androi
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:10:19-82
 application
 ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:12:5-85:19
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/12a182d10e395be6ff3603e35171ef60/android-form-edittext-1.2.1/AndroidManifest.xml:11:5-20
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/12a182d10e395be6ff3603e35171ef60/android-form-edittext-1.2.1/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/063dd6d72f1a08a56ab9d43a1060c89e/android-form-edittext-1.2.1/AndroidManifest.xml:11:5-20
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/063dd6d72f1a08a56ab9d43a1060c89e/android-form-edittext-1.2.1/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:14:3-35
 	android:allowClearUserData
@@ -233,38 +229,38 @@ uses-sdk
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/12a182d10e395be6ff3603e35171ef60/android-form-edittext-1.2.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/12a182d10e395be6ff3603e35171ef60/android-form-edittext-1.2.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d53aef5ca87374385840d53057a85cb6/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d53aef5ca87374385840d53057a85cb6/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/3db3391a6f55ecc069181b0be66c8133/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/3db3391a6f55ecc069181b0be66c8133/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/063dd6d72f1a08a56ab9d43a1060c89e/android-form-edittext-1.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.andreabaccega:android-form-edittext:1.2.1] /home/travis/.gradle/caches/transforms-2/files-2.1/063dd6d72f1a08a56ab9d43a1060c89e/android-form-edittext-1.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4f1f327fff1e9b85206d14fdf36cf466/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mtotschnig:StickyListHeaders:2.7.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4f1f327fff1e9b85206d14fdf36cf466/StickyListHeaders-2.7.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8c913391e20a46fd5b949f2450c7536b/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8c913391e20a46fd5b949f2450c7536b/recyclerview-v7-25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:21:5-23:58
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
@@ -274,30 +270,30 @@ INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/And
 		ADDED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 		INJECTED from /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/2a74f1a0e40645edf99a3d2727e9c9e0/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/f0377fbe77bdd70af94c3b936c9d7ed7/transition-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/34a0b51b69863319514a80f43475dfef/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/485f6d7eafe5ff5f304f19f9eedc3b93/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/ff72584bff828dd89b62bbc1ca53debc/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/0b3ad8634b42fb37f8a89ca0fe2ec745/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/d9e12d084f7eba0f38b0953d5a57f5a9/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/3db3391a6f55ecc069181b0be66c8133/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/3db3391a6f55ecc069181b0be66c8133/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/e4a21f180cbed869227192cb5a136f30/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/bc94c24935839879a82ff8ffd01f364c/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/184aab623ab5a9d9cb978c1642613c20/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/be37f51fafd9910745bee0ef9b4536a0/appcompat-v7-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/1caf555a599aefcbcc79b65e9d974a63/transition-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/76a028669807120c20e2f5145779265a/support-v4-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/a659ec828d3dee71ce1654738b592e97/support-fragment-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8d4a9bc49bdc17eb3659263d0c21e5e5/animated-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/85af815577947965c5f52042ff17f63d/support-vector-drawable-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/4b70a6bb2a7ba0ab3e5727cedeb6997e/support-media-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8c913391e20a46fd5b949f2450c7536b/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/8c913391e20a46fd5b949f2450c7536b/recyclerview-v7-25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/79ffe674180bb71b914b664b25bfd087/support-core-ui-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/559b28e02efa0508dc23e64445812ab3/support-core-utils-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/cd5f504f1ad7bd08caeed5e0561cca34/support-compat-25.3.1/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/000e340a54da49c89f040169e9e3278c/design-25.3.1/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] /home/travis/.gradle/caches/transforms-2/files-2.1/428a014c6fdc49994116a7de5e32921a/design-25.3.1/AndroidManifest.xml:26:9-47

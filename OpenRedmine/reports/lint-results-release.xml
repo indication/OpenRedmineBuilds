@@ -1,665 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="5" by="lint 4.1.0-beta05">
-
-    <issue
-        id="ScopedStorage"
-        severity="Warning"
-        message="WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+"
-        category="Correctness"
-        priority="8"
-        summary="Affected by scoped storage"
-        explanation="Scoped storage is enforced on Android 10+ (or Android 11+ if using `requestLegacyExternalStorage`). In particular, `WRITE_EXTERNAL_STORAGE` will no longer provide write access to all files; it will provide the equivalent of `READ_EXTERNAL_STORAGE` instead.&#xA;&#xA;The `MANAGE_EXTERNAL_STORAGE` permission can be used to manage all files, but it is rarely necessary and most apps on Google Play are not allowed to use it. Most apps should instead migrate to use scoped storage. To modify or delete files, apps should request write access from the user as described at https://developer.android.com/reference/android/provider/MediaStore#createWriteRequest."
-        url="https://developer.android.com/preview/privacy/storage#scoped-storage"
-        urls="https://developer.android.com/preview/privacy/storage#scoped-storage"
-        errorLine1=" &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/>"
-        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
-            line="9"
-            column="33"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_add,null);"
-        errorLine2="                                                   ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="96"
-            column="52"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="   convertView = infrator.inflate(R.layout.listheader_connection, null);"
-        errorLine2="                                                                  ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java"
-            line="42"
-            column="67"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="161"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mHeader = inflater.inflate(R.layout.listheader_filter,null);"
-        errorLine2="                                                        ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="163"
-            column="57"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="159"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java"
-            line="104"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
-            line="117"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java"
-            line="64"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="InflateParams"
-        severity="Warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
-        category="Correctness"
-        priority="5"
-        summary="Layout Inflation without a Parent"
-        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
-        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
-        errorLine1="  mFooter = inflater.inflate(R.layout.listview_footer,null);"
-        errorLine2="                                                      ~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java"
-            line="113"
-            column="55"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_save:"
-        errorLine2="        ~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionEdit.java"
-            line="165"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_delete:"
-        errorLine2="        ~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionEdit.java"
-            line="168"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_access_addnew:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="125"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_access_removecache:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="130"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_settings:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="136"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_about:"
-        errorLine2="        ~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java"
-            line="143"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case android.R.id.home:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/IssueActivity.java"
-            line="144"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_save:"
-        errorLine2="        ~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java"
-            line="121"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_delete:"
-        errorLine2="        ~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java"
-            line="175"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="324"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_issues_filter:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="329"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_access_addnew:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="334"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java"
-            line="341"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="273"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="278"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java"
-            line="197"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java"
-            line="202"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectDetail.java"
-            line="85"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
-            line="213"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_settings:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
-            line="218"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java"
-            line="225"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_save:"
-        errorLine2="        ~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java"
-            line="110"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_delete:"
-        errorLine2="        ~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java"
-            line="156"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java"
-            line="101"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_access_addnew:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java"
-            line="106"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case android.R.id.home:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WebViewActivity.java"
-            line="90"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java"
-            line="180"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_web:"
-        errorLine2="        ~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java"
-            line="185"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case R.id.menu_refresh:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java"
-            line="153"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="NonConstantResourceId"
-        severity="Warning"
-        message="Resource IDs will be non-final in Android Gradle Plugin version 5.0, avoid using them in switch case statements"
-        category="Correctness"
-        priority="5"
-        summary="Checks use of resource IDs in places requiring constants."
-        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
-        errorLine1="   case android.R.id.home:"
-        errorLine2="        ~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WikiViewActivity.java"
-            line="120"
-            column="9"/>
-    </issue>
+<issues format="5" by="lint 3.5.3">
 
     <issue
         id="GradleDependency"
@@ -764,9 +104,9 @@
         category="Correctness:Messages"
         priority="5"
         summary="Potential Plurals"
-        explanation="This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.&#xA;&#xA;For example, rather than something like this:&#xA;```xml&#xA;  &lt;string name=&quot;try_again&quot;>Try again in %d seconds.&lt;/string>&#xA;```&#xA;you should be using a plural:&#xA;```xml&#xA;   &lt;plurals name=&quot;try_again&quot;>&#xA;        &lt;item quantity=&quot;one&quot;>Try again in %d second&lt;/item>&#xA;        &lt;item quantity=&quot;other&quot;>Try again in %d seconds&lt;/item>&#xA;    &lt;/plurals>&#xA;```&#xA;This will ensure that in other languages the right set of translations are provided for the different quantity classes.&#xA;&#xA;(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives."
-        url="https://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
-        urls="https://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        explanation="This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.&#xA;&#xA;For example, rather than something like this:&#xA;  &lt;string name=&quot;try_again&quot;>Try again in %d seconds.&lt;/string>&#xA;you should be using a plural:&#xA;   &lt;plurals name=&quot;try_again&quot;>&#xA;        &lt;item quantity=&quot;one&quot;>Try again in %d second&lt;/item>&#xA;        &lt;item quantity=&quot;other&quot;>Try again in %d seconds&lt;/item>&#xA;    &lt;/plurals>&#xA;This will ensure that in other languages the right set of translations are provided for the different quantity classes.&#xA;&#xA;(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
         errorLine1=" &lt;string name=&quot;relation_precedes&quot;>%1$d days precedes&lt;/string>"
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -782,9 +122,9 @@
         category="Correctness:Messages"
         priority="5"
         summary="Potential Plurals"
-        explanation="This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.&#xA;&#xA;For example, rather than something like this:&#xA;```xml&#xA;  &lt;string name=&quot;try_again&quot;>Try again in %d seconds.&lt;/string>&#xA;```&#xA;you should be using a plural:&#xA;```xml&#xA;   &lt;plurals name=&quot;try_again&quot;>&#xA;        &lt;item quantity=&quot;one&quot;>Try again in %d second&lt;/item>&#xA;        &lt;item quantity=&quot;other&quot;>Try again in %d seconds&lt;/item>&#xA;    &lt;/plurals>&#xA;```&#xA;This will ensure that in other languages the right set of translations are provided for the different quantity classes.&#xA;&#xA;(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives."
-        url="https://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
-        urls="https://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        explanation="This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.&#xA;&#xA;For example, rather than something like this:&#xA;  &lt;string name=&quot;try_again&quot;>Try again in %d seconds.&lt;/string>&#xA;you should be using a plural:&#xA;   &lt;plurals name=&quot;try_again&quot;>&#xA;        &lt;item quantity=&quot;one&quot;>Try again in %d second&lt;/item>&#xA;        &lt;item quantity=&quot;other&quot;>Try again in %d seconds&lt;/item>&#xA;    &lt;/plurals>&#xA;This will ensure that in other languages the right set of translations are provided for the different quantity classes.&#xA;&#xA;(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
         errorLine1=" &lt;string name=&quot;relation_follows&quot;>%1$d days follows&lt;/string>"
         errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1915,8 +1255,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_setting_edit_accesstoken&quot;>0e7c82... 40 karakter&lt;/string>"
         errorLine2="                                               ^">
         <location
@@ -1933,8 +1273,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Recibiendo datos...&lt;/string>"
         errorLine2="                                       ^">
         <location
@@ -1951,8 +1291,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Guardando datos...&lt;/string>"
         errorLine2="                                         ^">
         <location
@@ -1969,8 +1309,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Obtendo dados do item...&lt;/string>"
         errorLine2="                                       ^">
         <location
@@ -1987,8 +1327,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Nesne verisi getiriliyor...&lt;/string>"
         errorLine2="                                       ^">
         <location
@@ -2005,8 +1345,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Schreibe Elemente ...&lt;/string>"
         errorLine2="                                         ^">
         <location
@@ -2023,8 +1363,8 @@
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
         explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
-        url="https://en.wikipedia.org/wiki/Ellipsis"
-        urls="https://en.wikipedia.org/wiki/Ellipsis"
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Nesne verisi gönderiliyor...&lt;/string>"
         errorLine2="                                         ^">
         <location
@@ -2040,11 +1380,29 @@
         category="Usability:Icons"
         priority="3"
         summary="Missing density folder"
-        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see https://developer.android.com/about/dashboards"
-        url="https://developer.android.com/guide/practices/screens_support.html"
-        urls="https://developer.android.com/guide/practices/screens_support.html">
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        severity="Warning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent filter. See issue explanation for more details."
+        category="Usability"
+        priority="5"
+        summary="Missing support for Firebase App Indexing"
+        explanation="Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search."
+        url="https://g.co/AppIndexing/AndroidStudio"
+        urls="https://g.co/AppIndexing/AndroidStudio"
+        errorLine1="    &lt;application"
+        errorLine2="    ^">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
+            line="12"
+            column="5"/>
     </issue>
 
     <issue
@@ -2144,7 +1502,7 @@
         category="Accessibility"
         priority="3"
         summary="Image without `contentDescription`"
-        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
         errorLine1=" &lt;ImageView"
         errorLine2="  ~~~~~~~~~">
         <location
@@ -2177,8 +1535,8 @@
         priority="6"
         summary="TextView Internationalization"
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
-        url="https://developer.android.com/guide/topics/resources/localization.html"
-        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        url="http://developer.android.com/guide/topics/resources/localization.html"
+        urls="http://developer.android.com/guide/topics/resources/localization.html"
         errorLine1="  textTicketid.setText(&quot;#&quot;+rd.getIssueId().toString());"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2195,8 +1553,8 @@
         priority="6"
         summary="TextView Internationalization"
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
-        url="https://developer.android.com/guide/topics/resources/localization.html"
-        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        url="http://developer.android.com/guide/topics/resources/localization.html"
+        urls="http://developer.android.com/guide/topics/resources/localization.html"
         errorLine1="  textTicketid.setText(&quot;#&quot;+rd.getIssueId().toString());"
         errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
