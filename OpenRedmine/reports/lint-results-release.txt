@@ -76,29 +76,15 @@
    </lint>
    ```
 
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml:6: Warning: Attribute scaleX is only used in API level 11 and higher (current min is 9) [UnusedAttribute]
-  <group android:scaleX="0.12269231"
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml:7: Warning: Attribute scaleY is only used in API level 11 and higher (current min is 9) [UnusedAttribute]
-      android:scaleY="0.12269231"
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/SplashActivity.java:11: Warning: The application should not provide its own launch screen [CustomSplashScreen]
+public class SplashActivity extends Activity{
+             ~~~~~~~~~~~~~~
 
-   Explanation for issues of type "UnusedAttribute":
-   This check finds attributes set in XML files that were introduced in a
-   version newer than the oldest version targeted by your application (with
-   the minSdkVersion attribute).
-
-   This is not an error; the application will simply ignore the attribute.
-   However, if the attribute is important to the appearance or functionality
-   of your application, you should consider finding an alternative way to
-   achieve the same result with only available attributes, and then you can
-   optionally create a copy of the layout in a layout-vNN folder which will be
-   used on API NN or higher where you can take advantage of the newer
-   attribute.
-
-   Note: This check does not only apply to attributes. For example, some tags
-   can be unused too, such as the new <tag> element in layouts introduced in
-   API 21.
+   Explanation for issues of type "CustomSplashScreen":
+   Starting in Android 12 (API 31+), the application's Launch Screen is
+   provided by the system and the application should not create its own,
+   otherwise the user will see two splashscreen. Please check the SplashScreen
+   class to check how the Splash Screen can be controlled and customized.
 
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:96: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
   mFooter = inflater.inflate(R.layout.listview_add,null);
@@ -397,34 +383,6 @@
    Explanation for issues of type "CustomX509TrustManager":
    This check looks for custom X509TrustManager implementations.
 
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:22: Warning: As of Android 12, android:exported must be set; use true to make the activity available to other apps, and false otherwise. For launcher activities, this should be set to true. [IntentFilterExportedReceiver]
-        <activity android:name=".activity.SplashActivity"
-         ~~~~~~~~
-
-   Explanation for issues of type "IntentFilterExportedReceiver":
-   Apps targeting Android 12 and higher are required to specify an explicit
-   value for android:exported when the corresponding component has an intent
-   filter defined. Otherwise, installation will fail. Set it to true to make
-   this activity accessible to other apps, and false to limit it to be used
-   only by this app or the OS. For launch activities, this should be set to
-   true; otherwise, the app will fail to launch.
-
-   Previously, android:exported for components without any intent filters
-   present used to default to false, and when intent filters were present, the
-   default was true. Defaults which change value based on other values are
-   confusing and lead to apps accidentally exporting components as a
-   side-effect of adding intent filters. This is a security risk, and we have
-   made this change to avoid introducing accidental vulnerabilities.
-
-   While the default without intent filters remains unchanged, it is now
-   required to explicitly specify a value when intent filters are present. Any
-   app failing to meet this requirement will fail to install on any Android
-   version after Android 11.
-
-   We recommend setting android:exported to false (even on previous versions
-   of Android prior to this requirement) unless you have a good reason to
-   export a particular component.
-
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java:79: Warning: Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking SslErrorHandler#cancel(). [WebViewClientOnReceivedSslError]
         handler.proceed();
         ~~~~~~~~~~~~~~~~~
@@ -436,12 +394,70 @@
    This check looks for onReceivedSslError implementations that invoke
    SslErrorHandler#proceed.
 
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:86: Warning: Unnecessary; SDK_INT is always >= 9 [ObsoleteSdkInt]
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:15: Warning: The attribute android:fullBackupContent is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+  android:fullBackupContent="true"
+                             ~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java:43: Warning: Unnecessary; SDK_INT is always >= 11 [ObsoleteSdkInt]
+  @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java:66: Warning: Unnecessary; SDK_INT is never < 12 [ObsoleteSdkInt]
+  if(Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java:97: Warning: Unnecessary; SDK_INT is always >= 11 [ObsoleteSdkInt]
+ @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java:116: Warning: Unnecessary; SDK_INT is always >= 11 [ObsoleteSdkInt]
+ @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:86: Warning: Unnecessary; SDK_INT is always >= 12 [ObsoleteSdkInt]
   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:123: Warning: Unnecessary; SDK_INT is always >= 9 [ObsoleteSdkInt]
  @TargetApi(Build.VERSION_CODES.GINGERBREAD)
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:136: Warning: Unnecessary; SDK_INT is always >= 12 [ObsoleteSdkInt]
+   if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/com/j256/ormlite/android/apptools/OrmLiteContentProvider.java:52: Warning: Unnecessary; SDK_INT is always >= 11 [ObsoleteSdkInt]
+ @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java:9: Warning: Unnecessary; SDK_INT is never < 12 [ObsoleteSdkInt]
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java:14: Warning: Unnecessary; SDK_INT is always >= 11 [ObsoleteSdkInt]
+   @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java:24: Warning: Unnecessary; SDK_INT is never < 12 [ObsoleteSdkInt]
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java:31: Warning: Unnecessary; SDK_INT is never < 12 [ObsoleteSdkInt]
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java:39: Warning: Unnecessary; SDK_INT is never < 12 [ObsoleteSdkInt]
+  if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java:127: Warning: Unnecessary; SDK_INT is always >= 12 [ObsoleteSdkInt]
+  if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java:134: Warning: Unnecessary; SDK_INT is always >= 12 [ObsoleteSdkInt]
+  if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "ObsoleteSdkInt":
    This check flags version checks that are not necessary, because the
@@ -828,4 +844,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 172 warnings
+0 errors, 184 warnings

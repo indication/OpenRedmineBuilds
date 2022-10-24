@@ -167,35 +167,19 @@
     </issue>
 
     <issue
-        id="UnusedAttribute"
+        id="CustomSplashScreen"
         severity="Warning"
-        message="Attribute `scaleX` is only used in API level 11 and higher (current min is 9)"
+        message="The application should not provide its own launch screen"
         category="Correctness"
-        priority="6"
-        summary="Attribute unused on older versions"
-        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).&#xA;&#xA;This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.&#xA;&#xA;Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
-        errorLine1="  &lt;group android:scaleX=&quot;0.12269231&quot;"
-        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        priority="5"
+        summary="Application-defined Launch Screen"
+        explanation="Starting in Android 12 (API 31+), the application&apos;s Launch Screen is provided by the system and the application should not create its own, otherwise the user will see two splashscreen. Please check the `SplashScreen` class to check how the Splash Screen can be controlled and customized."
+        errorLine1="public class SplashActivity extends Activity{"
+        errorLine2="             ~~~~~~~~~~~~~~">
         <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml"
-            line="6"
-            column="10"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        severity="Warning"
-        message="Attribute `scaleY` is only used in API level 11 and higher (current min is 9)"
-        category="Correctness"
-        priority="6"
-        summary="Attribute unused on older versions"
-        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).&#xA;&#xA;This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.&#xA;&#xA;Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
-        errorLine1="      android:scaleY=&quot;0.12269231&quot;"
-        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml"
-            line="7"
-            column="7"/>
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/SplashActivity.java"
+            line="11"
+            column="14"/>
     </issue>
 
     <issue
@@ -1327,22 +1311,6 @@
     </issue>
 
     <issue
-        id="IntentFilterExportedReceiver"
-        severity="Warning"
-        message="As of Android 12, `android:exported` must be set; use `true` to make the activity \&#xA;available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`."
-        category="Security"
-        priority="5"
-        summary="Unspecified `android:exported` in manifest"
-        explanation="Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported` when the corresponding component has an intent filter defined. Otherwise, installation will fail. Set it to `true` to make this activity accessible to other apps, and `false` to limit it to be used only by this app or the OS. For launch activities, this should be set to true; otherwise, the app will fail to launch.&#xA;&#xA;Previously, `android:exported` for components without any intent filters present used to default to `false`, and when intent filters were present, the default was `true`. Defaults which change value based on other values are confusing and lead to apps accidentally exporting components as a side-effect of adding intent filters. This is a security risk, and we have made this change to avoid introducing accidental vulnerabilities.&#xA;&#xA;While the default without intent filters remains unchanged, it is now required to explicitly specify a value when intent filters are present. Any app failing to meet this requirement will fail to install on any Android version after Android 11.&#xA;&#xA;We recommend setting `android:exported` to false (even on previous versions of Android prior to this requirement) unless you have a good reason to export a particular component."
-        errorLine1="        &lt;activity android:name=&quot;.activity.SplashActivity&quot;"
-        errorLine2="         ~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
-            line="22"
-            column="10"/>
-    </issue>
-
-    <issue
         id="WebViewClientOnReceivedSslError"
         severity="Warning"
         message="Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking `SslErrorHandler#cancel()`."
@@ -1375,9 +1343,91 @@
     </issue>
 
     <issue
+        id="DataExtractionRules"
+        severity="Warning"
+        message="The attribute `android:fullBackupContent` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+        category="Security"
+        priority="3"
+        summary="Missing data extraction rules"
+        explanation="Before Android 12, the attributes `android:allowBackup` and `android:fullBackupContent` were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.&#xA;&#xA;In Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute `android:dataExtractionRules`, specifying an `@xml` resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your `minSdkVersion` supports older versions, you&apos;ll still want to specify an `android:fullBackupContent` resource if the default behavior is not right for your app."
+        url="https://developer.android.com/about/versions/12/backup-restore#xml-changes"
+        urls="https://developer.android.com/about/versions/12/backup-restore#xml-changes"
+        errorLine1="  android:fullBackupContent=&quot;true&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
+            line="15"
+            column="30"/>
+    </issue>
+
+    <issue
         id="ObsoleteSdkInt"
         severity="Warning"
-        message="Unnecessary; SDK_INT is always >= 9"
+        message="Unnecessary; SDK_INT is always >= 11"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  @TargetApi(Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java"
+            line="43"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if(Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java"
+            line="66"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 11"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1=" @TargetApi(Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java"
+            line="97"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 11"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1=" @TargetApi(Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/form/DownloadForm.java"
+            line="116"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 12"
         category="Performance"
         priority="6"
         summary="Obsolete SDK_INT Version Check"
@@ -1404,6 +1454,150 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java"
             line="123"
             column="2"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="   if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java"
+            line="136"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 11"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1=" @TargetApi(Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/com/j256/ormlite/android/apptools/OrmLiteContentProvider.java"
+            line="52"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java"
+            line="9"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 11"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="   @TargetApi(Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java"
+            line="14"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java"
+            line="24"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java"
+            line="31"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is never &lt; 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/helper/SwipeRefreshLayoutHelper.java"
+            line="39"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java"
+            line="127"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 12"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="  if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java"
+            line="134"
+            column="6"/>
     </issue>
 
     <issue
