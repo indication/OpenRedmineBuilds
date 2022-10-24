@@ -1,0 +1,839 @@
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:8: Warning: WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+ [ScopedStorage]
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:265: Error: Suspicious indentation: This is indented but is not nested under the previous expression (if(task != null && t...) [SuspiciousIndentation]
+        super.onCreateOptionsMenu(menu, inflater);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:263: Previous statement here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:82: Error: Suspicious indentation: This is indented but is not nested under the previous expression (if(!isValidParameter...) [SuspiciousIndentation]
+        try {
+        ~~~~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:80: Previous statement here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java:143: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  return convertView;
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java:142: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:77: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  super.onDestroyView();
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:75: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:104: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  adapter = new IssueStickyListAdapter(getHelper(),activity, mActionListener);
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:102: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:43: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  super.notifyDataSetChanged();
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:35: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineDaoAdapter.java:63: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  super.notifyDataSetChanged();
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineDaoAdapter.java:55: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/entity/RedmineProject.java:91: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  name = item.getName();
+~~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/entity/RedmineProject.java:90: Previous line indentation here
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WebViewActivity.java:49: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  form = new RedmineWebviewForm(this);
+ ~
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WebViewActivity.java:46: Previous line indentation here
+
+   Explanation for issues of type "SuspiciousIndentation":
+   This check looks for cases where the indentation suggests a grouping that
+   isn't actually there in the code. A common example of this would be
+   something like
+   if (column > width)
+       line++
+       column = 0
+   Here, the column = 0 line will be executed every single time, not just if
+   the condition is true.
+
+   Available options:
+
+   **always-run** (default is false):
+   Whether this check should be included while editing.
+
+   While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an `if` statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="SuspiciousIndentation">
+           <option name="always-run" value="false" />
+       </issue>
+   </lint>
+   ```
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml:6: Warning: Attribute scaleX is only used in API level 11 and higher (current min is 9) [UnusedAttribute]
+  <group android:scaleX="0.12269231"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_launcher_foreground.xml:7: Warning: Attribute scaleY is only used in API level 11 and higher (current min is 9) [UnusedAttribute]
+      android:scaleY="0.12269231"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:96: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_add,null);
+                                                   ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/FavoriteProjectListAdapter.java:42: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+   convertView = infrator.inflate(R.layout.listheader_connection, null);
+                                                                  ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:161: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:163: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mHeader = inflater.inflate(R.layout.listheader_filter,null);
+                                                        ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:159: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java:104: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java:117: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java:64: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java:113: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+  mFooter = inflater.inflate(R.layout.listview_footer,null);
+                                                      ~~~~
+
+   Explanation for issues of type "InflateParams":
+   When inflating a layout, avoid passing in null as the parent view, since
+   otherwise any layout parameters on the root of the inflated layout will be
+   ignored.
+
+   https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionEdit.java:165: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_save:
+        ~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionEdit.java:168: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_delete:
+        ~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:125: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_access_addnew:
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:130: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_access_removecache:
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:136: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_settings:
+        ~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ConnectionList.java:143: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_about:
+        ~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java:121: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_save:
+        ~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueEdit.java:175: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_delete:
+        ~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:324: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:329: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_issues_filter:
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:334: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_access_addnew:
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:341: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:273: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:278: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java:197: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java:202: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectDetail.java:85: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java:213: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java:218: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_settings:
+        ~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/ProjectList.java:225: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java:110: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_save:
+        ~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryEdit.java:156: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_delete:
+        ~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java:101: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/TimeEntryList.java:106: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_access_addnew:
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java:180: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiDetail.java:185: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_web:
+        ~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/WikiList.java:153: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+   case R.id.menu_refresh:
+        ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NonConstantResourceId":
+   Avoid the usage of resource IDs where constant expressions are required.
+
+   A future version of the Android Gradle Plugin will generate R classes with
+   non-constant IDs in order to improve the performance of incremental
+   compilation.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle:87: Warning: A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 28.0.0 [GradleDependency]
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle:88: Warning: A newer version of com.android.support:support-fragment than 25.3.1 is available: 28.0.0 [GradleDependency]
+    implementation 'com.android.support:support-fragment:25.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle:89: Warning: A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 28.0.0 [GradleDependency]
+    implementation 'com.android.support:animated-vector-drawable:25.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle:90: Warning: A newer version of com.android.support:design than 25.3.1 is available: 28.0.0 [GradleDependency]
+    implementation 'com.android.support:design:25.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml:27: Warning: "invez" is a common misspelling; did you mean "invés"? [Typos]
+  <string name="preference_issue_description_get_all">Por padrão, obtém apenas tarefas NÃO FECHADAS do servidor remoto. Se ao invez disso você deseja obter todas as tarefas, marque esta opção.</string>
+                                                                                                                              ^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml:124: Warning: "via" is a common misspelling; did you mean "vía"? [Typos]
+  <string name="download_with_manager">Download via Download Manager</string>
+                                                ^
+
+   Explanation for issues of type "Typos":
+   This check looks through the string definitions, and if it finds any words
+   that look like likely misspellings, they are flagged.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:92: Warning: Formatting %d followed by words ("days"): This should probably be a plural rather than a string [PluralsCandidate]
+ <string name="relation_precedes">%1$d days precedes</string>
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:93: Warning: Formatting %d followed by words ("days"): This should probably be a plural rather than a string [PluralsCandidate]
+ <string name="relation_follows">%1$d days follows</string>
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PluralsCandidate":
+   This lint check looks for potential errors in internationalization where
+   you have translated a message which involves a quantity and it looks like
+   other parts of the string may need grammatical changes.
+
+   For example, rather than something like this:
+     <string name="try_again">Try again in %d seconds.</string>
+   you should be using a plural:
+      <plurals name="try_again">
+           <item quantity="one">Try again in %d second</item>
+           <item quantity="other">Try again in %d seconds</item>
+       </plurals>
+   This will ensure that in other languages the right set of translations are
+   provided for the different quantity classes.
+
+   (This check depends on some heuristics, so it may not accurately determine
+   whether a string really should be a quantity. You can use tools:ignore to
+   filter out false positives.
+
+   https://developer.android.com/guide/topics/resources/string-resource.html#Plurals
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml:10: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml:40: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml:58: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml:58: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-nl/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+  <string name="ticket_modified_by">%2$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:60: Warning: Formatting string 'ticket_modified_by' is not referencing numbered arguments [1] [StringFormatCount]
+ <string name="ticket_modified_by">%2$s</string>
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-zh/strings.xml:99: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">设置 <b>%1$s</b> 到 %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ru/strings.xml:103: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Установить <b>%1$s</b> для %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-cs/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Nastavit <b>%1$s</b> na %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Setze <b>%1$s</b> auf %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Set <b>%1$s</b> to %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-ja/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to"><b>%1$s</b> に %3$s を設定</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-nl/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Zet <b>%1$s</b> tot %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Definir <b>%1$s</b> para %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml:107: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to"><b>%1$s\'ı</b> %3$s\'a ayarla</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-fr/strings.xml:108: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+  <string name="changes_set_to">Set <b>%1$s</b> to %3$s</string>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:110: Warning: Formatting string 'changes_set_to' is not referencing numbered arguments [2] [StringFormatCount]
+ <string name="changes_set_to">Set <b>%1$s</b> to %3$s</string>
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StringFormatCount":
+   When a formatted string takes arguments, it usually needs to reference the
+   same arguments in all translations (or all arguments if there are no
+   translations.
+
+   There are cases where this is not the case, so this issue is a warning
+   rather than an error by default. However, this usually happens when a
+   language is not translated or updated correctly.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/task/Fetcher.java:131: Warning: Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info. [TrulyRandom]
+      context.init(null, trustManagers, new SecureRandom());
+                                            ~~~~~~~~~~~~
+
+   Explanation for issues of type "TrulyRandom":
+   Key generation, signing, encryption, and random number generation may not
+   receive cryptographically strong values due to improper initialization of
+   the underlying PRNG on Android 4.3 and below.
+
+   If your application relies on cryptographically secure random number
+   generation you should apply the workaround described in
+   https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.
+   html .
+
+   This lint rule is mostly informational; it does not accurately detect
+   whether cryptographically secure RNG is required, or whether the workaround
+   has already been applied. After reading the blog entry and updating your
+   code if necessary, you can disable this lint issue.
+
+   https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/task/Fetcher.java:120: Warning: checkServerTrusted is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers [TrustAllX509TrustManager]
+      public void checkServerTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+                  ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TrustAllX509TrustManager":
+   This check looks for X509TrustManager implementations whose
+   checkServerTrusted or checkClientTrusted methods do nothing (thus trusting
+   any certificate chain) which could result in insecure network traffic
+   caused by trusting arbitrary TLS/SSL certificates presented by peers.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/task/Fetcher.java:70: Warning: Implementing a custom X509TrustManager is error-prone and likely to be insecure. It is likely to disable certificate validation altogether, and is non-trivial to implement correctly without calling Android's default implementation. [CustomX509TrustManager]
+     TrustManager[] trustManagers = new TrustManager[]{new X509TrustManager() {
+                                                           ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CustomX509TrustManager":
+   This check looks for custom X509TrustManager implementations.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml:22: Warning: As of Android 12, android:exported must be set; use true to make the activity available to other apps, and false otherwise. For launcher activities, this should be set to true. [IntentFilterExportedReceiver]
+        <activity android:name=".activity.SplashActivity"
+         ~~~~~~~~
+
+   Explanation for issues of type "IntentFilterExportedReceiver":
+   Apps targeting Android 12 and higher are required to specify an explicit
+   value for android:exported when the corresponding component has an intent
+   filter defined. Otherwise, installation will fail. Set it to true to make
+   this activity accessible to other apps, and false to limit it to be used
+   only by this app or the OS. For launch activities, this should be set to
+   true; otherwise, the app will fail to launch.
+
+   Previously, android:exported for components without any intent filters
+   present used to default to false, and when intent filters were present, the
+   default was true. Defaults which change value based on other values are
+   confusing and lead to apps accidentally exporting components as a
+   side-effect of adding intent filters. This is a security risk, and we have
+   made this change to avoid introducing accidental vulnerabilities.
+
+   While the default without intent filters remains unchanged, it is now
+   required to explicitly specify a value when intent filters are present. Any
+   app failing to meet this requirement will fail to install on any Android
+   version after Android 11.
+
+   We recommend setting android:exported to false (even on previous versions
+   of Android prior to this requirement) unless you have a good reason to
+   export a particular component.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java:79: Warning: Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking SslErrorHandler#cancel(). [WebViewClientOnReceivedSslError]
+        handler.proceed();
+        ~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/form/helper/RedmineWebViewClient.java:89: Warning: Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking SslErrorHandler#cancel(). [WebViewClientOnReceivedSslError]
+   handler.proceed();
+   ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "WebViewClientOnReceivedSslError":
+   This check looks for onReceivedSslError implementations that invoke
+   SslErrorHandler#proceed.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:86: Warning: Unnecessary; SDK_INT is always >= 9 [ObsoleteSdkInt]
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java:123: Warning: Unnecessary; SDK_INT is always >= 9 [ObsoleteSdkInt]
+ @TargetApi(Build.VERSION_CODES.GINGERBREAD)
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_access_time.xml:1: Warning: The resource R.drawable.ic_access_time appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_arrow_equals.xml:1: Warning: The resource R.drawable.ic_relative_arrow_equals appears to be unused [UnusedResources]
+<vector android:height="24dp" android:viewportHeight="97.0"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_copy_from.xml:1: Warning: The resource R.drawable.ic_relative_copy_from appears to be unused [UnusedResources]
+<vector android:height="24dp" android:viewportHeight="73.105"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_follows_to.xml:1: Warning: The resource R.drawable.ic_relative_follows_to appears to be unused [UnusedResources]
+<vector android:height="24dp" android:viewportHeight="73.105"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_relative_precedes_to.xml:1: Warning: The resource R.drawable.ic_relative_precedes_to appears to be unused [UnusedResources]
+<vector android:height="24dp" android:viewportHeight="73.105"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/drawable/ic_search.xml:1: Warning: The resource R.drawable.ic_search appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/pager_main.xml:2: Warning: The resource R.layout.pager_main appears to be unused [UnusedResources]
+<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:4: Warning: The resource R.string.menu_access_to appears to be unused [UnusedResources]
+ <string name="menu_access_to">Access</string>
+         ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:19: Warning: The resource R.string.menu_setting_list_menu_title appears to be unused [UnusedResources]
+ <string name="menu_setting_list_menu_title">%1$s :</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:23: Warning: The resource R.string.menu_settings_uploading appears to be unused [UnusedResources]
+ <string name="menu_settings_uploading">Posting item data.. </string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:24: Warning: The resource R.string.menu_confirm_delete_msg appears to be unused [UnusedResources]
+ <string name="menu_confirm_delete_msg">Are you sure you want to delete this connection?</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:25: Warning: The resource R.string.preference_category_issue appears to be unused [UnusedResources]
+ <string name="preference_category_issue">Issues</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:26: Warning: The resource R.string.preference_issue_get_all appears to be unused [UnusedResources]
+ <string name="preference_issue_get_all">Get all issues</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:27: Warning: The resource R.string.preference_issue_description_get_all appears to be unused [UnusedResources]
+ <string name="preference_issue_description_get_all">By default, fetch UNCLOSED issues from remote. If you wish to get all issues from remote, check this option.</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:73: Warning: The resource R.string.ticket_jump appears to be unused [UnusedResources]
+ <string name="ticket_jump">Jump</string>
+         ~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:82: Warning: The resource R.string.issue_id appears to be unused [UnusedResources]
+ <string name="issue_id">#%1$d</string>
+         ~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:105: Warning: The resource R.string.menu_add_timeentry appears to be unused [UnusedResources]
+ <string name="menu_add_timeentry">Record Time</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values/strings.xml:125: Warning: The resource R.string.progress appears to be unused [UnusedResources]
+ <string name="progress">Progress</string>
+         ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml:9: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_setting_edit_accesstoken">0e7c82... 40 karakter</string>
+                                               ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml:21: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_loading">Recibiendo datos...</string>
+                                       ~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-es-rES/strings.xml:22: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_uploading">Guardando datos...</string>
+                                         ~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-pt-rBR/strings.xml:22: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_loading">Obtendo dados do item...</string>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml:22: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_loading">Nesne verisi getiriliyor...</string>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-de/strings.xml:23: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_uploading">Schreibe Elemente ...</string>
+                                         ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/values-tr-rTR/strings.xml:23: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+  <string name="menu_settings_uploading">Nesne verisi gönderiliyor...</string>
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_basicauthentication.xml:17: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_basicauthentication.xml:43: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:188: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:203: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:233: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:19: Warning: Missing contentDescription attribute on image [ContentDescription]
+ <ImageView
+  ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/provider/Attachment.java:43: Warning: Assigning Locale.getDefault() to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running [ConstantLocale]
+ protected static final String PROVIDER = BuildConfig.APPLICATION_ID + "." + TAG.toLowerCase(Locale.getDefault());
+                                                                                             ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ConstantLocale":
+   Assigning Locale.getDefault() to a constant is suspicious, because the
+   locale can change while the app is running.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/form/IssueForm.java:46: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+  textTicketid.setText("#"+rd.getIssueId().toString());
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/form/IssueForm.java:46: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+  textTicketid.setText("#"+rd.getIssueId().toString());
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:179: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+    android:paddingLeft="10dp" >
+    ~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:225: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+    android:paddingLeft="10dp" >
+    ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:133: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="10dp"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:179: Warning: Consider adding android:paddingStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+    android:paddingLeft="10dp" >
+    ~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:225: Warning: Consider adding android:paddingStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+    android:paddingLeft="10dp" >
+    ~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_connection.xml:244: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+     android:layout_marginLeft="10dp"
+     ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/input_issue.xml:157: Warning: Consider adding android:layout_marginEnd="3dp" to better support right-to-left layouts [RtlHardcoded]
+     android:layout_marginRight="3dp"
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listheader_issuetitle.xml:7: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+ android:layout_marginLeft="3dip"
+ ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_attachment.xml:29: Warning: Consider adding android:layout_toStartOf="@+id/textCreated" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/textCreated"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:13: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+  android:layout_gravity="right"
+                          ~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:26: Warning: Consider adding android:layout_toStartOf="@+id/textModified" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/textModified"
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:55: Warning: Consider adding android:layout_alignEnd="@+id/textTicketid" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignRight="@+id/textTicketid"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:69: Warning: Consider adding android:layout_alignEnd="@+id/textTicketid" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignRight="@+id/textTicketid"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:83: Warning: Consider adding android:layout_alignEnd="@+id/textTicketid" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignRight="@+id/textTicketid"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:96: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="10dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:99: Warning: Consider adding android:layout_toEndOf="@+id/textTicketid" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toRightOf="@+id/textTicketid"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:117: Warning: Consider adding android:layout_toEndOf="@+id/textDateFrom" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toRightOf="@+id/textDateFrom"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:128: Warning: Consider adding android:layout_toEndOf="@+id/textView2" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toRightOf="@+id/textView2"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:139: Warning: Consider adding android:layout_alignStart="@+id/description" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignLeft="@+id/description"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:149: Warning: Consider adding android:layout_alignStart="@+id/description" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignLeft="@+id/description"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_issue.xml:150: Warning: Consider adding android:layout_toStartOf="@+id/imageRecent" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/imageRecent"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_journal.xml:15: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignParentRight="true"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_news.xml:14: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+     android:layout_marginLeft="5dp"
+     ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_relation.xml:15: Warning: Consider adding android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignParentLeft="true"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_relation.xml:24: Warning: Consider adding android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignParentLeft="true"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_relation.xml:26: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignParentRight="true"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_relation.xml:73: Warning: Consider adding android:layout_toStartOf="@+id/textStatus" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/textStatus"
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:26: Warning: Consider adding android:layout_toEndOf="@+id/image" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toRightOf="@+id/image"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:36: Warning: Consider adding android:layout_toEndOf="@+id/textActivity" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toRightOf="@+id/textActivity"
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:37: Warning: Consider adding android:layout_toStartOf="@+id/textSpentsOn" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/textSpentsOn"
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:48: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="5dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:50: Warning: Consider adding android:layout_toStartOf="@+id/textTimeEntry" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_toLeftOf="@+id/textTimeEntry"
+  ~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:59: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="5dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listitem_timeentry.xml:61: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_alignParentRight="true"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/listview_add.xml:8: Warning: Consider adding android:drawableStart="@drawable/ic_add_circle" to better support right-to-left layouts [RtlHardcoded]
+    android:drawableLeft="@drawable/ic_add_circle"
+    ~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml:100: Warning: Consider adding android:layout_marginStart="10dip" to better support right-to-left layouts [RtlHardcoded]
+   android:layout_marginLeft="10dip"
+   ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml:111: Warning: Consider adding android:drawableStart="@android:drawable/ic_menu_save" to better support right-to-left layouts [RtlHardcoded]
+  android:drawableLeft="@android:drawable/ic_menu_save"
+  ~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_download.xml:118: Warning: Consider adding android:drawableStart="@android:drawable/ic_menu_set_as" to better support right-to-left layouts [RtlHardcoded]
+  android:drawableLeft="@android:drawable/ic_menu_set_as"
+  ~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issue.xml:25: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+      android:layout_marginLeft="3dip"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_issue.xml:34: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+      android:layout_marginLeft="5dp"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:19: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="right|center_vertical"
+                            ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:26: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="3dip"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:38: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="right|center_vertical"
+                            ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:45: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="3dip"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:57: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="right|center_vertical"
+                            ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:64: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="3dip"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:76: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="right|center_vertical"
+                            ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:83: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="3dip"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:94: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:layout_gravity="right|center_vertical"
+                            ~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:101: Warning: Consider adding android:layout_marginStart="3dip" to better support right-to-left layouts [RtlHardcoded]
+    android:layout_marginLeft="3dip"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_project.xml:114: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="10dp"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_splash.xml:42: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginRight="20dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/res/layout/page_splash.xml:43: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+  android:gravity="right"
+                   ~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml: Warning: The project references RTL attributes, but does not explicitly enable or disable RTL support with android:supportsRtl in the manifest [RtlEnabled]
+
+   Explanation for issues of type "RtlEnabled":
+   To enable right-to-left support, when running on API 17 and higher, you
+   must set the android:supportsRtl attribute in the manifest <application>
+   element.
+
+   If you have started adding RTL attributes, but have not yet finished the
+   migration, you can set the attribute to false to satisfy this lint check.
+
+2 errors, 172 warnings

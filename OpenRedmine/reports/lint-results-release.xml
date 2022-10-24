@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 7.0.0">
+<issues format="6" by="lint 7.3.1">
 
     <issue
         id="ScopedStorage"
@@ -15,8 +15,197 @@
         errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
-            line="9"
+            line="8"
             column="33"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Error"
+        message="Suspicious indentation: This is indented but is not nested under the previous expression (`if(task != null &amp;&amp; t`...)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="        super.onCreateOptionsMenu(menu, inflater);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="265"
+            column="9"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="263"
+            column="3"
+            message="Previous statement here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Error"
+        message="Suspicious indentation: This is indented but is not nested under the previous expression (`if(!isValidParameter`...)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="        try {"
+        errorLine2="        ~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
+            line="82"
+            column="9"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
+            line="80"
+            column="3"
+            message="Previous statement here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  return convertView;"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java"
+            line="143"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java"
+            line="142"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  super.onDestroyView();"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="77"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="75"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  adapter = new IssueStickyListAdapter(getHelper(),activity, mActionListener);"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="104"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
+            line="102"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  super.notifyDataSetChanged();"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
+            line="43"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
+            line="35"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  super.notifyDataSetChanged();"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineDaoAdapter.java"
+            line="63"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineDaoAdapter.java"
+            line="55"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  name = item.getName();"
+        errorLine2="~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/entity/RedmineProject.java"
+            line="91"
+            column="1"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/entity/RedmineProject.java"
+            line="90"
+            column="1"
+            message="Previous line indentation here"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        severity="Warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
+        category="Correctness"
+        priority="6"
+        summary="Suspicious indentation"
+        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
+        errorLine1="  form = new RedmineWebviewForm(this);"
+        errorLine2=" ~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WebViewActivity.java"
+            line="49"
+            column="2"/>
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/activity/WebViewActivity.java"
+            line="46"
+            column="2"
+            message="Previous line indentation here"/>
     </issue>
 
     <issue
@@ -646,9 +835,73 @@
     </issue>
 
     <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:appcompat-v7 than 25.3.1 is available: 28.0.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.android.support:appcompat-v7:25.3.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
+            line="87"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:support-fragment than 25.3.1 is available: 28.0.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.android.support:support-fragment:25.3.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
+            line="88"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:animated-vector-drawable than 25.3.1 is available: 28.0.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.android.support:animated-vector-drawable:25.3.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
+            line="89"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:design than 25.3.1 is available: 28.0.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.android.support:design:25.3.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/build.gradle"
+            line="90"
+            column="20"/>
+    </issue>
+
+    <issue
         id="Typos"
         severity="Warning"
-        message="&quot;invez&quot; is a common misspelling; did you mean &quot;invés&quot; ?"
+        message="&quot;invez&quot; is a common misspelling; did you mean &quot;invés&quot;?"
         category="Correctness:Messages"
         priority="7"
         summary="Spelling error"
@@ -664,7 +917,7 @@
     <issue
         id="Typos"
         severity="Warning"
-        message="&quot;via&quot; is a common misspelling; did you mean &quot;vía&quot; ?"
+        message="&quot;via&quot; is a common misspelling; did you mean &quot;vía&quot;?"
         category="Correctness:Messages"
         priority="7"
         summary="Spelling error"
@@ -1118,17 +1371,49 @@
     <issue
         id="IntentFilterExportedReceiver"
         severity="Warning"
-        message="When using intent filters, please specify `android:exported` as well"
+        message="As of Android 12, `android:exported` must be set; use `true` to make the activity \&#xA;available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`."
         category="Security"
         priority="5"
         summary="Unspecified `android:exported` in manifest"
-        explanation="Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported` when the corresponding component has an intent filter defined. Otherwise, installation will fail.&#xA;&#xA;Previously, `android:exported` for components without any intent filters present used to default to `false`, and when intent filters were present, the default was `true`. Defaults which change value based on other values are confusing and lead to apps accidentally exporting components as a side-effect of adding intent filters. This is a security risk, and we have made this change to avoid introducing accidental vulnerabilities.&#xA;&#xA;While the default without intent filters remains unchanged, it is now required to explicitly specify a value when intent filters are present. Any app failing to meet this requirement will fail to install on any Android version after Android 11.&#xA;&#xA;We recommend setting `android:exported` to false (even on previous versions of Android prior to this requirement) unless you have a good reason to export a particular component."
+        explanation="Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported` when the corresponding component has an intent filter defined. Otherwise, installation will fail. Set it to `true` to make this activity accessible to other apps, and `false` to limit it to be used only by this app or the OS. For launch activities, this should be set to true; otherwise, the app will fail to launch.&#xA;&#xA;Previously, `android:exported` for components without any intent filters present used to default to `false`, and when intent filters were present, the default was `true`. Defaults which change value based on other values are confusing and lead to apps accidentally exporting components as a side-effect of adding intent filters. This is a security risk, and we have made this change to avoid introducing accidental vulnerabilities.&#xA;&#xA;While the default without intent filters remains unchanged, it is now required to explicitly specify a value when intent filters are present. Any app failing to meet this requirement will fail to install on any Android version after Android 11.&#xA;&#xA;We recommend setting `android:exported` to false (even on previous versions of Android prior to this requirement) unless you have a good reason to export a particular component."
         errorLine1="        &lt;activity android:name=&quot;.activity.SplashActivity&quot;"
         errorLine2="         ~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/AndroidManifest.xml"
-            line="23"
+            line="22"
             column="10"/>
+    </issue>
+
+    <issue
+        id="WebViewClientOnReceivedSslError"
+        severity="Warning"
+        message="Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking `SslErrorHandler#cancel()`."
+        category="Security"
+        priority="5"
+        summary="Proceeds with the HTTPS connection despite SSL errors"
+        explanation="This check looks for `onReceivedSslError` implementations that invoke `SslErrorHandler#proceed`."
+        errorLine1="        handler.proceed();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/external/lib/MyWebViewClient.java"
+            line="79"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="WebViewClientOnReceivedSslError"
+        severity="Warning"
+        message="Permitting connections with SSL-related errors could allow eavesdroppers to intercept data sent by your app, which impacts the privacy of your users. Consider canceling the connections by invoking `SslErrorHandler#cancel()`."
+        category="Security"
+        priority="5"
+        summary="Proceeds with the HTTPS connection despite SSL errors"
+        explanation="This check looks for `onReceivedSslError` implementations that invoke `SslErrorHandler#proceed`."
+        errorLine1="   handler.proceed();"
+        errorLine2="   ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/form/helper/RedmineWebViewClient.java"
+            line="89"
+            column="4"/>
     </issue>
 
     <issue
@@ -1145,6 +1430,22 @@
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java"
             line="86"
             column="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 9"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1=" @TargetApi(Build.VERSION_CODES.GINGERBREAD)"
+        errorLine2=" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/FileDownload.java"
+            line="123"
+            column="2"/>
     </issue>
 
     <issue
@@ -1442,7 +1743,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_setting_edit_accesstoken&quot;>0e7c82... 40 karakter&lt;/string>"
@@ -1460,7 +1761,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Recibiendo datos...&lt;/string>"
@@ -1478,7 +1779,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Guardando datos...&lt;/string>"
@@ -1496,7 +1797,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Obtendo dados do item...&lt;/string>"
@@ -1514,7 +1815,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_loading&quot;>Nesne verisi getiriliyor...&lt;/string>"
@@ -1532,7 +1833,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Schreibe Elemente ...&lt;/string>"
@@ -1550,7 +1851,7 @@
         category="Usability:Typography"
         priority="5"
         summary="Ellipsis string can be replaced with ellipsis character"
-        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (\u2026, &amp;#8230;). This can help make the text more readable."
         url="https://en.wikipedia.org/wiki/Ellipsis"
         urls="https://en.wikipedia.org/wiki/Ellipsis"
         errorLine1="  &lt;string name=&quot;menu_settings_uploading&quot;>Nesne verisi gönderiliyor...&lt;/string>"
