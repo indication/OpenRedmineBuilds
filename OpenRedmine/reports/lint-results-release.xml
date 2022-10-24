@@ -21,48 +21,6 @@
 
     <issue
         id="SuspiciousIndentation"
-        severity="Error"
-        message="Suspicious indentation: This is indented but is not nested under the previous expression (`if(task != null &amp;&amp; t`...)"
-        category="Correctness"
-        priority="6"
-        summary="Suspicious indentation"
-        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
-        errorLine1="        super.onCreateOptionsMenu(menu, inflater);"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="265"
-            column="9"/>
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="263"
-            column="3"
-            message="Previous statement here"/>
-    </issue>
-
-    <issue
-        id="SuspiciousIndentation"
-        severity="Error"
-        message="Suspicious indentation: This is indented but is not nested under the previous expression (`if(!isValidParameter`...)"
-        category="Correctness"
-        priority="6"
-        summary="Suspicious indentation"
-        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
-        errorLine1="        try {"
-        errorLine2="        ~~~~~">
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
-            line="82"
-            column="9"/>
-        <location
-            file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java"
-            line="80"
-            column="3"
-            message="Previous statement here"/>
-    </issue>
-
-    <issue
-        id="SuspiciousIndentation"
         severity="Warning"
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
         category="Correctness"
@@ -111,15 +69,15 @@
         priority="6"
         summary="Suspicious indentation"
         explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
-        errorLine1="  adapter = new IssueStickyListAdapter(getHelper(),activity, mActionListener);"
+        errorLine1="  formTitle = new IssueViewForm(getView());"
         errorLine2="~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="104"
+            line="110"
             column="1"/>
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="102"
+            line="107"
             column="1"
             message="Previous line indentation here"/>
     </issue>
@@ -606,7 +564,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="273"
+            line="274"
             column="9"/>
     </issue>
 
@@ -622,7 +580,7 @@
         errorLine2="        ~~~~~~~~~~~~~">
         <location
             file="/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java"
-            line="278"
+            line="279"
             column="9"/>
     </issue>
 

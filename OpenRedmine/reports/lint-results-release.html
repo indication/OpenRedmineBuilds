@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 2 errors and 172 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 172 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Mon Oct 24 16:11:50 UTC 2022 by AGP (7.3.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Mon Oct 24 17:07:22 UTC 2022 by AGP (7.3.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -187,7 +187,7 @@ document.getElementById(id).style.display = 'none';
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#ScopedStorage"><i class="material-icons warning-icon">warning</i>Affected by scoped storage (1)</a>
-      <a class="mdl-navigation__link" href="#SuspiciousIndentation"><i class="material-icons error-icon">error</i>Suspicious indentation (9)</a>
+      <a class="mdl-navigation__link" href="#SuspiciousIndentation"><i class="material-icons warning-icon">warning</i>Suspicious indentation (7)</a>
       <a class="mdl-navigation__link" href="#UnusedAttribute"><i class="material-icons warning-icon">warning</i>Attribute unused on older versions (2)</a>
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (9)</a>
       <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (27)</a>
@@ -228,7 +228,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ScopedStorage">ScopedStorage</a>: Affected by scoped storage</td></tr>
 <tr>
-<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<td class="countColumn">7</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SuspiciousIndentation">SuspiciousIndentation</a>: Suspicious indentation</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -381,44 +381,7 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:265</span>: <span class="message">Suspicious indentation: This is indented but is not nested under the previous expression (<code>if(task != null &amp;&amp; t</code>...)</span><br /><pre class="errorlines">
-<span class="lineno"> 262 </span>        menu_refresh = menu.findItem(R.id.menu_refresh);
-<span class="lineno"> 263 </span>        <span class="keyword">if</span>(task != <span class="keyword">null</span> &amp;&amp; task.getStatus() == Status.RUNNING)
-<span class="lineno"> 264 </span>            menu_refresh.setEnabled(<span class="keyword">false</span>);
-<span class="caretline"><span class="lineno"> 265 </span>        <span class="error"><span class="keyword">super</span>.onCreateOptionsMenu(menu, inflater)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 266 </span>    }
-<span class="lineno"> 267 </span>
-<span class="lineno"> 268 </span>    <span class="annotation">@Override</span></pre>
-
-<ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:263</span>: <span class="message">Previous statement here</span><br /><pre class="errorlines">
-<span class="lineno"> 260 </span>        inflater.inflate( R.menu.issue_view, menu );
-<span class="lineno"> 261 </span>        inflater.inflate( R.menu.web, menu );
-<span class="lineno"> 262 </span>        menu_refresh = menu.findItem(R.id.menu_refresh);
-<span class="caretline"><span class="lineno"> 263 </span>        <span class="error"><span class="keyword">if</span>(task != <span class="keyword">null</span> &amp;&amp; task.getStatus() == Status.RUNNING)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 264 </span>            menu_refresh.setEnabled(<span class="keyword">false</span>);
-<span class="lineno"> 265 </span>        <span class="keyword">super</span>.onCreateOptionsMenu(menu, inflater);
-<span class="lineno"> 266 </span>    }
-</pre>
-</ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java</a>:82</span>: <span class="message">Suspicious indentation: This is indented but is not nested under the previous expression (<code>if(!isValidParameter</code>...)</span><br /><pre class="errorlines">
-<span class="lineno">  79 </span>    <span class="keyword">public</span> Object getItem(Integer position) {
-<span class="lineno">  80 </span>        <span class="keyword">if</span>(!isValidParameter())
-<span class="lineno">  81 </span>            <span class="keyword">return</span> <span class="keyword">null</span>;
-<span class="caretline"><span class="lineno">  82 </span>        <span class="error"><span class="keyword">try</span> {</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  83 </span>            <span class="keyword">return</span> getDbItem(position);
-<span class="lineno">  84 </span>        } <span class="keyword">catch</span> (SQLException e) {
-<span class="lineno">  85 </span>            Log.e(TAG,<span class="string">"getDbItem"</span> , e);
-</pre>
-
-<ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java</a>:80</span>: <span class="message">Previous statement here</span><br /><pre class="errorlines">
-<span class="lineno">  77 </span><span class="javadoc">     */</span>
-<span class="lineno">  78 </span>    <span class="annotation">@Override</span>
-<span class="lineno">  79 </span>    <span class="keyword">public</span> Object getItem(Integer position) {
-<span class="caretline"><span class="lineno">  80 </span>        <span class="error"><span class="keyword">if</span>(!isValidParameter())</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  81 </span>            <span class="keyword">return</span> <span class="keyword">null</span>;
-<span class="lineno">  82 </span>        <span class="keyword">try</span> {
-<span class="lineno">  83 </span>            <span class="keyword">return</span> getDbItem(position);
-</pre>
-</ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java</a>:143</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java</a>:143</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
 <span class="lineno"> 140 </span>        }
 <span class="lineno"> 141 </span>      <span class="comment">//fix background to hide transparent headers</span>
 <span class="lineno"> 142 </span>      convertView.setBackgroundColor(HtmlHelper.getBackgroundColor(convertView.getContext()));
@@ -453,28 +416,26 @@ Dismiss</button>            </div>
 <span class="lineno">  77 </span>        <span class="keyword">super</span>.onDestroyView();
 <span class="lineno">  78 </span>    }
 </pre>
-</ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:104</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
-<span class="lineno"> 101 </span>
-<span class="lineno"> 102 </span>        list.addFooterView(mFooter);
-<span class="lineno"> 103 </span>
-<span class="caretline"><span class="lineno"> 104 </span><span class="warning">        </span>adapter = <span class="keyword">new</span> IssueStickyListAdapter(getHelper(),activity, mActionListener);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 105 </span>        list.setAdapter(adapter);
-<span class="lineno"> 106 </span>        
+</ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:110</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
 <span class="lineno"> 107 </span>        list.setFastScrollEnabled(<span class="keyword">true</span>);
+<span class="lineno"> 108 </span>
+<span class="lineno"> 109 </span>        <span class="comment">//setup title view</span>
+<span class="caretline"><span class="lineno"> 110 </span><span class="warning">        </span>formTitle = <span class="keyword">new</span> IssueViewForm(getView());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 111 </span>
+<span class="lineno"> 112 </span>        <span class="comment">//setup comment form</span>
+<span class="lineno"> 113 </span>        formComment = <span class="keyword">new</span> IssueCommentForm(getView());
 </pre>
 
-<ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:102</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
-<span class="lineno">  99 </span>        mTimeEntryListener = ActivityHandler.getHandler(activity, TimeentryActionInterface.<span class="keyword">class</span>);
-<span class="lineno"> 100 </span>        mAttachmentListener = ActivityHandler.getHandler(activity, AttachmentActionInterface.<span class="keyword">class</span>);
-<span class="lineno"> 101 </span>
-<span class="caretline"><span class="lineno"> 102 </span><span class="warning"></span>  list.addFooterView(mFooter);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 103 </span>
+<ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:107</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
 <span class="lineno"> 104 </span>        adapter = <span class="keyword">new</span> IssueStickyListAdapter(getHelper(),activity, mActionListener);
-<span class="lineno"> 105 </span>  list.setAdapter(adapter);
+<span class="lineno"> 105 </span>        list.setAdapter(adapter);
+<span class="lineno"> 106 </span>        
+<span class="caretline"><span class="lineno"> 107 </span><span class="warning">  </span>      list.setFastScrollEnabled(<span class="keyword">true</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 108 </span>
+<span class="lineno"> 109 </span>        <span class="comment">//setup title view</span>
+<span class="lineno"> 110 </span>        formTitle = <span class="keyword">new</span> IssueViewForm(getView());
 </pre>
-</ul><button class="mdl-button mdl-js-button mdl-button--primary" id="SuspiciousIndentationDivLink" onclick="reveal('SuspiciousIndentationDiv');" />+ 4 More Occurrences...</button>
-<div id="SuspiciousIndentationDiv" style="display: none">
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java</a>:43</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
+</ul><span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java">../../src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java</a>:43</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
 <span class="lineno">  40 </span>                count = <span class="number">0</span>;
 <span class="lineno">  41 </span>            }
 <span class="lineno">  42 </span>        }
@@ -549,7 +510,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 49 </span>        form = <span class="keyword">new</span> RedmineWebviewForm(<span class="keyword">this</span>);
 </pre>
 </ul></div>
-</div>
 <div class="metadata"><div class="explanation" id="explanationSuspiciousIndentation" style="display: none;">
 This check looks for cases where the indentation suggests a grouping that isn't actually there in the code. A common example of this would be something like
 <pre>
@@ -585,7 +545,7 @@ To configure this option, use a `lint.xml` file in the project or source folder 
     <span class="mdl-chip__text">Correctness</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Error</span>
+    <span class="mdl-chip__text">Warning</span>
 </span>
 <span class="mdl-chip">
     <span class="mdl-chip__text">Priority 6/10</span>
@@ -915,24 +875,24 @@ Dismiss</button>            </div>
 <span class="lineno"> 344 </span>                input.setArgument(getArguments());
 </pre>
 
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:273</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 270 </span>    {
-<span class="lineno"> 271 </span>        <span class="keyword">switch</span> ( item.getItemId() )
-<span class="lineno"> 272 </span>        {
-<span class="caretline"><span class="lineno"> 273 </span>            <span class="keyword">case</span> <span class="warning">R.id.menu_refresh</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 274 </span>            {
-<span class="lineno"> 275 </span>                onFetchRemote();
-<span class="lineno"> 276 </span>                <span class="keyword">return</span> <span class="keyword">true</span>;
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:274</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 271 </span>    {
+<span class="lineno"> 272 </span>        <span class="keyword">switch</span> ( item.getItemId() )
+<span class="lineno"> 273 </span>        {
+<span class="caretline"><span class="lineno"> 274 </span>            <span class="keyword">case</span> <span class="warning">R.id.menu_refresh</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 275 </span>            {
+<span class="lineno"> 276 </span>                onFetchRemote();
+<span class="lineno"> 277 </span>                <span class="keyword">return</span> <span class="keyword">true</span>;
 </pre>
 
-<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:278</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 275 </span>                onFetchRemote();
-<span class="lineno"> 276 </span>                <span class="keyword">return</span> <span class="keyword">true</span>;
-<span class="lineno"> 277 </span>            }
-<span class="caretline"><span class="lineno"> 278 </span>            <span class="keyword">case</span> <span class="warning">R.id.menu_web</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 279 </span>            {
-<span class="lineno"> 280 </span>                IssueArgument input = <span class="keyword">new</span> IssueArgument();
-<span class="lineno"> 281 </span>                input.setArgument(getArguments());
+<span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java">../../src/main/java/jp/redmine/redmineclient/fragment/IssueView.java</a>:279</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 276 </span>                onFetchRemote();
+<span class="lineno"> 277 </span>                <span class="keyword">return</span> <span class="keyword">true</span>;
+<span class="lineno"> 278 </span>            }
+<span class="caretline"><span class="lineno"> 279 </span>            <span class="keyword">case</span> <span class="warning">R.id.menu_web</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 280 </span>            {
+<span class="lineno"> 281 </span>                IssueArgument input = <span class="keyword">new</span> IssueArgument();
+<span class="lineno"> 282 </span>                input.setArgument(getArguments());
 </pre>
 
 <span class="location"><a href="../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java">../../src/main/java/jp/redmine/redmineclient/fragment/NewsList.java</a>:197</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">

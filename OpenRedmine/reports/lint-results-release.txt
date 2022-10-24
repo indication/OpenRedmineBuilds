@@ -20,14 +20,6 @@
 
    https://goo.gle/android-storage-usecases
 
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:265: Error: Suspicious indentation: This is indented but is not nested under the previous expression (if(task != null && t...) [SuspiciousIndentation]
-        super.onCreateOptionsMenu(menu, inflater);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:263: Previous statement here
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:82: Error: Suspicious indentation: This is indented but is not nested under the previous expression (if(!isValidParameter...) [SuspiciousIndentation]
-        try {
-        ~~~~~
-    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:80: Previous statement here
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/IssueStickyListAdapter.java:143: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
   return convertView;
 ~~
@@ -36,10 +28,10 @@
   super.onDestroyView();
 ~~
     /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:75: Previous line indentation here
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:104: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
-  adapter = new IssueStickyListAdapter(getHelper(),activity, mActionListener);
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:110: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+  formTitle = new IssueViewForm(getView());
 ~~
-    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:102: Previous line indentation here
+    /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:107: Previous line indentation here
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/adapter/RedmineBaseAdapter.java:43: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
   super.notifyDataSetChanged();
 ~~
@@ -179,10 +171,10 @@
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueList.java:341: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
    case R.id.menu_web:
         ~~~~~~~~~~~~~
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:273: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:274: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
    case R.id.menu_refresh:
         ~~~~~~~~~~~~~~~~~
-/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:278: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/IssueView.java:279: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
    case R.id.menu_web:
         ~~~~~~~~~~~~~
 /home/travis/build/indication/OpenRedmine/OpenRedmine/src/main/java/jp/redmine/redmineclient/fragment/NewsList.java:197: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
@@ -836,4 +828,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-2 errors, 172 warnings
+0 errors, 172 warnings
